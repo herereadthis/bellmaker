@@ -4,3 +4,49 @@
 @mq_medium:     ~"only screen and (min-width: 1024px)";
 @mq_large:      ~"only screen and (min-width: 1280px)";
 @mq_x_large:    ~"only screen and (min-width: 1368px)";
+
+
+
+/* iOS Media Queries ------------------------ */
+/* ------------------------------------------ */
+// usage example:
+// @media @ipad {}
+//
+// use prefix mwh_mq
+
+// All iPads in portrait & landscape
+@mwh_mq_ipad:                   ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px)";
+// All iPads in landscape
+@mwh_mq_ipad_landscape:         ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)";
+// All iPads in portrait
+@mwh_mq_ipad_portrait:          ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)";
+
+// ipad Mini, iPad 1 & 2 in portrait & landscape
+@mwh_mq_ipad_early:             ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1)";
+/*ipad Mini, iPad 1 & 2 in landscape*/
+@mwh_mq_ipad_early_landscape:   ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 1)";
+/*ipad Mini, iPad 1 & 2 in portrait*/
+@mwh_mq_ipad_early_portrait:    ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1)";
+
+// Retina iPad (includes Mini Retina) in portrait & landscape
+@mwh_mq_ipad_retina:            ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 2)";
+// Retina iPad in landscape
+@mwh_mq_ipad_retina_landscape:  ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 2)";
+// Retina iPad in portrait
+@mwh_mq_ipad_retina_portrait:   ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 2)";
+
+// iPhone 2G, 3G, 4, 4S Media Queries
+@mwh_mq_iphone_early:           ~"only screen and (min-device-width : 320px) and (max-device-width : 480px)";
+// iPhone 2G-4S in landscape
+@mwh_mq_iphone_early_landscape: ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape)";
+// iPhone 2G-4S in portrait
+@mwh_mq_iphone_early_portrait:  ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait)";
+
+// iPhone 5 (includes 5C) in portrait & landscape
+@mwh_mq_iphone_5:               ~"only screen and (min-device-width : 320px) and (max-device-width : 568px)";
+// iPhone 5 in landscape
+@mwh_mq_iphone_5_landscape:     ~"only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape)";
+// iPhone 5 in portrait
+@mwh_mq_iphone_5_portrait:      ~"only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait)";
+/* ------------------------------------------ */
+/* ------------------------------------------ */
