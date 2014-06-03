@@ -17,28 +17,52 @@ body {
   font-size: 1em;
   line-height: 1;
 }
+[role="banner"] {
+  margin: 0 auto;
+}
+[role="main"] {
+  margin: 0 auto;
+}
 /* iOS Media Queries ------------------------ */
 /* ------------------------------------------ */
 /*ipad Mini, iPad 1 & 2 in landscape*/
 /*ipad Mini, iPad 1 & 2 in portrait*/
 /* ------------------------------------------ */
 /* ------------------------------------------ */@media only screen and (min-width: 320px) {
-  
+  [role="banner"],
+  [role="main"] {
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 568px) {
-  
+  [role="banner"],
+  [role="main"] {
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 768px) {
-  
+  [role="banner"],
+  [role="main"] {
+    width: 76.8rem;
+  }
 }
 @media only screen and (min-width: 1024px) {
-  
+  [role="banner"],
+  [role="main"] {
+    width: 96rem;
+  }
 }
 @media only screen and (min-width: 1280px) {
-  
+  [role="banner"],
+  [role="main"] {
+    width: 115.2rem;
+  }
 }
 @media only screen and (min-width: 1440px) {
-  
+  [role="banner"],
+  [role="main"] {
+    width: 129.6rem;
+  }
 }
 @media only screen and (min-width: 320px) {
   
