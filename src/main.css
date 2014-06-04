@@ -15,13 +15,28 @@ body {
   text-rendering: optimizelegibility;
   font-size: 1em;
   line-height: 1;
+  font-family: Helvetica, Arial, sans-serif;
 }
 [role="banner"],
 [role="main"] {
   margin: 0 auto;
   overflow: auto;
   box-sizing: border-box;
+}
+[role="banner"] > h1 {
   padding: 2rem;
+}
+[role="main"] > p,
+[role="main"] > h2 {
+  padding: 0 2rem 2rem;
+}
+h1 {
+  font-size: 3rem;
+  line-height: 4rem;
+}
+p {
+  font-size: 1.4rem;
+  line-height: 2rem;
 }
 /* iOS Media Queries ------------------------ */
 /* ------------------------------------------ */
