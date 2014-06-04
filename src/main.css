@@ -1,7 +1,6 @@
 /* iOS Media Queries ------------------------ */
 html {
   font-size: 62.5%;
-  height: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   overflow: -moz-scrollbars-vertical;
@@ -10,18 +9,19 @@ html {
 }
 body {
   padding: 0;
+  margin: 0;
   font-size: 100%;
-  height: 100%;
   position: relative;
   text-rendering: optimizelegibility;
   font-size: 1em;
   line-height: 1;
 }
-[role="banner"] {
-  margin: 0 auto;
-}
+[role="banner"],
 [role="main"] {
   margin: 0 auto;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 2rem;
 }
 /* iOS Media Queries ------------------------ */
 /* ------------------------------------------ */
