@@ -32,36 +32,42 @@ body {
   [role="banner"],
   [role="main"] {
     width: 100%;
+    background-color: rgba(0, 0, 255, 0.1);
   }
 }
 @media only screen and (min-width: 568px) {
   [role="banner"],
   [role="main"] {
     width: 100%;
+    background-color: rgba(0, 0, 255, 0.2);
   }
 }
 @media only screen and (min-width: 768px) {
   [role="banner"],
   [role="main"] {
     width: 76.8rem;
+    background-color: rgba(0, 0, 255, 0.3);
   }
 }
 @media only screen and (min-width: 1024px) {
   [role="banner"],
   [role="main"] {
     width: 96rem;
+    background-color: rgba(0, 0, 255, 0.1);
   }
 }
 @media only screen and (min-width: 1280px) {
   [role="banner"],
   [role="main"] {
     width: 115.2rem;
+    background-color: rgba(0, 0, 255, 0.2);
   }
 }
 @media only screen and (min-width: 1440px) {
   [role="banner"],
   [role="main"] {
     width: 129.6rem;
+    background-color: rgba(0, 0, 255, 0.3);
   }
 }
 @media only screen and (min-width: 320px) {
