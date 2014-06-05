@@ -19,7 +19,12 @@
 // @media @ipad {}
 //
 // use prefix mwh_mq
+// adapted from http://www.stephentgilbert.com/mediaqueries/
 
+
+// CSS Resolution: 768 X 1024
+// Actual Resolution: 768 X 1024
+// Device-pixel-ratio: 1
 // All iPads in portrait & landscape
 @mwh_mq_ipad:                   ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px)";
 // All iPads in landscape
@@ -34,6 +39,9 @@
 /*ipad Mini, iPad 1 & 2 in portrait*/
 @mwh_mq_ipad_early_portrait:    ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1)";
 
+// CSS Resolution: 768 X 1024
+// Actual Resolution: 1536 X 2048
+// Device-pixel-ratio: 2
 // Retina iPad (includes Mini Retina) in portrait & landscape
 @mwh_mq_ipad_retina:            ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 2)";
 // Retina iPad in landscape
@@ -41,6 +49,10 @@
 // Retina iPad in portrait
 @mwh_mq_ipad_retina_portrait:   ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 2)";
 
+
+// CSS Resolution: 320 X 480 (EARLY)	| 	320 X 480 (LATER)
+// Actual Resolution: 320 X 480 (EARLY)	| 	640 X 960 (LATER)
+// Device-pixel-ratio: 1 (EARLY)		|	2 (LATER)
 // iPhone 2G, 3G, 4, 4S Media Queries
 @mwh_mq_iphone_early:           ~"only screen and (min-device-width : 320px) and (max-device-width : 480px)";
 // iPhone 2G-4S in landscape
@@ -48,6 +60,10 @@
 // iPhone 2G-4S in portrait
 @mwh_mq_iphone_early_portrait:  ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait)";
 
+
+// CSS Resolution: 320 X 568
+// Actual Resolution: 640 X 1136
+// Device-pixel-ratio: 2
 // iPhone 5 (includes 5C) in portrait & landscape
 @mwh_mq_iphone_5:               ~"only screen and (min-device-width : 320px) and (max-device-width : 568px)";
 // iPhone 5 in landscape
