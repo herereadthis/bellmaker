@@ -37,12 +37,6 @@ p {
   font-size: 1.4rem;
   line-height: 2rem;
 }
-/* iOS Media Queries ------------------------ */
-/* ------------------------------------------ */
-/*ipad Mini, iPad 1 & 2 in landscape*/
-/*ipad Mini, iPad 1 & 2 in portrait*/
-/* ------------------------------------------ */
-/* ------------------------------------------ */
 @media only screen and (min-width: 320px) {
   [role="banner"],
   [role="main"] {
@@ -115,3 +109,9 @@ p {
     content: "Query 6: 1296 pixels for screens at 1440 and up";
   }
 }
+/* iOS Media Queries ------------------------ */
+/* ------------------------------------------ */
+/*ipad Mini, iPad 1 & 2 in landscape*/
+/*ipad Mini, iPad 1 & 2 in portrait*/
+/* ------------------------------------------ */
+/* ------------------------------------------ */

@@ -16,8 +16,17 @@
     "Mobile",
     "CSS"
   ],
-  "author": "Jimmy Ha",
-  "license": "MIT",
+  "author": {
+    "name": "Jimmy Ha",
+    "email": "herereadthis@gmail.com",
+    "url": "http://herereadthis.com/"
+  },
+  "licenses": [
+    {
+      "type": "GPL",
+      "url": "https://github.com/herereadthis/bellmaker/blob/master/LICENSE"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/herereadthis/bellmaker/issues"
   },
