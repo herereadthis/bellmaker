@@ -63,7 +63,7 @@ Media queries in Bellmaker bubble up from smallest to largest, in sequence.
 
 #### Column Snapping
 
-Media queries in the Bellmaker create a pseudo-liquid snapping layout. That is, as the screen gets larger, the elements on the page go to higher fixed widths. Each of the fixed widths is selected because they are divisible by 2, 3, 4, 6, and 12, which makes grid layouts easier.
+Media queries in the Bellmaker create a pseudo-liquid snapping layout. That is, as the screen gets larger, the elements on the page go to higher fixed widths. Each of the fixed widths is selected because they are divisible by 2, 3, 4, 6, 12, 16, and 24, which makes grid layouts easier.
 
 * 768-1024: 768 pixels = 12 X 64px columns
 * 1024-1280: 960 pixels = 12 X 80px columns
