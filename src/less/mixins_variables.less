@@ -13,6 +13,20 @@
 @pw_x_large: 134.4rem;
 
 
+// Android Media Queries -----------------------
+// ---------------------------------------------
+
+// CSS Resolution: 1080 X 1920
+// Actual Resolution: 360 X 640
+// Device-pixel-ratio: 3
+// All Samsung Galaxy S4
+@mwh_mq_gs4:                    ~"only screen and (min-device-width : 1080px) and (max-device-width : 1920px) and (-webkit-min-device-pixel-ratio: 3)";
+// Samsung Galaxy S4 in landscape
+@mwh_mq_gs4_landscape:          ~"only screen and (min-device-width : 1080px) and (max-device-width : 1920px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 3)";
+// Samsung Galaxy S4 in portrait
+@mwh_mq_gs4_portrait:           ~"only screen and (min-device-width : 1080px) and (max-device-width : 1920px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 3)";
+
+
 // iOS Media Queries ---------------------------
 // ---------------------------------------------
 // usage example:
@@ -34,9 +48,9 @@
 
 // ipad Mini, iPad 1 & 2 in portrait & landscape
 @mwh_mq_ipad_early:             ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1)";
-/*ipad Mini, iPad 1 & 2 in landscape*/
+// ipad Mini, iPad 1 & 2 in landscape
 @mwh_mq_ipad_early_landscape:   ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 1)";
-/*ipad Mini, iPad 1 & 2 in portrait*/
+// ipad Mini, iPad 1 & 2 in portrait
 @mwh_mq_ipad_early_portrait:    ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1)";
 
 
