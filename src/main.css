@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  height: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   overflow: -moz-scrollbars-vertical;
@@ -8,13 +9,24 @@ html {
 }
 body {
   padding: 0;
-  margin: 0;
   font-size: 100%;
   position: relative;
   text-rendering: optimizelegibility;
   font-size: 1em;
   line-height: 1;
   font-family: Helvetica, Arial, sans-serif;
+}
+body,
+table,
+td,
+ul,
+h1,
+h2,
+h3,
+h4,
+p,
+img {
+  margin: 0;
 }
 [role="banner"],
 [role="main"] {
@@ -25,6 +37,9 @@ body {
 [role="banner"] > h1 {
   padding: 2rem;
 }
+[role="main"] {
+  padding-bottom: 2rem;
+}
 [role="main"] > p,
 [role="main"] > h2 {
   padding: 0 2rem 2rem;
@@ -33,7 +48,8 @@ h1 {
   font-size: 3rem;
   line-height: 4rem;
 }
-p {
+p,
+li {
   font-size: 1.4rem;
   line-height: 2rem;
 }
@@ -107,6 +123,72 @@ p {
 @media only screen and (min-width: 1440px) {
   #basic_query:after {
     content: "Query 6: 1296 pixels for screens at 1440 and up";
+  }
+}
+#ios_sniffer:before {
+  content: "iOS device - ";
+}
+#ios_sniffer:after {
+  content: "none detected";
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  #ios_sniffer:after {
+    content: "early iPad in landscape mode";
+  }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  #ios_sniffer:after {
+    content: "early iPad in portrait mode";
+  }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  #ios_sniffer:after {
+    content: "retina iPad in landscape mode";
+  }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  #ios_sniffer:after {
+    content: "retina iPad in portrait mode";
+  }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) {
+  #ios_sniffer:after {
+    content: "early iPhone in landscape mode";
+  }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
+  #ios_sniffer:after {
+    content: "early iPhone in portrait mode";
+  }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) {
+  #ios_sniffer:after {
+    content: "early iPhone in landscape mode";
+  }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
+  #ios_sniffer:after {
+    content: "early iPhone in portrait mode";
+  }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  #ios_sniffer:after {
+    content: "iPhone 4(s) in landscape mode";
+  }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  #ios_sniffer:after {
+    content: "iPhone 4(s) in portrait mode";
+  }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+  #ios_sniffer:after {
+    content: "iPhone 5(s)(c) in landscape mode";
+  }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
+  #ios_sniffer:after {
+    content: "iPhone 5(s)(c) in portrait mode";
   }
 }
 /* iOS Media Queries ------------------------ */

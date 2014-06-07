@@ -37,9 +37,11 @@
 
 #ios_sniffer {
     &:before {
-        content: "Possible iOS device - "
+        content: "iOS device - "
     }
     &:after {
+        content: "none detected";
+        
         @media @mwh_mq_ipad_early_landscape {
             content: "early iPad in landscape mode";
         }
@@ -69,6 +71,12 @@
         }
         @media @mwh_mq_iphone_4_portrait {
             content: "iPhone 4(s) in portrait mode";
+        }
+        @media @mwh_mq_iphone_5_landscape {
+            content: "iPhone 5(s)(c) in landscape mode";
+        }
+        @media @mwh_mq_iphone_5_portrait {
+            content: "iPhone 5(s)(c) in portrait mode";
         }
     }
 }
