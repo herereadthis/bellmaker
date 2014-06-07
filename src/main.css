@@ -91,7 +91,7 @@ li {
 @media only screen and (min-width: 1440px) {
   [role="banner"],
   [role="main"] {
-    width: 129.6rem;
+    width: 134.4rem;
     background-color: rgba(255, 0, 255, 0.2);
   }
 }
