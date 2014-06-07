@@ -39,6 +39,7 @@
 /*ipad Mini, iPad 1 & 2 in portrait*/
 @mwh_mq_ipad_early_portrait:    ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1)";
 
+
 // CSS Resolution: 768 X 1024
 // Actual Resolution: 1536 X 2048
 // Device-pixel-ratio: 2
@@ -50,15 +51,26 @@
 @mwh_mq_ipad_retina_portrait:   ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 2)";
 
 
-// CSS Resolution: 320 X 480 (EARLY)	| 	320 X 480 (LATER)
-// Actual Resolution: 320 X 480 (EARLY)	| 	640 X 960 (LATER)
-// Device-pixel-ratio: 1 (EARLY)		|	2 (LATER)
-// iPhone 2G, 3G, 4, 4S Media Queries
+// CSS Resolution: 320 X 480
+// Actual Resolution: 320 X 480
+// Device-pixel-ratio: 1
+// iPhone 2G, 3G Media Queries
 @mwh_mq_iphone_early:           ~"only screen and (min-device-width : 320px) and (max-device-width : 480px)";
 // iPhone 2G-4S in landscape
 @mwh_mq_iphone_early_landscape: ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape)";
 // iPhone 2G-4S in portrait
 @mwh_mq_iphone_early_portrait:  ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait)";
+
+
+// CSS Resolution: 320 X 480 (LATER)
+// Actual Resolution: 640 X 960 (LATER)
+// Device-pixel-ratio: 2
+// iPhone 4, 4S Media Queries
+@mwh_mq_iphone_4:           ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (-webkit-min-device-pixel-ratio: 2)";
+// iPhone 2G-4S in landscape
+@mwh_mq_iphone_4_landscape: ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 2)";
+// iPhone 2G-4S in portrait
+@mwh_mq_iphone_4_portrait:  ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 2)";
 
 
 // CSS Resolution: 320 X 568

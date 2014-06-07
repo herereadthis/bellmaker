@@ -15,22 +15,60 @@
 
 // tells you which one are you using
 #basic_query:after {
-	@media @mq_2x_small {
-		content: "Query 1: 100% liquid for screens at 320 to 568";
-	}
-	@media @mq_x_small {
-		content: "Query 2: 100% liquid for screens at 568 to 768";
-	}
-	@media @mq_small {
-		content: "Query 3: 768 pixels for screens at 768 to 1024";
-	}
-	@media @mq_medium {
-		content: "Query 4: 960 pixels for screens at 1024 to 1280";
-	}
-	@media @mq_large {
-		content: "Query 5: 1152 pixels for screens at 1280 to 1440";
-	}
-	@media @mq_x_large {
-		content: "Query 6: 1296 pixels for screens at 1440 and up";
-	}
+    @media @mq_2x_small {
+        content: "Query 1: 100% liquid for screens at 320 to 568";
+    }
+    @media @mq_x_small {
+        content: "Query 2: 100% liquid for screens at 568 to 768";
+    }
+    @media @mq_small {
+        content: "Query 3: 768 pixels for screens at 768 to 1024";
+    }
+    @media @mq_medium {
+        content: "Query 4: 960 pixels for screens at 1024 to 1280";
+    }
+    @media @mq_large {
+        content: "Query 5: 1152 pixels for screens at 1280 to 1440";
+    }
+    @media @mq_x_large {
+        content: "Query 6: 1296 pixels for screens at 1440 and up";
+    }
+}
+
+#ios_sniffer {
+    &:before {
+        content: "Possible iOS device - "
+    }
+    &:after {
+        @media @mwh_mq_ipad_early_landscape {
+            content: "early iPad in landscape mode";
+        }
+        @media @mwh_mq_ipad_early_portrait {
+            content: "early iPad in portrait mode";
+        }
+        @media @mwh_mq_ipad_retina_landscape {
+            content: "retina iPad in landscape mode";
+        }
+        @media @mwh_mq_ipad_early_portrait {
+            content: "retina iPad in portrait mode";
+        }
+        @media @mwh_mq_iphone_early_landscape {
+            content: "early iPhone in landscape mode";
+        }
+        @media @mwh_mq_iphone_early_portrait {
+            content: "early iPhone in portrait mode";
+        }
+        @media @mwh_mq_iphone_early_landscape {
+            content: "early iPhone in landscape mode";
+        }
+        @media @mwh_mq_iphone_early_portrait {
+            content: "early iPhone in portrait mode";
+        }
+        @media @mwh_mq_iphone_4_landscape {
+            content: "iPhone 4(s) in landscape mode";
+        }
+        @media @mwh_mq_iphone_4_portrait {
+            content: "iPhone 4(s) in portrait mode";
+        }
+    }
 }
