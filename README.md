@@ -1,7 +1,15 @@
-needle
+Bellmaker
 ======
 
-Device-agnostic CSS media queries
+The Bellmaker is a library of ***device-agnostic*** *and* ***device-specific*** media queries that will complement your exisiting CSS. It will help you make *responsive websites*, especially if you are using grid layouts. It is free to use and modify as you please.
+
+## View the Demo
+
+```
+$ git clone https://github.com/herereadthis/bellmaker.git
+$ cd bellmaker/
+$ python -m SimpleHTTPServer
+```
 
 ## Build
 
@@ -25,8 +33,26 @@ $ git add bellmaker .gitmodules
 #### Add the Bellmaker to your LESS imports
 
 ```CSS
-@import "../../bellmaker/src/less/bellmaker.less";
+@import "/PATH_TO/../bellmaker/src/less/bellmaker.less";
 ```
+
+#### Reset page styling to make 10px = 1REM
+
+```CSS
+html {
+    font-size: 62.5%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    /* existing attributes */
+}
+body {
+    font-size: 100%;
+    font-size: 1em;
+    /* existing attributes */
+}
+```
+
+(*For more useful global CSS resets and utilities, check out out the companion [**Mossflower**](https://github.com/herereadthis/mossflower) repository on the [herereadthis](https://github.com/herereadthis) Github.*)
 
 ### Configuration
 
@@ -39,9 +65,7 @@ watch: {
         files: ["your_other_directories", "./bellmaker/src/less/*"],
         tasks: ["less"]
     },
-    ...: {
-        files: "..."
-    }
+    ...
 }
 ```
 
@@ -61,48 +85,126 @@ Media queries in Bellmaker bubble up from smallest to largest, in sequence.
 
 ### Concepts
 
+#### Liquid Mobile
+
+For resolutions that would mostly likely occur on handheld devices, the Bellmaker will fill the container it is given. The resolutions covered are 320, 360, 480, 568, 640, and 720.
+
+| Breakpoint | Width |
+| ---- | ---- |
+| *320 - 480* | **100%** |
+| *480 - 640* | **100%** |
+| *480 - 768* | **100%** | 
+
+While a breakpoint at 640 pixels does exist, it's okay to skip because it would only become useful if a significant number of people frequently held their HD phones (e.g. Samsung GS5, HTC Hero) in landscape mode, but not many do unless they're gaming.
+
 #### Column Snapping
 
-Media queries in the Bellmaker create a pseudo-liquid snapping layout. That is, as the screen gets larger, the elements on the page go to higher fixed widths. Each of the fixed widths is selected because they are divisible by 2, 3, 4, 6, 12, 16, and 24, which makes grid layouts easier.
+Media queries in the Bellmaker create a pseudo-liquid snapping layout. That is, as the screen gets larger, the elements on the page go to higher fixed widths. Each of the fixed widths was selected because they are divisible by 2, 3, 4, 6, 12, 16, and 24, which makes grid layouts easier. Resolution ranges were selected because the breakpoints are a best-fit for commonly-occurring screen resolutions.
 
-* 768-1024: 768 pixels = 12 X 64px columns
-* 1024-1280: 960 pixels = 12 X 80px columns
-* 1280-1440: 1152 pixels = 12 X 96px columns
-* 1440 and up: 1344 pixels = 12 X 108px columns
+| Breakpoint | Fixed Width | 3 Columns | 4 Columns | 12 Columns | 16 Columns | 24 columns |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| *768 - 1024*  | **768px**  | 256px | 192px | 64px  | 48px | 32px |
+| *1024 - 1280* | **960px**  | 320px | 240px | 80px  | 60px | 40px |
+| *1280 - 1440* | **1152px** | 384px | 288px | 96px  | 72px | 48px |
+| *1440 and up* | **1344px** | 448px | 336px | 112px | 84px | 56px |
 
-### In practice
+For example, if your browser window is 1366 pixels wide, then the width of the page content will be 1152 pixels wide, giving you 3 columns of 384 pixels each, or 12 columns of 96 pixels each. The Bellmaker does not do an addtional larger breakpoint because 6 media queries is enough, and designing for screen resolutions for 1600 or 1920 screens runs into usability difficulties with reading long lines of text.
 
-As LESS
+### Output
 
-```LESS
-@media @mq_2x_small {
-}
-@media @mq_x_small {
-}
-@media @mq_small {
-}
-@media @mq_medium {
-}
-@media @mq_large {
-}
-@media @mq_x_large {
+#### As LESS
+
+```
+#container_id {
+    @media @mq_baseline {
+        width: @pw_baseline;
+    }
+    @media @mq_2x_small {
+        width: @pw_2x_small;
+    }
+    @media @mq_x_small {
+        width: @pw_x_small;
+    }
+    @media @mq_small {
+        width: @pw_small;
+    }
+    @media @mq_medium {
+        width: @pw_medium;
+    }
+    @media @mq_large {
+        width: @pw_large;
+    }
+    @media @mq_x_large {
+        width: @pw_x_large;
+    }
 }
 ```
 
-Compiled as CSS
+Note: the abbreviation "mq" stands for "media query," and "pw" stands for "page width."
+
+#### Compiled as CSS
 
 ```CSS
 @media only screen and (min-width: 320px) {
+    #container_id {
+        width: 100%;
+    }
 }
-@media only screen and (min-width: 568px) {
+@media only screen and (min-width: 480px) {
+    #container_id {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 640px) {
+    #container_id {
+        width: 100%;
+    }
 }
 @media only screen and (min-width: 768px) {
+    #container_id {
+        width: 76.8rem;
+    }
 }
 @media only screen and (min-width: 1024px) {
+    #container_id {
+        width: 96rem;
+    }
 }
 @media only screen and (min-width: 1280px) {
+    #container_id {
+        width: 115.2rem;
+    }
 }
 @media only screen and (min-width: 1440px) {
+    #container_id {
+        width: 134.4rem;
+    }
+}
+```
+
+To speed up development, there is always the option of skipping or omitting breakpoints. In the above code, there is no need to declare breakpoints at 480px or 640px because ```#container_id {}``` would still be 100% width. Also, if you don't feel like (or would rather delay) designing for very large screens, then there is no need to specify ```@media @mq_x_large {...}``` As such, **even though the Bellmaker does provide 7 breakpoints,** ***you can use just 4*** **as a bare minimum.**
+
+```
+#container_id {
+    @media @mq_baseline {   width: @pw_baseline;}
+    @media @mq_small {      width: @pw_small;}
+    @media @mq_medium {     width: @pw_medium;}
+    @media @mq_large {      width: @pw_large;}
+}
+```
+
+```CSS
+@media only screen and (min-width: 320px) {
+    #container_id {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    #container_id {width: 76.8rem;}
+}
+@media only screen and (min-width: 1024px) {
+    #container_id {width: 96rem;}
+}
+@media only screen and (min-width: 1280px) {
+    #container_id {width: 115.2rem;}
 }
 ```
 

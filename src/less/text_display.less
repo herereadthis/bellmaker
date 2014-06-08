@@ -1,4 +1,6 @@
 
+@media @mq_baseline {
+}
 @media @mq_2x_small {
 }
 @media @mq_x_small {
@@ -15,11 +17,14 @@
 
 // tells you which one are you using
 #basic_query:after {
+    @media @mq_baseline {
+        content: "Query 1: 100% liquid for screens at 320 to 480";
+    }
     @media @mq_2x_small {
-        content: "Query 1: 100% liquid for screens at 320 to 568";
+        content: "Query 1: 100% liquid for screens at 480 to 640";
     }
     @media @mq_x_small {
-        content: "Query 2: 100% liquid for screens at 568 to 768";
+        content: "Query 2: 100% liquid for screens at 480 to 768";
     }
     @media @mq_small {
         content: "Query 3: 768 pixels for screens at 768 to 1024";
@@ -34,23 +39,9 @@
         content: "Query 6: 1296 pixels for screens at 1440 and up";
     }
 }
-#galaxy_sniffer {
+#device_sniffer {
     &:before {
-        content: "Android device - "
-    }
-    &:after {
-        content: "none detected";
-        @media @mwh_mq_gs4_landscape {
-            content: "Samsung Galaxy S4 in landscape mode";
-        }
-        @media @mwh_mq_gs4_portrait {
-            content: "Samsung Galaxy S4 in portrait mode";
-        }
-    }
-}
-#ios_sniffer {
-    &:before {
-        content: "iOS device - "
+        // content: "iOS device - ";
     }
     &:after {
         content: "none detected";
@@ -90,6 +81,12 @@
         }
         @media @mwh_mq_iphone_5_portrait {
             content: "iPhone 5(s)(c) in portrait mode";
+        }
+        @media @mwh_mq_hd3_landscape {
+            content: "1920 × 1080 HD : 3 in landscape mode";
+        }
+        @media @mwh_mq_hd3_portrait {
+            content: "1920 × 1080 HD : 3 in portrait mode";
         }
     }
 }

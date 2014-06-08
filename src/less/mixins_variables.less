@@ -1,10 +1,26 @@
-@mq_2x_small:   ~"only screen and (min-width: 320px)";
-@mq_x_small:    ~"only screen and (min-width: 568px)";
+// Breakpoints -------------------------------
+// Warning: you may be tempted to change these numbers, but trust me, they 
+// were very carefully selected to match against commonly occuring screen
+// resolutions, with the exception of 1440 but that's only because it's 
+// disproportionately represented among developers and our Macbooks. However,
+// the 1440 breakpoint is close enough to the standard 1368 laptop screens to
+// be totally reasonable in practice.
+// ---------------------------------------------
+@mq_baseline:   ~"only screen and (min-width: 320px)";
+@mq_2x_small:   ~"only screen and (min-width: 480px)";
+@mq_x_small:    ~"only screen and (min-width: 640px)";
 @mq_small:      ~"only screen and (min-width: 768px)";
 @mq_medium:     ~"only screen and (min-width: 1024px)";
 @mq_large:      ~"only screen and (min-width: 1280px)";
 @mq_x_large:    ~"only screen and (min-width: 1440px)";
 
+
+// Liquid/ Fixed Widths ----------------------
+// Again, I don't recommend you changing these numbers as they are all
+// selected because many different numbers can divide into them, making them
+// quite useful for building grid layouts.
+// ---------------------------------------------
+@pw_baseline: 100%;
 @pw_2x_small: 100%;
 @pw_x_small: 100%;
 @pw_small: 76.8rem;
@@ -15,26 +31,25 @@
 
 // Android Media Queries -----------------------
 // ---------------------------------------------
+// usage example:
+// @media @mwh_mq_hd3{}
 
 // CSS Resolution: 1080 X 1920
 // Actual Resolution: 360 X 640
 // Device-pixel-ratio: 3
-// All Samsung Galaxy S4
-@mwh_mq_gs4:                    ~"only screen and (min-device-width : 1080px) and (max-device-width : 1920px) and (-webkit-min-device-pixel-ratio: 3)";
+// Full HD phones: Samsun Galaxy S4, S5; HTC One
+@mwh_mq_hd3:                    ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (-webkit-min-device-pixel-ratio: 3)";
 // Samsung Galaxy S4 in landscape
-@mwh_mq_gs4_landscape:          ~"only screen and (min-device-width : 1080px) and (max-device-width : 1920px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 3)";
+@mwh_mq_hd3_landscape:          ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 3)";
 // Samsung Galaxy S4 in portrait
-@mwh_mq_gs4_portrait:           ~"only screen and (min-device-width : 1080px) and (max-device-width : 1920px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 3)";
+@mwh_mq_hd3_portrait:           ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 3)";
 
 
 // iOS Media Queries ---------------------------
 // ---------------------------------------------
 // usage example:
 // @media @ipad {}
-//
-// use prefix mwh_mq
-// adapted from http://www.stephentgilbert.com/mediaqueries/
-
+// built upon foundations from http://www.stephentgilbert.com/mediaqueries/
 
 // CSS Resolution: 768 X 1024
 // Actual Resolution: 768 X 1024
