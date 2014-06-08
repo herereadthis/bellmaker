@@ -89,11 +89,11 @@ Media queries in Bellmaker bubble up from smallest to largest, in sequence.
 
 For resolutions that would mostly likely occur on handheld devices, the Bellmaker will fill the container it is given. The resolutions covered are 320, 360, 480, 568, 640, and 720.
 
-| Breakpoint | Width |
-| ---- | ---- |
-| *320 - 480* | **100%** |
-| *480 - 640* | **100%** |
-| *480 - 768* | **100%** | 
+| Breakpoint | Width | iOS Devices | Other Devices |
+| ---- | ---- | ---- | ---- |
+| *320 - 480* | **100%** | iPhone Portrait | Samsung GS4+, HTC Hero M7+, Sony Xperia Z1+ |
+| *480 - 640* | **100%** | iPhone Landscape | Samsung GN3 + |
+| *640 - 768* | **100%** | iPad | Samsung GS4+ Landscape |
 
 While a breakpoint at 640 pixels does exist, it's okay to skip because it would only become useful if a significant number of people frequently held their HD phones (e.g. Samsung GS5, HTC Hero) in landscape mode, but not many do unless they're gaming.
 
@@ -101,7 +101,7 @@ While a breakpoint at 640 pixels does exist, it's okay to skip because it would 
 
 Media queries in the Bellmaker create a pseudo-liquid snapping layout. That is, as the screen gets larger, the elements on the page go to higher fixed widths. Each of the fixed widths was selected because they are divisible by 2, 3, 4, 6, 12, 16, and 24, which makes grid layouts easier. Resolution ranges were selected because the breakpoints are a best-fit for commonly-occurring screen resolutions.
 
-| Breakpoint | Fixed Width | 3 Columns | 4 Columns | 12 Columns | 16 Columns | 24 columns |
+| Breakpoint | Fixed Width | 3 Cols | 4 Cols | 12 Cols | 16 Cols | 24 Cols |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | *768 - 1024*  | **768px**  | 256px | 192px | 64px  | 48px | 32px |
 | *1024 - 1280* | **960px**  | 320px | 240px | 80px  | 60px | 40px |
