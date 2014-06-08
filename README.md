@@ -11,6 +11,8 @@ $ cd bellmaker/
 $ python -m SimpleHTTPServer
 ```
 
+Site will load at http://localhost:8000/
+
 ## Build
 
 ```
@@ -19,6 +21,12 @@ grunt
 ```
 
 ## Setup
+
+The Bellmaker assumes you have basic terminal skills and knowledge of Git. Additionally, your project is using LESS and Grunt.
+
+### But what if my project is old school?
+
+Maybe you write your novels on a typewriter. Maybe you develop your Tri-X in Rodinal. In which case, there is supplemental documentation for [***using the Bellmaker as straight CSS***](https://github.com/herereadthis/bellmaker/old_school.md).
 
 ### CSS importing
 
