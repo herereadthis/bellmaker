@@ -16,8 +16,8 @@ Site will load at http://localhost:8000/
 ## Build
 
 ```
-npm install
-grunt
+$ npm install
+$ grunt
 ```
 
 ## Setup
@@ -36,6 +36,7 @@ Maybe you write your novels on a typewriter. Maybe you develop your Tri-X in Rod
 $ cd my_repo
 $ git submodule add https://github.com/herereadthis/bellmaker.git
 $ git add bellmaker .gitmodules
+$ git commit -m "adds Bellmaker submodule"
 ```
 
 #### Add the Bellmaker to your LESS imports
@@ -99,9 +100,9 @@ For resolutions that would mostly likely occur on handheld devices, the Bellmake
 
 | Breakpoint | Width | iOS Devices | Other Devices |
 | ---- | ---- | ---- | ---- |
-| *320 - 480* | **100%** | iPhone Portrait | Samsung GS4+, HTC Hero M7+, Sony Xperia Z1+ |
-| *480 - 640* | **100%** | iPhone Landscape | Samsung GN3 + |
-| *640 - 768* | **100%** | iPad | Samsung GS4+ Landscape |
+| *320 - 480* | **100%** | iPhone Portrait | HD:3 phones |
+| *480 - 640* | **100%** | iPhone Landscape | HD:2 phones |
+| *640 - 768* | **100%** | iPad Portrait | HD:3 phones landscape |
 
 While a breakpoint at 640 pixels does exist, it's okay to skip because it would only become useful if a significant number of people frequently held their HD phones (e.g. Samsung GS5, HTC Hero) in landscape mode, but not many do unless they're gaming.
 
@@ -116,9 +117,9 @@ Media queries in the Bellmaker create a pseudo-liquid snapping layout. That is, 
 | *1280 - 1440* | **1152px** | 384px | 288px | 96px  | 72px | 48px |
 | *1440 and up* | **1344px** | 448px | 336px | 112px | 84px | 56px |
 
-For example, if your browser window is 1366 pixels wide, then the width of the page content will be 1152 pixels wide, giving you 3 columns of 384 pixels each, or 12 columns of 96 pixels each. The Bellmaker does not do an addtional larger breakpoint because 6 media queries is enough, and designing for screen resolutions for 1600 or 1920 screens runs into usability difficulties with reading long lines of text.
+For example, if your browser window is 1366 pixels wide, then the width of the page content will be 1152 pixels wide, giving you 3 columns of 384 pixels each, or 12 columns of 96 pixels each. The Bellmaker does not do an addtional larger breakpoint because 7 media queries is plenty enough, and designing for screen resolutions for 1600 or 1920 screens runs into usability difficulties with reading long lines of text.
 
-### Output
+### Device-Agnostic Output
 
 #### As LESS
 
@@ -201,6 +202,9 @@ To speed up development, there is always the option of skipping or omitting brea
 }
 ```
 
+Notice how the LESS variable names of the media queries just became very easy to remember?
+
+
 ```CSS
 @media only screen and (min-width: 320px) {
     #container_id {width: 100%;}
@@ -215,6 +219,18 @@ To speed up development, there is always the option of skipping or omitting brea
     #container_id {width: 115.2rem;}
 }
 ```
+
+### Device-Specific Output
+
+| Name | Resolution | Pixel Ratio | Real Resolution | Aspect Ratio | Known Devices |
+| ---- | ---- | ---- | ---- | ---- | ---- |
+| HD:2 | 1080×1920 | 2| 540×960 | 9:16 | Samsung GS3, GN3+ |
+| HD:3 | 1080×1920 | 3 | 360×640 | 9:16 | Samsung GS4+; HTC Hero M7+; Sony Xperia Z1+ |
+| early iPhone | 320×480 | 1 | 320×480 | 2:3 | iPhone 1-3 |
+| iPhone 4(s) | 640×960 | 1 | 320×480 | 2:3 | iPhone 4(s) |
+| late iPhone | 640×1136 | 1 | 320×568 | 9:16 | iPhone 5(s)(c) |
+| early iPad | 768×1024 | 1 | 768×1024 | 3:4 | iPad 1-2; iPad Mini 1 |
+| retina iPad | 1536×2056 | 2 | 768×1024 | 3:4 | iPad 3+; iPad Air; iPad Mini 2 |
 
 
 
