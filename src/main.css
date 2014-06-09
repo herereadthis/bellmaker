@@ -282,11 +282,11 @@ h3 {
 }
 @media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 4dppx) and (orientation : landscape) {
   #device_sniffer:after {
-    content: "1440p HD in landscape mode";
+    content: "WQHD:4 in landscape mode";
   }
 }
 @media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 4dppx) and (orientation : portrait) {
   #device_sniffer:after {
-    content: "1440p HD in portrait mode";
+    content: "WQHD:4 in portrait mode";
   }
 }
