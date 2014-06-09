@@ -1,17 +1,21 @@
 Bellmaker
 ======
 
-The Bellmaker is a library of ***device-agnostic*** *and* ***device-specific*** media queries that will complement your exisiting CSS. It will help you make *responsive websites*, especially if you are using grid layouts. It is free to use and modify as you please.
+The Bellmaker is a library of ***device-agnostic*** *and* ***device-specific*** media queries that will complement your exisiting CSS. 
+
+* It will help you make *responsive websites*, especially if you are using grid layouts.
+* It is free to use and modify as you please.
+* Both **LESS** (.less) and **SASS** (.scss) versions are available.
 
 ## View the Demo
 
 ```
 $ git clone https://github.com/herereadthis/bellmaker.git
 $ cd bellmaker/
-$ python -m SimpleHTTPServer
+$ python -m SimpleHTTPServer 8001
 ```
 
-Site will load at http://localhost:8000/
+Site will load at http://localhost:8001/
 
 ## Build
 
@@ -39,10 +43,16 @@ $ git add bellmaker .gitmodules
 $ git commit -m "adds Bellmaker submodule"
 ```
 
-#### Add the Bellmaker to your LESS imports
+#### As LESS: Add to your imports
 
 ```CSS
 @import "/PATH_TO/../bellmaker/src/less/bellmaker.less";
+```
+
+#### As SASS: Add mixins partial to any file that needs media queries
+
+```CSS
+@import "/PATH_TO/../bellmaker/src/less/mixins_variables";
 ```
 
 #### Reset page styling to make 10px = 1REM
@@ -149,6 +159,34 @@ For example, if your browser window is 1366 pixels wide, then the width of the p
 }
 ```
 
+#### As SASS
+
+```
+#container_id {
+    @media #{$mq_baseline} {
+        width: $pw_baseline;
+    }
+    @media #{$mq_2x_small} {
+        width: $pw_2x_small;
+    }
+    @media #{$mq_x_small} {
+        width: $pw_x_small;
+    }
+    @media #{$mq_small} {
+        width: $pw_small;
+    }
+    @media #{$mq_medium} {
+        width: $pw_medium;
+    }
+    @media #{$mq_large} {
+        width: $pw_large;
+    }
+    @media #{$mq_x_large} {
+        width: $pw_x_large;
+    }
+}
+```
+
 Note: the abbreviation "mq" stands for "media query," and "pw" stands for "page width."
 
 #### Compiled as CSS
@@ -193,6 +231,8 @@ Note: the abbreviation "mq" stands for "media query," and "pw" stands for "page 
 
 To speed up development, there is always the option of skipping or omitting breakpoints. In the above code, there is no need to declare breakpoints at 480px or 640px because ```#container_id {}``` would still be 100% width. Also, if you don't feel like (or would rather delay) designing for very large screens, then there is no need to specify ```@media @mq_x_large {...}``` As such, **even though the Bellmaker does provide 7 breakpoints,** ***you can use just 4*** **as a bare minimum.**
 
+#### As LESS
+
 ```
 #container_id {
     @media @mq_baseline {   width: @pw_baseline;}
@@ -202,7 +242,18 @@ To speed up development, there is always the option of skipping or omitting brea
 }
 ```
 
-Notice how the LESS variable names of the media queries just became very easy to remember?
+#### As SASS
+
+```
+#container_id {
+    @media #{$mq_baseline} {    width: $pw_baseline;}
+    @media #{$mq_small} {       width: $pw_small;}
+    @media #{$mq_medium} {      width: $pw_medium;}
+    @media #{$mq_large} {       width: $pw_large;}
+}
+```
+
+Notice how the LESS/SASS variable names of the media queries just became very easy to remember?
 
 
 ```CSS
@@ -222,12 +273,12 @@ Notice how the LESS variable names of the media queries just became very easy to
 
 ### Device-Specific Output
 
-| Name | Resolution | Pixel Ratio | Real Resolution | Aspect Ratio | Known Devices |
+| Name | Actual Resolution | Pixel Ratio | Display Resolution | Aspect Ratio | Known Devices |
 | ---- | ---- | ---- | ---- | ---- | ---- |
-| 15:9 HD:2 | 768×1280 | 2| 384×640 | 2:3 | Google Nexus 4 |
-| 720p HD:2 | 720×1280 | 2| 360:640 | 9:16 | Blackberry Z30; Motorola Droid Maxx, Razr HD; Samsung GN2; Sony Xperia S |
-| Full HD:2 | 1080×1920 | 2 | 560×960 | 9:16 | Samsung GN3 |
-| Full HD:3 | 1080×1920 | 3 | 360×640 | 9:16 | Google Nexus 5; HTC Hero M7+; LG G2; Samsung GS4+; Sony Xperia Z1+ |
+| 768 WXGA:2 | 768×1280 | 2| 384×640 | 2:3 | Google Nexus 4 |
+| 720 HD:2 | 720×1280 | 2| 360:640 | 9:16 | Blackberry Z30; Motorola Droid Maxx, Razr HD; Samsung GN2; Sony Xperia S |
+| 1080 HD:2 | 1080×1920 | 2 | 560×960 | 9:16 | Samsung GN3 |
+| 1080 HD:3 | 1080×1920 | 3 | 360×640 | 9:16 | Google Nexus 5; HTC Hero M7+; LG G2; Samsung GS4+; Sony Xperia Z1+ |
 | WQHD:4 | 1440×2560 | 4 | 360×640 | 9:16 | LG G3 |
 | early iPhone | 320×480 | 1 | 320×480 | 2:3 | iPhone 1-3 |
 | iPhone 4(s) | 640×960 | 1 | 320×480 | 2:3 | iPhone 4(s) |

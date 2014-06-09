@@ -1,0 +1,26 @@
+@import "mixins_variables";
+
+body {
+
+    @media #{$mq_baseline} {
+        width: $pw_baseline;
+    }
+    @media #{$mq_2x_small} {
+        width: $pw_2x_small;
+    }
+    @media #{$mq_x_small} {
+        width: $pw_x_small;
+    }
+    @media #{$mq_small} {
+        width: $pw_small;
+    }
+    @media #{$mq_medium} {
+        width: $pw_medium;
+    }
+    @media #{$mq_large} {
+        width: $pw_large;
+    }
+    @media #{$mq_x_large} {
+        width: $pw_x_large;
+    }
+}

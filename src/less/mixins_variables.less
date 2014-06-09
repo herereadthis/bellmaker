@@ -20,13 +20,13 @@
 // selected because many different numbers can divide into them, making them
 // quite useful for building grid layouts.
 // ---------------------------------------------
-@pw_baseline: 100%;
-@pw_2x_small: 100%;
-@pw_x_small: 100%;
-@pw_small: 76.8rem;
-@pw_medium: 96rem;
-@pw_large: 115.2rem;
-@pw_x_large: 134.4rem;
+@pw_baseline:   100%;
+@pw_2x_small:   100%;
+@pw_x_small:    100%;
+@pw_small:      76.8rem;
+@pw_medium:     96rem;
+@pw_large:      115.2rem;
+@pw_x_large:    134.4rem;
 
 
 // Android Media Queries -----------------------
@@ -36,74 +36,73 @@
 // Common 16:9 phones, 720p: Blackberry Z30; Motorola Droid Maxx, Razr HD; Samsung GN2; Sony Xperia S 
 // Common 16:9 phones, HD:2: Samsung GN3
 // Common 16:9 phones, HD:3: Google Nexus 5, HTC One M7+, LG G2; Samsung GS4+; Sony Xperia Z1+
-@ds_common_16_9:               ~"only screen and (min-device-width : 384px) and (max-device-width : 640px)";
+@ds_common_16_9:            ~"only screen and (min-device-width : 384px) and (max-device-width : 640px)";
 // True HD phones in landscape
-@ds_common_16_9_landscape:     ~"only screen and (min-device-width : 384px) and (max-device-width : 640px) and (orientation : landscape)";
+@ds_common_16_9_landscape:  ~"only screen and (min-device-width : 384px) and (max-device-width : 640px) and (orientation : landscape)";
 // True HD phones in portrait
-@ds_common_16_9_portrait:      ~"only screen and (min-device-width : 384px) and (max-device-width : 640px) and (orientation : portrait)";
+@ds_common_16_9_portrait:   ~"only screen and (min-device-width : 384px) and (max-device-width : 640px) and (orientation : portrait)";
 
 
 // Actual Resolution: 768 X 1280
 // Display Resolution: 384 X 640
 // Device-pixel-ratio: 2
-// 15:9 HD phones: Blackberry Z10; Google Nexus 4
-@ds_15_9_hd2:               ~"only screen and (min-device-width : 384px) and (max-device-width : 640px) and (min-resolution: 2dppx)";
+// 768 WXGA:2 phones: Blackberry Z10; Google Nexus 4
+@ds_768_wxga2:               ~"only screen and (min-device-width : 384px) and (max-device-width : 640px) and (min-resolution: 2dppx)";
 // True HD phones in landscape
-@ds_15_9_hd2_landscape:     ~"only screen and (min-device-width : 384px) and (max-device-width : 640px) and (min-resolution: 2dppx) and (orientation : landscape)";
+@ds_768_wxga2_landscape:     ~"only screen and (min-device-width : 384px) and (max-device-width : 640px) and (min-resolution: 2dppx) and (orientation : landscape)";
 // True HD phones in portrait
-@ds_15_9_hd2_portrait:      ~"only screen and (min-device-width : 384px) and (max-device-width : 640px) and (min-resolution: 2dppx) and (orientation : portrait)";
+@ds_768_wxga2_portrait:      ~"only screen and (min-device-width : 384px) and (max-device-width : 640px) and (min-resolution: 2dppx) and (orientation : portrait)";
 
 
 // Actual Resolution: 720 X 1280
 // Display Resolution: 360 X 640
 // Device-pixel-ratio: 2
-// 720p phones: Blackberry Z30; Motorola Droid Maxx, Razr HD; Samsung GN2; Sony Xperia S 
-// Full HD:2 phones: Samsung GN3
-@ds_720p_hd2:                    ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 2dppx)";
-// Full HD:2 phones in landscape
-@ds_720p_hd2_landscape:          ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 2dppx) and (orientation : landscape)";
-// Full HD:2 phones in portrait
-@ds_720p_hd2_portrait:           ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 2dppx) and (orientation : portrait)";
+// 720 HD:2 phones: Blackberry Z30; Motorola Droid Maxx, Razr HD; Samsung GN2; Sony Xperia S
+@ds_720p_hd2:               ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 2dppx)";
+// 720 HD:2 phones in landscape
+@ds_720p_hd2_landscape:     ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 2dppx) and (orientation : landscape)";
+// 720 HD:2 phones in portrait
+@ds_720p_hd2_portrait:      ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 2dppx) and (orientation : portrait)";
 
 
 // Actual Resolution: 1080 X 1920
 // Display Resolution: 360 X 640
 // Device-pixel-ratio: 2
-// Full HD:2 phones: Samsung GN3
-@ds_full_hd2:                    ~"only screen and (min-device-width : 540px) and (max-device-width : 960px) and (min-resolution: 2dppx)";
-// Full HD:2 phones in landscape
-@ds_full_hd2_landscape:          ~"only screen and (min-device-width : 540px) and (max-device-width : 960px) and (min-resolution: 2dppx) and (orientation : landscape)";
-// Full HD:2 phones in portrait
-@ds_full_hd2_portrait:           ~"only screen and (min-device-width : 540px) and (max-device-width : 960px) and (min-resolution: 2dppx) and (orientation : portrait)";
+// 1080 HD:2 phones: Samsung GN3
+@ds_full_hd2:               ~"only screen and (min-device-width : 540px) and (max-device-width : 960px) and (min-resolution: 2dppx)";
+// 1080 HD:2 phones in landscape
+@ds_full_hd2_landscape:     ~"only screen and (min-device-width : 540px) and (max-device-width : 960px) and (min-resolution: 2dppx) and (orientation : landscape)";
+// 1080 HD:2 phones in portrait
+@ds_full_hd2_portrait:      ~"only screen and (min-device-width : 540px) and (max-device-width : 960px) and (min-resolution: 2dppx) and (orientation : portrait)";
 
 
 // Actual Resolution: 1080 X 1920
 // Display Resolution: 360 X 640
 // Device-pixel-ratio: 3
 // 1080 HD:3 phones: Google Nexus 5, HTC One M7+, LG G2; Samsung GS4+; Sony Xperia Z1+
-@ds_1080_hd3:                    ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 3dppx)";
-// Full HD:3 phones in landscape
-@ds_1080_hd3_landscape:          ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 3dppx) and (orientation : landscape)";
-// Full HD:3 phones in portrait
-@ds_1080_hd3_portrait:           ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 3dppx) and (orientation : portrait)";
+@ds_1080_hd3:               ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 3dppx)";
+// 1080 HD:3 phones in landscape
+@ds_1080_hd3_landscape:     ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 3dppx) and (orientation : landscape)";
+// 1080 HD:3 phones in portrait
+@ds_1080_hd3_portrait:      ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 3dppx) and (orientation : portrait)";
 
 
 // Actual Resolution: 1440 X 2560
 // Display Resolution: 360 X 640
 // Device-pixel-ratio: 4
 // WQHD:4 phones: LG G3
-@ds_wqhd4:                    ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 4dppx)";
+@ds_wqhd4:                  ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 4dppx)";
 // Full HD phones in landscape
-@ds_wqhd4_landscape:          ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 4dppx) and (orientation : landscape)";
+@ds_wqhd4_landscape:        ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 4dppx) and (orientation : landscape)";
 // Full HD phones in portrait
-@ds_wqhd4_portrait:           ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 4dppx) and (orientation : portrait)";
+@ds_wqhd4_portrait:         ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 4dppx) and (orientation : portrait)";
+
+// ---------------------------------------------
+// ---------------------------------------------
 
 
 // iOS Media Queries ---------------------------
 // ---------------------------------------------
-// usage example:
-// @media @ds_ipad {}
-// built upon foundations from http://www.stephentgilbert.com/mediaqueries/
 
 // Actual Resolution: 768 X 1024
 // Display Resolution: 768 X 1024
@@ -149,11 +148,11 @@
 // Display Resolution: 640 X 960 (LATER)
 // Device-pixel-ratio: 2
 // iPhone 4, 4S Media Queries
-@ds_iphone_4:           ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 2dppx)";
+@ds_iphone_4:               ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 2dppx)";
 // iPhone 2G-4S in landscape
-@ds_iphone_4_landscape: ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 2dppx) and (orientation : landscape)";
+@ds_iphone_4_landscape:     ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 2dppx) and (orientation : landscape)";
 // iPhone 2G-4S in portrait
-@ds_iphone_4_portrait:  ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 2dppx) and (orientation : portrait)";
+@ds_iphone_4_portrait:      ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 2dppx) and (orientation : portrait)";
 
 
 // Actual Resolution: 320 X 568
@@ -167,9 +166,8 @@
 @ds_iphone_5_portrait:      ~"only screen and (min-device-width : 320px) and (max-device-width : 568px) and (min-resolution: 2dppx) and (orientation : portrait)";
 
 // ---------------------------------------------
-
-
-
-
-
 // ---------------------------------------------
+
+
+
+
