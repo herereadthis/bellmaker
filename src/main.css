@@ -179,22 +179,22 @@ h3 {
   content: "none detected";
   display: block;
 }
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (min-resolution: 1dppx) {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (min-resolution: 1dppx) and (orientation : landscape) {
   #device_sniffer:after {
     content: "early iPad in landscape mode";
   }
 }
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (min-resolution: 1dppx) {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (min-resolution: 1dppx) and (orientation : portrait) {
   #device_sniffer:after {
     content: "early iPad in portrait mode";
   }
 }
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (min-resolution: 2dppx) {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (min-resolution: 2dppx) and (orientation : landscape) {
   #device_sniffer:after {
     content: "retina iPad in landscape mode";
   }
 }
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (min-resolution: 1dppx) {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (min-resolution: 1dppx) and (orientation : portrait) {
   #device_sniffer:after {
     content: "retina iPad in portrait mode";
   }
@@ -219,22 +219,22 @@ h3 {
     content: "early iPhone in portrait mode";
   }
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (min-resolution: 2dppx) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 2dppx) and (orientation : landscape) {
   #device_sniffer:after {
     content: "iPhone 4(s) in landscape mode";
   }
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (min-resolution: 2dppx) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 2dppx) and (orientation : portrait) {
   #device_sniffer:after {
     content: "iPhone 4(s) in portrait mode";
   }
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) and (min-resolution: 2dppx) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (min-resolution: 2dppx) and (orientation : landscape) {
   #device_sniffer:after {
     content: "iPhone 5(s)(c) in landscape mode";
   }
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) and (min-resolution: 2dppx) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (min-resolution: 2dppx) and (orientation : portrait) {
   #device_sniffer:after {
     content: "iPhone 5(s)(c) in portrait mode";
   }
@@ -249,22 +249,22 @@ h3 {
     content: "True HD:2 in portrait mode";
   }
 }
-@media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : landscape) and (min-resolution: 3dppx) {
+@media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 3dppx) and (orientation : landscape) {
   #device_sniffer:after {
     content: "Full HD:3 in landscape mode";
   }
 }
-@media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 3dppx) {
+@media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 3dppx) and (orientation : portrait) {
   #device_sniffer:after {
     content: "Full HD:3 in portrait mode";
   }
 }
-@media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : landscape) and (min-resolution: 4dppx) {
+@media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 4dppx) and (orientation : landscape) {
   #device_sniffer:after {
     content: "1440p HD in landscape mode";
   }
 }
-@media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 4dppx) {
+@media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 4dppx) and (orientation : portrait) {
   #device_sniffer:after {
     content: "1440p HD in portrait mode";
   }
