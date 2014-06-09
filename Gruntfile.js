@@ -8,11 +8,18 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         // compiles LESS file to minified CSS
         less: {
-            development: {
+            minified: {
                 options: {
                     paths: ["./src/less", "./src/demo/less"],
-                    // yuicompress: true,
-                    // compress: true,
+                    cleancss: true
+                },
+                files: {
+                    "./src/main.minified.css": "./src/less/main.less"
+                }
+            }
+            uncompressed: {
+                options: {
+                    paths: ["./src/less", "./src/demo/less"],
                     cleancss: false
                 },
                 files: {
