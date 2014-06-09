@@ -1,0 +1,112 @@
+
+@media @mq_baseline {
+}
+@media @mq_2x_small {
+}
+@media @mq_x_small {
+}
+@media @mq_small {
+}
+@media @mq_medium {
+}
+@media @mq_large {
+}
+@media @mq_x_large {
+}
+
+
+// tells you which one are you using
+#basic_query:before {
+    content: "Device-agnostic: ";
+    font-weight: bold;
+}
+#basic_query:after {
+    display: block;
+
+    @media @mq_baseline {
+        content: "baseline - 100% liquid for screens at 320 to 480";
+    }
+    @media @mq_2x_small {
+        content: "2x-small - 100% liquid for screens at 480 to 640";
+    }
+    @media @mq_x_small {
+        content: "x small - 100% liquid for screens at 480 to 768";
+    }
+    @media @mq_small {
+        content: "small - 768 pixels for screens at 768 to 1024";
+    }
+    @media @mq_medium {
+        content: "medium - 960 pixels for screens at 1024 to 1280";
+    }
+    @media @mq_large {
+        content: "large - 1152 pixels for screens at 1280 to 1440";
+    }
+    @media @mq_x_large {
+        content: "x-large - 1296 pixels for screens at 1440 and up";
+    }
+}
+#device_sniffer {
+    &:before {
+        content: "Device-specific: ";
+        font-weight: bold;
+    }
+    &:after {
+        content: "none detected";
+        display: block;
+        
+        @media @ds_ipad_early_landscape {
+            content: "early iPad in landscape mode";
+        }
+        @media @ds_ipad_early_portrait {
+            content: "early iPad in portrait mode";
+        }
+        @media @ds_ipad_retina_landscape {
+            content: "retina iPad in landscape mode";
+        }
+        @media @ds_ipad_early_portrait {
+            content: "retina iPad in portrait mode";
+        }
+        @media @ds_iphone_early_landscape {
+            content: "early iPhone in landscape mode";
+        }
+        @media @ds_iphone_early_portrait {
+            content: "early iPhone in portrait mode";
+        }
+        @media @ds_iphone_early_landscape {
+            content: "early iPhone in landscape mode";
+        }
+        @media @ds_iphone_early_portrait {
+            content: "early iPhone in portrait mode";
+        }
+        @media @ds_iphone_4_landscape {
+            content: "iPhone 4(s) in landscape mode";
+        }
+        @media @ds_iphone_4_portrait {
+            content: "iPhone 4(s) in portrait mode";
+        }
+        @media @ds_iphone_5_landscape {
+            content: "iPhone 5(s)(c) in landscape mode";
+        }
+        @media @ds_iphone_5_portrait {
+            content: "iPhone 5(s)(c) in portrait mode";
+        }
+        @media @ds_true_hd2_landscape {
+            content: "True HD:2 in landscape mode";
+        }
+        @media @ds_true_hd2_portrait {
+            content: "True HD:2 in portrait mode";
+        }
+        @media @ds_full_hd3_landscape {
+            content: "Full HD:3 in landscape mode";
+        }
+        @media @ds_full_hd3_portrait {
+            content: "Full HD:3 in portrait mode";
+        }
+        @media @ds_1440p_hd_landscape {
+            content: "1440p HD in landscape mode";
+        }
+        @media @ds_1440p_hd_portrait {
+            content: "1440p HD in portrait mode";
+        }
+    }
+}

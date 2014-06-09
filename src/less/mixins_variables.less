@@ -31,18 +31,38 @@
 
 // Android Media Queries -----------------------
 // ---------------------------------------------
-// usage example:
-// @media @mwh_mq_hd3{}
+
+// CSS Resolution: 768 X 1280
+// Actual Resolution: 384 X 640
+// Device-pixel-ratio: 2
+// True HD phones: Google Nexus 4
+@ds_true_hd2:				~"only screen and (min-device-width : 384px) and (max-device-width : 640px) and (min-resolution: 2dppx)";
+// True HD phones in landscape
+@ds_true_hd2_landscape:		~"only screen and (min-device-width : 384px) and (max-device-width : 640px) and (min-resolution: 2dppx) and (orientation : landscape)";
+// True HD phones in portrait
+@ds_true_hd2_portrait:		~"only screen and (min-device-width : 384px) and (max-device-width : 640px) and (min-resolution: 2dppx) and (orientation : portrait)";
+
 
 // CSS Resolution: 1080 X 1920
 // Actual Resolution: 360 X 640
 // Device-pixel-ratio: 3
-// Full HD phones: Samsun Galaxy S4, S5; HTC One
-@mwh_mq_hd3:                    ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (-webkit-min-device-pixel-ratio: 3)";
-// Samsung Galaxy S4 in landscape
-@mwh_mq_hd3_landscape:          ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 3)";
-// Samsung Galaxy S4 in portrait
-@mwh_mq_hd3_portrait:           ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 3)";
+// Full HD phones: Google Nexus 5, HTC One M7+, LG G2; Samsung Galaxy S4+; Sony Xperia Z1+
+@ds_full_hd3:                    ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 3dppx)";
+// Full HD phones in landscape
+@ds_full_hd3_landscape:          ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : landscape) and (min-resolution: 3dppx)";
+// Full HD phones in portrait
+@ds_full_hd3_portrait:           ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 3dppx)";
+
+
+// CSS Resolution: 1440 X 2560
+// Actual Resolution: 360 X 640
+// Device-pixel-ratio: 4
+// 1440p HD phones: LG G3
+@ds_1440p_hd:                    ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 4dppx)";
+// Full HD phones in landscape
+@ds_1440p_hd_landscape:          ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : landscape) and (min-resolution: 4dppx)";
+// Full HD phones in portrait
+@ds_1440p_hd_portrait:           ~"only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 4dppx)";
 
 
 // iOS Media Queries ---------------------------
@@ -55,62 +75,78 @@
 // Actual Resolution: 768 X 1024
 // Device-pixel-ratio: 1
 // All iPads in portrait & landscape
-@mwh_mq_ipad:                   ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px)";
+@ds_ipad:                   ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px)";
 // All iPads in landscape
-@mwh_mq_ipad_landscape:         ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)";
+@ds_ipad_landscape:         ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)";
 // All iPads in portrait
-@mwh_mq_ipad_portrait:          ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)";
+@ds_ipad_portrait:          ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)";
 
 // ipad Mini, iPad 1 & 2 in portrait & landscape
-@mwh_mq_ipad_early:             ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1)";
+@ds_ipad_early:             ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (min-resolution: 1dppx)";
 // ipad Mini, iPad 1 & 2 in landscape
-@mwh_mq_ipad_early_landscape:   ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 1)";
+@ds_ipad_early_landscape:   ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (min-resolution: 1dppx)";
 // ipad Mini, iPad 1 & 2 in portrait
-@mwh_mq_ipad_early_portrait:    ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1)";
+@ds_ipad_early_portrait:    ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (min-resolution: 1dppx)";
 
 
 // CSS Resolution: 768 X 1024
 // Actual Resolution: 1536 X 2048
 // Device-pixel-ratio: 2
 // Retina iPad (includes Mini Retina) in portrait & landscape
-@mwh_mq_ipad_retina:            ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 2)";
+@ds_ipad_retina:            ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (min-resolution: 2dppx)";
 // Retina iPad in landscape
-@mwh_mq_ipad_retina_landscape:  ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 2)";
+@ds_ipad_retina_landscape:  ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (min-resolution: 2dppx)";
 // Retina iPad in portrait
-@mwh_mq_ipad_retina_portrait:   ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 2)";
+@ds_ipad_retina_portrait:   ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (min-resolution: 2dppx)";
 
 
 // CSS Resolution: 320 X 480
 // Actual Resolution: 320 X 480
 // Device-pixel-ratio: 1
 // iPhone 2G, 3G Media Queries
-@mwh_mq_iphone_early:           ~"only screen and (min-device-width : 320px) and (max-device-width : 480px)";
+@ds_iphone_early:           ~"only screen and (min-device-width : 320px) and (max-device-width : 480px)";
 // iPhone 2G-4S in landscape
-@mwh_mq_iphone_early_landscape: ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape)";
+@ds_iphone_early_landscape: ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape)";
 // iPhone 2G-4S in portrait
-@mwh_mq_iphone_early_portrait:  ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait)";
+@ds_iphone_early_portrait:  ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait)";
 
 
 // CSS Resolution: 320 X 480 (LATER)
 // Actual Resolution: 640 X 960 (LATER)
 // Device-pixel-ratio: 2
 // iPhone 4, 4S Media Queries
-@mwh_mq_iphone_4:           ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (-webkit-min-device-pixel-ratio: 2)";
+@ds_iphone_4:           ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 2dppx)";
 // iPhone 2G-4S in landscape
-@mwh_mq_iphone_4_landscape: ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 2)";
+@ds_iphone_4_landscape: ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (min-resolution: 2dppx)";
 // iPhone 2G-4S in portrait
-@mwh_mq_iphone_4_portrait:  ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 2)";
+@ds_iphone_4_portrait:  ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (min-resolution: 2dppx)";
 
 
 // CSS Resolution: 320 X 568
 // Actual Resolution: 640 X 1136
 // Device-pixel-ratio: 2
 // iPhone 5 (includes 5C) in portrait & landscape
-@mwh_mq_iphone_5:               ~"only screen and (min-device-width : 320px) and (max-device-width : 568px)";
+@ds_iphone_5:               ~"only screen and (min-device-width : 320px) and (max-device-width : 568px) and (min-resolution: 2dppx)";
 // iPhone 5 in landscape
-@mwh_mq_iphone_5_landscape:     ~"only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape)";
+@ds_iphone_5_landscape:     ~"only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) and (min-resolution: 2dppx)";
 // iPhone 5 in portrait
-@mwh_mq_iphone_5_portrait:      ~"only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait)";
+@ds_iphone_5_portrait:      ~"only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) and (min-resolution: 2dppx)";
 
 // ---------------------------------------------
+
+
+// Retina Macbook Pro Queries ------------------
+// ---------------------------------------------
+
+// CSS Resolution: 1280 X 800
+// Actual Resolution: 2560 X 1600
+// Device-pixel-ratio: 2
+// Retina Macbook Pro 13-inch
+@ds_rmbp_13:				~"only screen and (min-device-width : 800px) and (max-device-width : 1280px) and (min-resolution: 2dppx)";
+
+
+
+
+
+
 // ---------------------------------------------
