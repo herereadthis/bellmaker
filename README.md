@@ -224,9 +224,11 @@ Notice how the LESS variable names of the media queries just became very easy to
 
 | Name | Resolution | Pixel Ratio | Real Resolution | Aspect Ratio | Known Devices |
 | ---- | ---- | ---- | ---- | ---- | ---- |
-| True HD:2 | 768×1280 | 2| 384×640 | 2:3 | Google Nexus 4 |
-| Full HD:2 | 1080×1920 | 2| 540×960 | 9:16 | Samsung GS3, GN3+ |
+| 15:9 HD:2 | 768×1280 | 2| 384×640 | 2:3 | Google Nexus 4 |
+| 720p HD:2 | 720×1280 | 2| 360:640 | 9:16 | Blackberry Z30; Motorola Droid Maxx, Razr HD; Samsung GN2; Sony Xperia S |
+| Full HD:2 | 1080×1920 | 2 | 560×960 | 9:16 | Samsung GN3 |
 | Full HD:3 | 1080×1920 | 3 | 360×640 | 9:16 | Google Nexus 5; HTC Hero M7+; LG G2; Samsung GS4+; Sony Xperia Z1+ |
+| 1440p HD:4 | 1440×2560 | 4 | 360×640 | 9:16 | LG G3 |
 | early iPhone | 320×480 | 1 | 320×480 | 2:3 | iPhone 1-3 |
 | iPhone 4(s) | 640×960 | 1 | 320×480 | 2:3 | iPhone 4(s) |
 | late iPhone | 640×1136 | 1 | 320×568 | 9:16 | iPhone 5(s)(c) |

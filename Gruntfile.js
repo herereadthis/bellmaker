@@ -10,7 +10,7 @@ module.exports = function(grunt) {
         less: {
             development: {
                 options: {
-                    paths: ["./src/less"],
+                    paths: ["./src/less", "./src/demo/less"],
                     // yuicompress: true,
                     // compress: true,
                     cleancss: false
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
         watch: {
             // runs less task when any less files change
             less: {
-                files: "./src/less/*",
+                files: ["./src/less/*", "./src/demo/less/*"],
                 tasks: ["less"]
             },
             html: {
@@ -36,6 +36,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', [
         // 'uglify'
+        'less',
         'watch'
     ]);
 };
