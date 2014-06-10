@@ -110,9 +110,9 @@ For resolutions that would mostly likely occur on handheld devices, the Bellmake
 
 | Breakpoint | Width | iOS Devices | Other Devices |
 | ---- | ---- | ---- | ---- |
-| *320 - 480* | **100%** | iPhone Portrait | HD:3 phones |
-| *480 - 640* | **100%** | iPhone Landscape | HD:2 phones |
-| *640 - 768* | **100%** | iPad Portrait | HD:3 phones landscape |
+| *320 - 480* | **100%** | iPhone Portrait | 720 HD:2, 1080 HD:3, WQHD:4 |
+| *480 - 640* | **100%** | iPhone Landscape | 768 WXGA:2 |
+| *640 - 768* | **100%** | iPad Portrait | 720 HD:2 (landscape), 1080 HD:3 (landscape), WQHD:4 (landscape) |
 
 While a breakpoint at 640 pixels does exist, it's okay to skip because it would only become useful if a significant number of people frequently held their HD phones (e.g. Samsung GS5, HTC Hero) in landscape mode, but not many do unless they're gaming.
 
@@ -161,7 +161,7 @@ For example, if your browser window is 1366 pixels wide, then the width of the p
 
 #### As SASS
 
-```
+```SASS
 #container_id {
     @media #{$mq_baseline} {
         width: $pw_baseline;
@@ -244,7 +244,7 @@ To speed up development, there is always the option of skipping or omitting brea
 
 #### As SASS
 
-```
+```SASS
 #container_id {
     @media #{$mq_baseline} {    width: $pw_baseline;}
     @media #{$mq_small} {       width: $pw_small;}
@@ -285,6 +285,67 @@ Notice how the LESS/SASS variable names of the media queries just became very ea
 | late iPhone | 640×1136 | 1 | 320×568 | 9:16 | iPhone 5(s)(c) |
 | early iPad | 768×1024 | 1 | 768×1024 | 3:4 | iPad 1-2; iPad Mini 1 |
 | retina iPad | 1536×2056 | 2 | 768×1024 | 3:4 | iPad 3+; iPad Air; iPad Mini 2 |
+
+Notice how at first glance, there seems to be too many different screen resolutions of which to keep track, most acuually share the same 360×640 resolution? They are all using a 9:16 aspect ratio. Use the ```ds_common_9_16``` variable.
+
+#### Target all 9:16 phones (LESS)
+
+```LESS
+@media @ds_common_9_16 {
+    #container_id   {width: 100%;}
+}
+```
+
+#### Target all 9:16 phones (SASS)
+
+```SASS
+@media #{ds_common_9_16} {
+    #container_id   {width: 100%;}
+}
+```
+
+#### Compiled as CSS
+
+```CSS
+@media only screen and (min-device-width : 360px) and (max-device-width : 640px) {
+    #container_id   {width: 100%;}
+}
+```
+
+### Orientation
+
+There are two ways to target orientation, depending on your personal preference. Declare the orientation as a variable (```orientation_landscape``` vs. ```orientation_portrait```) or use the pre-assigned variable (```_landscape``` vs. ```_portrait```).
+
+#### LESS
+
+```
+@media @ds_common_9_16 @orientation_landscape {}
+@media @ds_common_9_16_landscape {}
+
+@media @ds_common_9_16 @orientation_portrait {}
+@media @ds_common_9_16_landscape {}
+```
+
+#### SASS
+
+```
+@media #{ds_common_9_16} #{orientation_landscape} {}
+@media #{ds_common_9_16_landscape} {}
+
+@media #{ds_common_9_16} #{orientation_portrait} {}
+@media #{ds_common_9_16_landscape} {}
+```
+
+#### Compiled as CSS
+
+```CSS
+@media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : landscape) {
+}
+@media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : portrait) {
+}
+```
+
+
 
 
 

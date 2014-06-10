@@ -29,6 +29,16 @@ $pw_large:      115.2rem;
 $pw_x_large:    134.4rem;
 
 
+// Alternative Orientation Variables -----------
+// That is, there are two ways to write device-specific media queries,
+// depending on your personal preference. Here's the iPhone 5 as an example:
+// @media @ds_iphone_5 @orientation_landscape {}
+// @media @ds_iphone_5_landscape {}
+// ---------------------------------------------
+$orientation_landscape:     "and (orientation : landscape)";
+$orientation_portrait:      "and (orientation : portrait)";
+
+
 // Android Media Queries -----------------------
 // ---------------------------------------------
 
@@ -36,11 +46,11 @@ $pw_x_large:    134.4rem;
 // Common 16:9 phones, 720p: Blackberry Z30; Motorola Droid Maxx, Razr HD; Samsung GN2; Sony Xperia S 
 // Common 16:9 phones, HD:2: Samsung GN3
 // Common 16:9 phones, HD:3: Google Nexus 5, HTC One M7+, LG G2; Samsung GS4+; Sony Xperia Z1+
-$ds_common_16_9:            "only screen and (min-device-width : 384px) and (max-device-width : 640px)";
+$ds_common_9_16:            "only screen and (min-device-width : 360px) and (max-device-width : 640px)";
 // True HD phones in landscape
-$ds_common_16_9_landscape:  "only screen and (min-device-width : 384px) and (max-device-width : 640px) and (orientation : landscape)";
+$ds_common_9_16_landscape:  "only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : landscape)";
 // True HD phones in portrait
-$ds_common_16_9_portrait:   "only screen and (min-device-width : 384px) and (max-device-width : 640px) and (orientation : portrait)";
+$ds_common_9_16_portrait:   "only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : portrait)";
 
 
 // Actual Resolution: 768 X 1280
