@@ -26,7 +26,7 @@ $ grunt
 
 ## Setup
 
-The Bellmaker assumes you have basic terminal skills and knowledge of Git. Additionally, your project is using LESS and Grunt.
+The Bellmaker assumes you have basic terminal skills and knowledge of Git. Additionally, your project is using LESS/SASS and Grunt.
 
 ### But what if my project is old school?
 
@@ -85,8 +85,7 @@ watch: {
     less: {
         files: ["your_other_directories", "./bellmaker/src/less/*"],
         tasks: ["less"]
-    },
-    ...
+    }
 }
 ```
 
@@ -98,9 +97,9 @@ watch: {
     sass: {
         files: ["your_other_directories", "./bellmaker/src/sass/*"],
         tasks: ["sass"]
-    },
-    ...
+    }
 }
+```
 
 #### Add vital stuff to your index.html file
 
@@ -125,7 +124,7 @@ For resolutions that would mostly likely occur on handheld devices, the Bellmake
 | ---- | ---- | ---- | ---- |
 | *320 - 480* | **100%** | iPhone Portrait | 720 HD:2, 1080 HD:3, WQHD:4 |
 | *480 - 640* | **100%** | iPhone Landscape | 768 WXGA:2 |
-| *640 - 768* | **100%** | iPad Portrait | 720 HD:2 (landscape), 1080 HD:3 (landscape), WQHD:4 (landscape) |
+| *640 - 768* | **100%** | | 720 HD:2 (landscape), 1080 HD:3 (landscape), WQHD:4 (landscape) |
 
 While a breakpoint at 640 pixels does exist, it's okay to skip because it would only become useful if a significant number of people frequently held their HD phones (e.g. Samsung GS5, HTC Hero) in landscape mode, but not many do unless they're gaming.
 
