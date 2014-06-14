@@ -1,13 +1,18 @@
 {
   "name": "bellmaker",
-  "description": "Responsive CSS media queries for LESS and SASS, with device-agnostic and device-specific breakpoints",
-  "version": "0.1.3",
+  "version": "0.1.4",
+  "authors": [
+    "Jimmy Ha <herereadthis@gmail.com>"
+  ],
+  "description": "Responsive CSS media query library for LESS and SASS, with device-agnostic and device-specific breakpoints",
+  "homepage": "http://herereadthis.com",
   "main": [
     "src/less/main.less",
     "src/sass/_mixins_variables.scss",
     "src/css/main.less-minified.css",
     "src/css/main.sass-minified.css"
   ],
+  "license": "MIT",
   "ignore": [
     ".bowerrc",
     ".gitignore",
