@@ -1,7 +1,7 @@
 {
   "name": "bellmaker",
-  "version": "0.1.2",
-  "description": "Bellmaker the CSS Media Query Master",
+  "version": "0.1.3",
+  "description": "Responsive CSS media queries for LESS and SASS, with device-agnostic and device-specific breakpoints",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
