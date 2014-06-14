@@ -1,0 +1,13 @@
+{
+  "name": "bellmaker",
+  "version": "5.4.39",
+  "ignore": [
+    "bower_components",
+    "Gruntfile.js",
+    "index.html",
+    "node_modules",
+    "old_school.md",
+    "src/demo",
+    ".sass-cache"
+  ]
+}

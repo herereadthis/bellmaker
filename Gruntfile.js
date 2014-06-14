@@ -7,6 +7,12 @@ module.exports = function(grunt) {
         // imports the JSON metadata stored in package.json
         pkg: grunt.file.readJSON('package.json'),
         // compiles LESS file to minified CSS
+        jekyll: {
+            dev: {
+                src: 'templates',
+                dest: 'dev'
+            }
+        },
         less: {
             minifiedLess: {
                 options: {
@@ -62,9 +68,15 @@ module.exports = function(grunt) {
             }
         }
     });
+    grunt.loadNpmTasks('grunt-jekyll');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+
+    grunt.registerTask('makeJekyll', [
+        // 'uglify'
+        'jekyll'
+    ]);
 
     grunt.registerTask('default', [
         // 'uglify'
