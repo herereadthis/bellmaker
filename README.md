@@ -30,11 +30,17 @@ The Bellmaker assumes you have basic terminal skills and knowledge of Git. Addit
 
 ### But what if my project is old school?
 
-Maybe you write your novels on a typewriter. Maybe you develop your Tri-X in Rodinal. In which case, there is supplemental documentation for [***using the Bellmaker as straight CSS***](https://github.com/herereadthis/bellmaker/old_school.md).
+Maybe you write your novels on a typewriter. Maybe you develop your Tri-X in Rodinal. In which case, there is supplemental documentation for [***using the Bellmaker as straight CSS***](https://github.com/herereadthis/bellmaker/docs/old_school.md).
 
 ### CSS importing
 
-#### Add the Bellmaker as a submodule
+#### Recommended: Add the Bellmaker as a Bower dependency
+
+```
+$ bower install --save bellmaker
+```
+
+#### Alternative: Add the Bellmaker as a submodule
 
 ```
 $ cd my_repo

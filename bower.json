@@ -1,13 +1,21 @@
 {
   "name": "bellmaker",
-  "version": "0.1.1",
+  "version": "0.1.2",
+  "main": [
+    "src/less/main.less",
+    "src/sass/_mixins_variables.scss",
+    "src/css/main.less-minified.css",
+    "src/css/main.sass-minified.css",
+  ],
   "ignore": [
-    "bower_components",
+    ".bowerrc",
+    ".gitignore",
+    ".sass-cache",
+    "docs",
     "Gruntfile.js",
     "index.html",
     "node_modules",
     "old_school.md",
-    "src/demo",
-    ".sass-cache"
+    "src/demo"
   ]
 }
