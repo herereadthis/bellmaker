@@ -1,6 +1,6 @@
 {
   "name": "bellmaker",
-  "version": "5.4.39",
+  "version": "0.1.1",
   "ignore": [
     "bower_components",
     "Gruntfile.js",
