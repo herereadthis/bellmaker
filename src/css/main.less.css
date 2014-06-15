@@ -1,3 +1,38 @@
+@media only screen and (min-width: 320px) {
+  .bellmaker_container {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .bellmaker_container {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 640px) {
+  .bellmaker_container {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .bellmaker_container {
+    width: 76.8rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .bellmaker_container {
+    width: 96rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .bellmaker_container {
+    width: 115.2rem;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .bellmaker_container {
+    width: 134.4rem;
+  }
+}
 html {
   font-size: 62.5%;
   height: 100%;
@@ -84,49 +119,42 @@ h3 {
 @media only screen and (min-width: 320px) {
   [role="banner"],
   [role="main"] {
-    width: 100%;
     background-color: rgba(0, 0, 255, 0.1);
   }
 }
 @media only screen and (min-width: 480px) {
   [role="banner"],
   [role="main"] {
-    width: 100%;
     background-color: rgba(0, 255, 255, 0.1);
   }
 }
 @media only screen and (min-width: 640px) {
   [role="banner"],
   [role="main"] {
-    width: 100%;
     background-color: rgba(255, 0, 255, 0.1);
   }
 }
 @media only screen and (min-width: 768px) {
   [role="banner"],
   [role="main"] {
-    width: 76.8rem;
     background-color: rgba(0, 0, 255, 0.2);
   }
 }
 @media only screen and (min-width: 1024px) {
   [role="banner"],
   [role="main"] {
-    width: 96rem;
     background-color: rgba(0, 255, 255, 0.2);
   }
 }
 @media only screen and (min-width: 1280px) {
   [role="banner"],
   [role="main"] {
-    width: 115.2rem;
     background-color: rgba(255, 0, 255, 0.2);
   }
 }
 @media only screen and (min-width: 1440px) {
   [role="banner"],
   [role="main"] {
-    width: 134.4rem;
     background-color: rgba(255, 255, 0, 0.2);
   }
 }
