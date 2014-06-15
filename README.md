@@ -1,5 +1,7 @@
 Bellmaker
-======
+=========
+
+[![Bower version](https://badge.fury.io/bo/bellmaker.svg)](http://badge.fury.io/bo/bellmaker)
 
 The Bellmaker is a library of ***device-agnostic*** *and* ***device-specific*** media queries that will complement your exisiting CSS. 
 
@@ -7,22 +9,22 @@ The Bellmaker is a library of ***device-agnostic*** *and* ***device-specific*** 
 * It is free to use and modify as you please.
 * Both **LESS** (.less) and **SASS** (.scss) versions are available.
 
-## View the Demo
+## Build
 
 ```
 $ git clone https://github.com/herereadthis/bellmaker.git
 $ cd bellmaker/
+$ npm install
+$ grunt
+```
+
+## View the Demo
+
+```
 $ python -m SimpleHTTPServer 8001
 ```
 
 Site will load at http://localhost:8001/
-
-## Build
-
-```
-$ npm install
-$ grunt
-```
 
 ## Setup
 
@@ -59,6 +61,7 @@ $ git commit -m "adds Bellmaker submodule"
 
 ```CSS
 @import "/PATH_TO/../bellmaker/src/less/mixins_variables";
+@import "/PATH_TO/../bellmaker/src/less/page_layout";
 ```
 
 #### Reset page styling to make 10px = 1REM
@@ -152,7 +155,7 @@ For example, if your browser window is 1366 pixels wide, then the width of the p
 #### As LESS
 
 ```
-#container_id {
+.bellmaker_container {
     @media @mq_baseline {
         width: @pw_baseline;
     }
@@ -180,7 +183,7 @@ For example, if your browser window is 1366 pixels wide, then the width of the p
 #### As SASS
 
 ```SASS
-#container_id {
+.bellmaker_container {
     @media #{$mq_baseline} {
         width: $pw_baseline;
     }
@@ -211,37 +214,37 @@ Note: the abbreviation "mq" stands for "media query," and "pw" stands for "page 
 
 ```CSS
 @media only screen and (min-width: 320px) {
-    #container_id {
+    .bellmaker_container {
         width: 100%;
     }
 }
 @media only screen and (min-width: 480px) {
-    #container_id {
+    .bellmaker_container {
         width: 100%;
     }
 }
 @media only screen and (min-width: 640px) {
-    #container_id {
+    .bellmaker_container {
         width: 100%;
     }
 }
 @media only screen and (min-width: 768px) {
-    #container_id {
+    .bellmaker_container {
         width: 76.8rem;
     }
 }
 @media only screen and (min-width: 1024px) {
-    #container_id {
+    .bellmaker_container {
         width: 96rem;
     }
 }
 @media only screen and (min-width: 1280px) {
-    #container_id {
+    .bellmaker_container {
         width: 115.2rem;
     }
 }
 @media only screen and (min-width: 1440px) {
-    #container_id {
+    .bellmaker_container {
         width: 134.4rem;
     }
 }
@@ -252,7 +255,7 @@ To speed up development, there is always the option of skipping or omitting brea
 #### As LESS
 
 ```
-#container_id {
+.bellmaker_container {
     @media @mq_baseline {   width: @pw_baseline;}
     @media @mq_small {      width: @pw_small;}
     @media @mq_medium {     width: @pw_medium;}
@@ -263,7 +266,7 @@ To speed up development, there is always the option of skipping or omitting brea
 #### As SASS
 
 ```SASS
-#container_id {
+.bellmaker_container {
     @media #{$mq_baseline} {    width: $pw_baseline;}
     @media #{$mq_small} {       width: $pw_small;}
     @media #{$mq_medium} {      width: $pw_medium;}
@@ -276,16 +279,16 @@ Notice how the LESS/SASS variable names of the media queries just became very ea
 
 ```CSS
 @media only screen and (min-width: 320px) {
-    #container_id {width: 100%;}
+    .bellmaker_container {width: 100%;}
 }
 @media only screen and (min-width: 768px) {
-    #container_id {width: 76.8rem;}
+    .bellmaker_container {width: 76.8rem;}
 }
 @media only screen and (min-width: 1024px) {
-    #container_id {width: 96rem;}
+    .bellmaker_container {width: 96rem;}
 }
 @media only screen and (min-width: 1280px) {
-    #container_id {width: 115.2rem;}
+    .bellmaker_container {width: 115.2rem;}
 }
 ```
 
