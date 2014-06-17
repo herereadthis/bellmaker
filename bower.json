@@ -1,11 +1,11 @@
 {
   "name": "bellmaker",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "authors": [
     "Jimmy Ha <herereadthis@gmail.com>"
   ],
   "description": "Responsive CSS media query library for LESS and SASS, with device-agnostic and device-specific breakpoints",
-  "homepage": "http://herereadthis.com",
+  "homepage": "http://herereadthis.com/code/bellmaker",
   "main": [
     "src/less/main.less",
     "src/sass/_mixins_variables.scss",
@@ -24,5 +24,8 @@
     "old_school.md",
     "src/components",
     "src/demo"
-  ]
+  ],
+  "dependencies": {
+    "mossflower": "~0.1.0"
+  }
 }

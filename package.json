@@ -1,6 +1,6 @@
 {
   "name": "bellmaker",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Responsive CSS media query library for LESS and SASS, with device-agnostic and device-specific breakpoints",
   "main": "index.html",
   "scripts": {

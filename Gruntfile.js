@@ -31,6 +31,15 @@ module.exports = function(grunt) {
                 files: {
                     "./src/css/main.less.css": "./src/less/main.less"
                 }
+            },
+            demoLess: {
+                options: {
+                    paths: ["./src/less", "./src/demo/less"],
+                    cleancss: false
+                },
+                files: {
+                    "./src/demo/css/main.css": "./src/demo/less/imports.less"
+                }  
             }
         },
         sass: {
@@ -80,7 +89,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', [
         // 'uglify'
-        'less',
+        'less:minifiedLess',
+        'less:uncompressedLess',
         'sass',
         'watch'
     ]);
