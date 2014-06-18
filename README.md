@@ -156,25 +156,25 @@ For example, if your browser window is 1366 pixels wide, then the width of the p
 
 ```
 .bellmaker_container {
-    @media @mq_baseline {
+    @media @da_baseline {
         width: @pw_baseline;
     }
-    @media @mq_2x_small {
+    @media @da_2x_small {
         width: @pw_2x_small;
     }
-    @media @mq_x_small {
+    @media @da_x_small {
         width: @pw_x_small;
     }
-    @media @mq_small {
+    @media @da_small {
         width: @pw_small;
     }
-    @media @mq_medium {
+    @media @da_medium {
         width: @pw_medium;
     }
-    @media @mq_large {
+    @media @da_large {
         width: @pw_large;
     }
-    @media @mq_x_large {
+    @media @da_x_large {
         width: @pw_x_large;
     }
 }
@@ -184,31 +184,31 @@ For example, if your browser window is 1366 pixels wide, then the width of the p
 
 ```SASS
 .bellmaker_container {
-    @media #{$mq_baseline} {
+    @media #{$da_baseline} {
         width: $pw_baseline;
     }
-    @media #{$mq_2x_small} {
+    @media #{$da_2x_small} {
         width: $pw_2x_small;
     }
-    @media #{$mq_x_small} {
+    @media #{$da_x_small} {
         width: $pw_x_small;
     }
-    @media #{$mq_small} {
+    @media #{$da_small} {
         width: $pw_small;
     }
-    @media #{$mq_medium} {
+    @media #{$da_medium} {
         width: $pw_medium;
     }
-    @media #{$mq_large} {
+    @media #{$da_large} {
         width: $pw_large;
     }
-    @media #{$mq_x_large} {
+    @media #{$da_x_large} {
         width: $pw_x_large;
     }
 }
 ```
 
-Note: the abbreviation "mq" stands for "media query," and "pw" stands for "page width."
+Note: the abbreviation "da" stands for "device-agnostic," and "pw" stands for "page width."
 
 #### Compiled as CSS
 
@@ -250,16 +250,16 @@ Note: the abbreviation "mq" stands for "media query," and "pw" stands for "page 
 }
 ```
 
-To speed up development, there is always the option of skipping or omitting breakpoints. In the above code, there is no need to declare breakpoints at 480px or 640px because ```#container_id {}``` would still be 100% width. Also, if you don't feel like (or would rather delay) designing for very large screens, then there is no need to specify ```@media @mq_x_large {...}``` As such, **even though the Bellmaker does provide 7 breakpoints,** ***you can use just 4*** **as a bare minimum.**
+To speed up development, there is always the option of skipping or omitting breakpoints. In the above code, there is no need to declare breakpoints at 480px or 640px because ```#container_id {}``` would still be 100% width. Also, if you don't feel like (or would rather delay) designing for very large screens, then there is no need to specify ```@media @da_x_large {...}``` As such, **even though the Bellmaker does provide 7 breakpoints,** ***you can use just 4*** **as a bare minimum.**
 
 #### As LESS
 
 ```
 .bellmaker_container {
-    @media @mq_baseline {   width: @pw_baseline;}
-    @media @mq_small {      width: @pw_small;}
-    @media @mq_medium {     width: @pw_medium;}
-    @media @mq_large {      width: @pw_large;}
+    @media @da_baseline {   width: @pw_baseline;}
+    @media @da_small {      width: @pw_small;}
+    @media @da_medium {     width: @pw_medium;}
+    @media @da_large {      width: @pw_large;}
 }
 ```
 
@@ -267,10 +267,10 @@ To speed up development, there is always the option of skipping or omitting brea
 
 ```SASS
 .bellmaker_container {
-    @media #{$mq_baseline} {    width: $pw_baseline;}
-    @media #{$mq_small} {       width: $pw_small;}
-    @media #{$mq_medium} {      width: $pw_medium;}
-    @media #{$mq_large} {       width: $pw_large;}
+    @media #{$da_baseline} {    width: $pw_baseline;}
+    @media #{$da_small} {       width: $pw_small;}
+    @media #{$da_medium} {      width: $pw_medium;}
+    @media #{$da_large} {       width: $pw_large;}
 }
 ```
 
@@ -307,7 +307,7 @@ Notice how the LESS/SASS variable names of the media queries just became very ea
 | early iPad | 768×1024 | 1 | 768×1024 | 3:4 | iPad 1-2; iPad Mini 1 |
 | retina iPad | 1536×2056 | 2 | 768×1024 | 3:4 | iPad 3+; iPad Air; iPad Mini 2 |
 
-Notice how at first glance, there seems to be too many different screen resolutions of which to keep track, most acuually share the same 360×640 resolution? They are all using a 9:16 aspect ratio. Use the ```ds_common_9_16``` variable.
+Notice how at first glance, there seems to be too many different screen resolutions of which to keep track, most acuually share the same 360×640 resolution? They are all using a 9:16 aspect ratio. Use the ```ds_common_9_16``` variable. ("ds" stands for device-specific)
 
 #### Target all 9:16 phones (LESS)
 

@@ -20,7 +20,7 @@ module.exports = function(grunt) {
                     cleancss: true
                 },
                 files: {
-                    "./src/css/main.less-minified.css": "./src/less/main.less"
+                    "./src/css/main.less-minified.css": "./src/less/bellmaker.less"
                 }
             },
             uncompressedLess: {
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
                     cleancss: false
                 },
                 files: {
-                    "./src/css/main.less.css": "./src/less/main.less"
+                    "./src/css/main.less.css": "./src/less/bellmaker.less"
                 }
             },
             demoLess: {
