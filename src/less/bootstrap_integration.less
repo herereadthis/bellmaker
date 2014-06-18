@@ -1,0 +1,237 @@
+
+@screen-bl:                 @da_baseline;
+@screen-bl-min:             @screen-bl;
+
+@screen-2s:                 @da_2x_small;
+@screen-2s-min:             @screen-2s;
+
+@screen-xs:                 @da_x_small;
+@screen-xs-min:             @screen-xs;
+
+@screen-sm:                 @da_small;
+@screen-sm-min:             @screen-sm;
+
+@screen-md:                 @pw_medium;
+@screen-md-min:             @screen-md;
+
+@screen-lg:                 @da_large;
+@screen-lg-min:             @screen-lg;
+
+@screen-xl:                 @da_x_large;
+@screen-xl-min:             @screen-xl;
+
+// phone sizes will stretch to 100% by default
+@container-bl:              @pw_baseline;
+@container-2s:              @pw_2x_small;
+@container-xs:              @pw_x_small;
+
+// Small screen / tablet
+// 12 columns of 64 pixels each makes 768
+@container-sm:              @pw_small;
+
+// Medium screen / desktop
+// 12 columns of 80 pixels each makes 960
+@container-md:              @pw_medium;
+
+// Large screen / wide desktop
+// 12 columns of 96 pixels each makes 1152
+@container-lg:              @pw_large;
+
+// Extra Large screen / wide desktop
+// 12 columns of 112 pixels each makes 1344
+@container-xl:              @pw_x_large;
+
+
+// Set the container width, and override it for fixed navbars in media queries
+.container {
+    @media (min-width: @screen-bl) {
+        width: @container-bl;
+    }
+    @media (min-width: @screen-2s) {
+        width: @container-2s;
+    }
+    @media (min-width: @screen-xs) {
+        width: @container-xs;
+    }
+    @media (min-width: @screen-sm) {
+        width: @container-sm;
+    }
+    @media (min-width: @screen-md) {
+        width: @container-md;
+    }
+    @media (min-width: @screen-lg-min) {
+        width: @container-lg;
+    }
+    @media (min-width: @screen-xl-min) {
+        width: @container-xl;
+    }
+}
+
+
+// Common styles for small and large grid columns
+.make-grid-columns();
+
+
+// baseline grid
+.make-grid-columns-float(bl);
+.make-grid(@grid-columns, bl, width);
+.make-grid(@grid-columns, bl, pull);
+.make-grid(@grid-columns, bl, push);
+.make-grid(@grid-columns, bl, offset);
+
+// 2x Small grid
+@media (min-width: @screen-2s-min) {
+    .make-grid-columns-float(2s);
+    .make-grid(@grid-columns, 2s, width);
+    .make-grid(@grid-columns, 2s, pull);
+    .make-grid(@grid-columns, 2s, push);
+    .make-grid(@grid-columns, 2s, offset);
+}
+
+// xs Small grid
+@media (min-width: @screen-xs-min) {
+    .make-grid-columns-float(xs);
+    .make-grid(@grid-columns, xs, width);
+    .make-grid(@grid-columns, xs, pull);
+    .make-grid(@grid-columns, xs, push);
+    .make-grid(@grid-columns, xs, offset);
+}
+// Extra Large grid
+@media (min-width: @screen-xl-min) {
+    .make-grid-columns-float(xl);
+    .make-grid(@grid-columns, xl, width);
+    .make-grid(@grid-columns, xl, pull);
+    .make-grid(@grid-columns, xl, push);
+    .make-grid(@grid-columns, xl, offset);
+}
+
+// Generate the baseline columns
+.make-bl-column(@columns; @gutter: @grid-gutter-width) {
+  position: relative;
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+
+  // Calculate width based on number of columns available
+  @media (min-width: @screen-bl-min) {
+    float: left;
+    width: percentage((@columns / @grid-columns));
+  }
+}
+
+// Generate the baseline column offsets
+.make-bl-column-offset(@columns) {
+  @media (min-width: @screen-bl-min) {
+    margin-left: percentage((@columns / @grid-columns));
+  }
+}
+.make-bl-column-push(@columns) {
+  @media (min-width: @screen-bl-min) {
+    left: percentage((@columns / @grid-columns));
+  }
+}
+.make-bl-column-pull(@columns) {
+  @media (min-width: @screen-bl-min) {
+    right: percentage((@columns / @grid-columns));
+  }
+}
+
+// Generate the extra small columns
+.make-xs-column(@columns; @gutter: @grid-gutter-width) {
+  position: relative;
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+
+  // Calculate width based on number of columns available
+  @media (min-width: @screen-xs-min) {
+    float: left;
+    width: percentage((@columns / @grid-columns));
+  }
+}
+
+// Generate the extra small column offsets
+.make-xs-column-offset(@columns) {
+  @media (min-width: @screen-xs-min) {
+    margin-left: percentage((@columns / @grid-columns));
+  }
+}
+.make-xs-column-push(@columns) {
+  @media (min-width: @screen-xs-min) {
+    left: percentage((@columns / @grid-columns));
+  }
+}
+.make-xs-column-pull(@columns) {
+  @media (min-width: @screen-xs-min) {
+    right: percentage((@columns / @grid-columns));
+  }
+}
+
+
+// Generate the extra large columns
+.make-xl-column(@columns; @gutter: @grid-gutter-width) {
+  position: relative;
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+
+  // Calculate width based on number of columns available
+  @media (min-width: @screen-xl-min) {
+    float: left;
+    width: percentage((@columns / @grid-columns));
+  }
+}
+
+// Generate the extra large column offsets
+.make-xl-column-offset(@columns) {
+  @media (min-width: @screen-xl-min) {
+    margin-left: percentage((@columns / @grid-columns));
+  }
+}
+.make-xl-column-push(@columns) {
+  @media (min-width: @screen-xl-min) {
+    left: percentage((@columns / @grid-columns));
+  }
+}
+.make-xl-column-pull(@columns) {
+  @media (min-width: @screen-xl-min) {
+    right: percentage((@columns / @grid-columns));
+  }
+}
+
+
+
+// Framework grid generation
+//
+// Used only by Bootstrap to generate the correct number of grid classes given
+// any value of `@grid-columns`.
+
+.make-grid-columns() {
+  // Common styles for all sizes of grid columns, widths 1-12
+  .col(@index) when (@index = 1) { // initial
+    @item: ~".col-bl-@{index}, .col-2s-@{index}, .col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}, .col-xl-@{index}";
+    .col(@index + 1, @item);
+  }
+  .col(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
+    @item: ~".col-bl-@{index}, .col-2s-@{index}, .col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}, .col-xl-@{index}";
+    .col(@index + 1, ~"@{list}, @{item}");
+  }
+  .col(@index, @list) when (@index > @grid-columns) { // terminal
+    @{list} {
+      position: relative;
+      // Prevent columns from collapsing when empty
+      min-height: 1px;
+      // Inner gutter via padding
+      padding-left:  (@grid-gutter-width / 2);
+      padding-right: (@grid-gutter-width / 2);
+    }
+  }
+  .col(1); // kickstart it
+}
+

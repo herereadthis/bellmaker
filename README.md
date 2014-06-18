@@ -369,4 +369,32 @@ There are two ways to target orientation, depending on your personal preference.
 
 
 
+------------------------
+
+## Integrate the Bellmaker to your existing frameworks
+
+
+
+
+#### LESS integration with Twitter Bootstrap
+
+```CSS
+@import "/PATH_TO/../bellmaker/src/less/bootstrap_integration.less";
+```
+
+Now you will have 7 breakpoints in Bootstrap
+
+```CSS
+.col-bl-##
+.col-2s-##
+.col-xs-##
+.col-sm-##
+.col-md-##
+.col-lg-##
+.col-bl-##
+```
+
+
+
+
 
