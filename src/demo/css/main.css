@@ -43,6 +43,15 @@ a:visited {
 a:hover {
   text-decoration: underline;
 }
+pre {
+  overflow: auto;
+}
+code {
+  white-space: pre-wrap;
+}
+pre > code {
+  white-space: pre;
+}
 @media only screen and (min-width: 320px) {
   .bellmaker_container {
     width: 100%;
