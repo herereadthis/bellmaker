@@ -26,6 +26,6 @@
     "src/demo"
   ],
   "dependencies": {
-    "mossflower": "~0.1.0"
+    "mossflower": "~0.1.2"
   }
 }

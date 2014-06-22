@@ -17,6 +17,10 @@ body {
   line-height: 1;
   font-family: Helvetica, Arial, sans-serif;
 }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 body,
 table,
 td,

@@ -89,21 +89,7 @@ $ bower install --save mossflower
 
 ## Concepts
 
-Media queries in Bellmaker bubble up from smallest to largest, in sequence.
-
-#### Liquid Mobile
-
-For resolutions that would mostly likely occur on handheld devices, the Bellmaker will fill the container it is given. The resolutions covered are 320, 360, 480, 568, 640, and 720.
-
-| Breakpoint | Width | iOS Devices | Other Devices |
-| ---- | ---- | ---- | ---- |
-| *320 - 480* | **100%** | iPhone Portrait | 720 HD:2, 1080 HD:3, WQHD:4 |
-| *480 - 640* | **100%** | iPhone Landscape | 768 WXGA:2 |
-| *640 - 768* | **100%** | | 720 HD:2 (landscape), 1080 HD:3 (landscape), WQHD:4 (landscape) |
-
-While a breakpoint at 640 pixels does exist, it's okay to skip because it would only become useful if a significant number of people frequently held their HD phones (e.g. Samsung GS5, HTC Hero) in landscape mode, but not many do unless they're gaming.
-
-#### Column Snapping
+Media queries in Bellmaker bubble up from smallest to largest, in sequence. For resolutions that would mostly likely occur on handheld devices, the Bellmaker will fill the container it is given. The resolutions covered are 320, 360, 480, 568, 640, and 720.
 
 Media queries in the Bellmaker create a pseudo-liquid snapping layout. That is, as the screen gets larger, the elements on the page go to higher fixed widths. Each of the fixed widths was selected because they are divisible by 2, 3, 4, 6, 12, 16, and 24, which makes grid layouts easier. Resolution ranges were selected because the breakpoints are a best-fit for commonly-occurring screen resolutions.
 
@@ -113,8 +99,6 @@ Media queries in the Bellmaker create a pseudo-liquid snapping layout. That is, 
 | *1024 - 1280* | **960px**  | 320px | 240px | 80px  | 60px | 40px |
 | *1280 - 1440* | **1152px** | 384px | 288px | 96px  | 72px | 48px |
 | *1440 and up* | **1344px** | 448px | 336px | 112px | 84px | 56px |
-
-For example, if your browser window is 1366 pixels wide, then the width of the page content will be 1152 pixels wide, giving you 3 columns of 384 pixels each, or 12 columns of 96 pixels each. The Bellmaker does not do an addtional larger breakpoint because 7 media queries is plenty enough, and designing for screen resolutions for 1600 or 1920 screens runs into usability difficulties with reading long lines of text.
 
 ----------------
 
@@ -148,7 +132,7 @@ For example, if your browser window is 1366 pixels wide, then the width of the p
 }
 ```
 
-#### As SASS
+#### Device-agnostic output as SASS
 
 ```SASS
 .bellmaker_container {
