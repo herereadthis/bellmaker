@@ -51,18 +51,7 @@ $ git add bellmaker .gitmodules
 $ git commit -m "adds Bellmaker submodule"
 ```
 
-#### As LESS: Add to your imports
-
-```CSS
-@import "/PATH_TO/../bellmaker/src/less/bellmaker.less";
-```
-
-#### As SASS: Add mixins partial to any file that needs media queries
-
-```CSS
-@import "/PATH_TO/../bellmaker/src/less/mixins_variables";
-@import "/PATH_TO/../bellmaker/src/less/page_layout";
-```
+### Configuration
 
 #### Reset page styling to make 10px = 1REM
 
@@ -82,32 +71,8 @@ body {
 
 (*For more useful global CSS resets and utilities, check out out the companion [**Mossflower**](https://github.com/herereadthis/mossflower) repository on the [herereadthis](https://github.com/herereadthis) Github.*)
 
-### Configuration
-
-#### Add to your watch task in Grunt
-
-##### LESS
-
-```JavaScript
-watch: {
-    // runs less task when any less files change
-    less: {
-        files: ["your_other_directories", "./bellmaker/src/less/*"],
-        tasks: ["less"]
-    }
-}
 ```
-
-##### SASS
-
-```JavaScript
-watch: {
-    // runs less task when any less files change
-    sass: {
-        files: ["your_other_directories", "./bellmaker/src/sass/*"],
-        tasks: ["sass"]
-    }
-}
+$ bower install --save mossflower
 ```
 
 #### Add vital stuff to your index.html file
@@ -119,11 +84,12 @@ watch: {
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 ```
 
-## Usage
+----------------------------
+
+
+## Concepts
 
 Media queries in Bellmaker bubble up from smallest to largest, in sequence.
-
-### Concepts
 
 #### Liquid Mobile
 
@@ -150,9 +116,11 @@ Media queries in the Bellmaker create a pseudo-liquid snapping layout. That is, 
 
 For example, if your browser window is 1366 pixels wide, then the width of the page content will be 1152 pixels wide, giving you 3 columns of 384 pixels each, or 12 columns of 96 pixels each. The Bellmaker does not do an addtional larger breakpoint because 7 media queries is plenty enough, and designing for screen resolutions for 1600 or 1920 screens runs into usability difficulties with reading long lines of text.
 
-### Device-Agnostic Output
+----------------
 
-#### As LESS
+### Usage
+
+#### Device-agnostic output as LESS
 
 ```
 .bellmaker_container {
