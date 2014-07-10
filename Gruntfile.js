@@ -32,13 +32,22 @@ module.exports = function(grunt) {
                     "./src/css/main.less.css": "./src/less/bellmaker.less"
                 }
             },
-            demoLess: {
+            basicDemoLess: {
                 options: {
-                    paths: ["./src/less", "./src/demo/less"],
+                    paths: ["./src/less", "./src/demo/basic_demo/less"],
                     cleancss: false
                 },
                 files: {
-                    "./src/demo/css/main.css": "./src/demo/less/imports.less"
+                    "./src/demo/basic_demo/css/main.css": "./src/demo/basic_demo/less/imports.less"
+                }  
+            },
+            bootstrapDemoLess: {
+                options: {
+                    paths: ["./src/less", "./src/demo/bootstrap_demo/less"],
+                    cleancss: true
+                },
+                files: {
+                    "./src/demo/bootstrap_demo/css/main.css": "./src/demo/bootstrap_demo/less/imports.less"
                 }  
             }
         },
