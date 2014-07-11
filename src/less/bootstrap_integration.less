@@ -1,6 +1,6 @@
 
 @screen-bl-min:             320px;
-@screen-2s-min:             480px;
+@screen-ss-min:            480px;
 @screen-xs-min:             640px;
 @screen-sm-min:             768px;
 @screen-md-min:             1024px;
@@ -8,15 +8,15 @@
 @screen-xl-min:             1440px;
 
 @container-baseline:        @pw_baseline;
-@container-2x-small:        @pw_2x_small;
+@container-xx-small:        @pw_2x_small;
 @container-x-small:         @pw_x_small;
 @container-tablet:          @pw_small;
 @container-desktop:         @pw_medium;
 @container-large-desktop:   @pw_large;
 
 
-@container-ba:              @pw_baseline;
-@container-2s:              @pw_2x_small;
+@container-bl:              @pw_baseline;
+@container-ss:              @pw_2x_small;
 @container-xs:              @pw_x_small;
 @container-sm:              @pw_small;
 @container-md:              @pw_medium;
@@ -25,8 +25,8 @@
 
 
 // So media queries don't overlap when required, provide a maximum
-@screen-bl-max:              (@screen-2s-min - 1);
-@screen-2s-max:              (@screen-xs-min - 1);
+@screen-bl-max:              (@screen-ss-min - 1);
+@screen-ss-max:              (@screen-xs-min - 1);
 @screen-xs-max:              (@screen-sm-min - 1);
 @screen-sm-max:              (@screen-md-min - 1);
 @screen-md-max:              (@screen-lg-min - 1);
@@ -34,74 +34,150 @@
 
 
 
-.make-grid-columns() {
-  // Common styles for all sizes of grid columns, widths 1-12
-  .col(@index) when (@index = 1) { // initial
-    @item: ~".col-ba-@{index}, .col-2s-@{index}, .col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}, .col-xl-@{index}";
-    .col((@index + 1), @item);
-  }
-  .col(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
-    @item: ~".col-ba-@{index}, .col-2s-@{index}, .col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}, .col-xl-@{index}";
-    .col((@index + 1), ~"@{list}, @{item}");
-  }
-  .col(@index, @list) when (@index > @grid-columns) { // terminal
-    @{list} {
-      position: relative;
-      // Prevent columns from collapsing when empty
-      min-height: 1px;
-      // Inner gutter via padding
-      padding-left:  (@grid-gutter-width / 2);
-      padding-right: (@grid-gutter-width / 2);
-    }
-  }
-  .col(1); // kickstart it
-}
+// .make-grid-columns() {
+//   // Common styles for all sizes of grid columns, widths 1-12
+//   .col(@index) when (@index = 1) { // initial
+//     @item: ~".col-bl-@{index}, .col-xxs-@{index}, .col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}, .col-xl-@{index}";
+//     .col((@index + 1), @item);
+//   }
+//   .col(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
+//     @item: ~".col-bl-@{index}, .col-xxs-@{index}, .col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}, .col-xl-@{index}";
+//     .col((@index + 1), ~"@{list}, @{item}");
+//   }
+//   .col(@index, @list) when (@index > @grid-columns) { // terminal
+//     @{list} {
+//       position: relative;
+//       // Prevent columns from collapsing when empty
+//       min-height: 1px;
+//       // Inner gutter via padding
+//       padding-left:  (@grid-gutter-width / 2);
+//       padding-right: (@grid-gutter-width / 2);
+//     }
+//   }
+//   .col(1); // kickstart it
+// }
 
 
 
-// Generate the baseline columns
-.make-ba-column(@columns; @gutter: @grid-gutter-width) {
-    position: relative;
-    float: left;
-    width: percentage((@columns / @grid-columns));
-    min-height: 1px;
-    padding-left:  (@gutter / 2);
-    padding-right: (@gutter / 2);
-}
-.make-ba-column-offset(@columns) {
-    margin-left: percentage((@columns / @grid-columns));
-}
-.make-ba-column-push(@columns) {
-    left: percentage((@columns / @grid-columns));
-}
-.make-ba-column-pull(@columns) {
-    right: percentage((@columns / @grid-columns));
-}
+// // Generate the baseline columns
+// .make-bl-column(@columns; @gutter: @grid-gutter-width) {
+//     position: relative;
+//     float: left;
+//     width: percentage((@columns / @grid-columns));
+//     min-height: 1px;
+//     padding-left:  (@gutter / 2);
+//     padding-right: (@gutter / 2);
+// }
+// .make-bl-column-offset(@columns) {
+//     margin-left: percentage((@columns / @grid-columns));
+// }
+// .make-bl-column-push(@columns) {
+//     left: percentage((@columns / @grid-columns));
+// }
+// .make-bl-column-pull(@columns) {
+//     right: percentage((@columns / @grid-columns));
+// }
+
+// // Generate the 2x small columns
+// .make-xxs-column(@columns; @gutter: @grid-gutter-width) {
+//   position: relative;
+//   min-height: 1px;
+//   padding-left:  (@gutter / 2);
+//   padding-right: (@gutter / 2);
+
+//   @media (min-width: @screen-xxs-min) {
+//     float: left;
+//     width: percentage((@columns / @grid-columns));
+//   }
+// }
+// .make-xxs-column-offset(@columns) {
+//   @media (min-width: @screen-xxs-min) {
+//     margin-left: percentage((@columns / @grid-columns));
+//   }
+// }
+// .make-xxs-column-push(@columns) {
+//   @media (min-width: @screen-xxs-min) {
+//     left: percentage((@columns / @grid-columns));
+//   }
+// }
+// .make-xxs-column-pull(@columns) {
+//   @media (min-width: @screen-xxs-min) {
+//     right: percentage((@columns / @grid-columns));
+//   }
+// }
+
+// // Generate the extra small columns
+// .make-xs-column(@columns; @gutter: @grid-gutter-width) {
+//   position: relative;
+//   min-height: 1px;
+//   padding-left:  (@gutter / 2);
+//   padding-right: (@gutter / 2);
+
+//   @media (min-width: @screen-xs-min) {
+//     float: left;
+//     width: percentage((@columns / @grid-columns));
+//   }
+// }
+// .make-xs-column-offset(@columns) {
+//   @media (min-width: @screen-xsx-min) {
+//     margin-left: percentage((@columns / @grid-columns));
+//   }
+// }
+// .make-xs-column-push(@columns) {
+//   @media (min-width: @screen-xs-min) {
+//     left: percentage((@columns / @grid-columns));
+//   }
+// }
+// .make-xs-column-pull(@columns) {
+//   @media (min-width: @screen-xs-min) {
+//     right: percentage((@columns / @grid-columns));
+//   }
+// }
 
 
-.container {
-    @media (min-width: @screen-bl-min) {
-        width: @container-ba;
-    }
-    @media (min-width: @screen-2s-min) {
-        width: @container-21;
-    }
-    @media (min-width: @screen-xs-min) {
-        width: @container-xs;
-    }
-    @media (min-width: @screen-sm-min) {
-        width: @container-sm;
-    }
-    @media (min-width: @screen-md-min) {
-        width: @container-md;
-    }
-    @media (min-width: @screen-lg-min) {
-        width: @container-lg;
-    }
-    @media (min-width: @screen-xl-min) {
-        width: @container-xl;
-    }
-}
+// .container {
+//     @media (min-width: @screen-bl-min) {
+//         width: @container-bl;
+//     }
+//     @media (min-width: @screen-xxs-min) {
+//         width: @container-xxs;
+//     }
+//     @media (min-width: @screen-xs-min) {
+//         width: @container-xs;
+//     }
+//     @media (min-width: @screen-sm-min) {
+//         width: @container-sm;
+//     }
+//     @media (min-width: @screen-md-min) {
+//         width: @container-md;
+//     }
+//     @media (min-width: @screen-lg-min) {
+//         width: @container-lg;
+//     }
+//     @media (min-width: @screen-xl-min) {
+//         width: @container-xl;
+//     }
+// }
+
+
+
+// .make-grid(bl);
+
+// @media (min-width: @screen-2s-min) {
+//   .make-grid(xxs);
+// }
+// @media (min-width: @screen-xs-min) {
+//   .make-grid(xs);
+// }
+// @media (min-width: @screen-sm-min) {
+//   .make-grid(sm);
+// }
+// @media (min-width: @screen-md-min) {
+//   .make-grid(md);
+// }
+// @media (min-width: @screen-lg-min) {
+//   .make-grid(lg);
+// }
 
 
 /*
