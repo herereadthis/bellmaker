@@ -8,6 +8,7 @@ The Bellmaker is a library of ***device-agnostic*** *and* ***device-specific*** 
 * It will help you make *responsive websites*, especially if you are using grid layouts.
 * It is free to use and modify as you please.
 * Both **LESS** (.less) and **SASS** (.scss) versions are available.
+* Can currently complement Bootstrap 3.2.x
 
 ## Build
 
@@ -328,9 +329,11 @@ There are two ways to target orientation, depending on your personal preference.
 
 
 
-#### LESS integration with Twitter Bootstrap
+#### LESS integration with Twitter Bootstrap (add bootstrap_integration.less)
 
 ```CSS
+@import "/PATH_TO/../bootstrap/less/bootstrap.less";
+@import "/PATH_TO/../bellmaker/src/less/bellmaker.less";
 @import "/PATH_TO/../bellmaker/src/less/bootstrap_integration.less";
 ```
 
@@ -338,7 +341,7 @@ Now you will have 7 breakpoints in Bootstrap
 
 ```CSS
 .col-bl-##
-.col-2s-##
+.col-ss-##
 .col-xs-##
 .col-sm-##
 .col-md-##
