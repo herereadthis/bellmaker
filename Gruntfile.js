@@ -100,6 +100,7 @@ module.exports = function(grunt) {
         // 'uglify'
         'less:minifiedLess',
         'less:uncompressedLess',
+        'less',
         'sass',
         'watch'
     ]);

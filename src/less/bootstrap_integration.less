@@ -1,12 +1,27 @@
 
-@screen-bl-min:             @pw_baseline;
-@screen-2s-min:             @pw_2x_small;
-@screen-xs-min:             @pw_x_small;
-@screen-sm-min:             @pw_small;
-@screen-md-min:             @pw_medium;
-@screen-lg-min:             @pw_large;
-@screen-xl-min:             @pw_x_large;
+@screen-bl-min:             320px;
+@screen-2s-min:             480px;
+@screen-xs-min:             640px;
+@screen-sm-min:             768px;
+@screen-md-min:             1024px;
+@screen-lg-min:             1280px;
+@screen-xl-min:             1440px;
 
+@container-baseline:        @pw_baseline;
+@container-2x-small:        @pw_2x_small;
+@container-x-small:         @pw_x_small;
+@container-tablet:          @pw_small;
+@container-desktop:         @pw_medium;
+@container-large-desktop:   @pw_large;
+
+
+@container-ba:              @pw_baseline;
+@container-2s:              @pw_2x_small;
+@container-xs:              @pw_x_small;
+@container-sm:              @pw_small;
+@container-md:              @pw_medium;
+@container-lg:              @pw_large;
+@container-xl:              @pw_large;
 
 
 // So media queries don't overlap when required, provide a maximum
@@ -16,6 +31,77 @@
 @screen-sm-max:              (@screen-md-min - 1);
 @screen-md-max:              (@screen-lg-min - 1);
 @screen-lg-max:              (@screen-xl-min - 1);
+
+
+
+.make-grid-columns() {
+  // Common styles for all sizes of grid columns, widths 1-12
+  .col(@index) when (@index = 1) { // initial
+    @item: ~".col-ba-@{index}, .col-2s-@{index}, .col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}, .col-xl-@{index}";
+    .col((@index + 1), @item);
+  }
+  .col(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
+    @item: ~".col-ba-@{index}, .col-2s-@{index}, .col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}, .col-xl-@{index}";
+    .col((@index + 1), ~"@{list}, @{item}");
+  }
+  .col(@index, @list) when (@index > @grid-columns) { // terminal
+    @{list} {
+      position: relative;
+      // Prevent columns from collapsing when empty
+      min-height: 1px;
+      // Inner gutter via padding
+      padding-left:  (@grid-gutter-width / 2);
+      padding-right: (@grid-gutter-width / 2);
+    }
+  }
+  .col(1); // kickstart it
+}
+
+
+
+// Generate the baseline columns
+.make-ba-column(@columns; @gutter: @grid-gutter-width) {
+    position: relative;
+    float: left;
+    width: percentage((@columns / @grid-columns));
+    min-height: 1px;
+    padding-left:  (@gutter / 2);
+    padding-right: (@gutter / 2);
+}
+.make-ba-column-offset(@columns) {
+    margin-left: percentage((@columns / @grid-columns));
+}
+.make-ba-column-push(@columns) {
+    left: percentage((@columns / @grid-columns));
+}
+.make-ba-column-pull(@columns) {
+    right: percentage((@columns / @grid-columns));
+}
+
+
+.container {
+    @media (min-width: @screen-bl-min) {
+        width: @container-ba;
+    }
+    @media (min-width: @screen-2s-min) {
+        width: @container-21;
+    }
+    @media (min-width: @screen-xs-min) {
+        width: @container-xs;
+    }
+    @media (min-width: @screen-sm-min) {
+        width: @container-sm;
+    }
+    @media (min-width: @screen-md-min) {
+        width: @container-md;
+    }
+    @media (min-width: @screen-lg-min) {
+        width: @container-lg;
+    }
+    @media (min-width: @screen-xl-min) {
+        width: @container-xl;
+    }
+}
 
 
 /*
