@@ -1,0 +1,23 @@
+{
+  "name": "sunflash",
+  "version": "0.1.0",
+  "authors": [
+    "Jimmy Ha <herereadthis@gmail.com>"
+  ],
+  "description": "Sunflash is a CSS library of utilities and helper classes that every website uses",
+  "homepage": "https://github.com/herereadthis/sunflash",
+  "main": [
+    "src/less/sunflash.less",
+    "src/css/sunflash.less-minified.css"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".bowerrc",
+    ".gitignore",
+    ".sass-cache",
+    "docs",
+    "Gruntfile.js",
+    "node_modules",
+    "src/components"
+  ]
+}

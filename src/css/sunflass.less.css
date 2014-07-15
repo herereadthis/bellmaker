@@ -1,0 +1,7 @@
+.sunflash_navmenu li {
+  float: left;
+  list-style-type: none;
+}
+.sunflash_navmenu li a {
+  display: block;
+}
