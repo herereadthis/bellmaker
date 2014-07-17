@@ -1,5 +1,5 @@
-Mossflower
-==========
+Sunflash
+========
 
 [![Bower version](https://badge.fury.io/bo/sunflash.svg)](http://badge.fury.io/bo/sunflash)
 
@@ -19,7 +19,7 @@ $ grunt
 #### Recommended: Add Sunflashas a Bower dependency
 
 ```
-$ bower install --save mossflower
+$ bower install --save sunflash
 ```
 
 #### Alternative: Add Sunflash as a submodule
