@@ -1,6 +1,6 @@
 {
   "name": "sunflash",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Sunflash is a CSS library of utilities and helper classes that every website uses",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
