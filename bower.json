@@ -1,13 +1,13 @@
 {
   "name": "bellmaker",
-  "version": "1.2.1",
+  "version": "0.3.2",
   "authors": [
     "Jimmy Ha <herereadthis@gmail.com>"
   ],
   "description": "Responsive CSS media query library for LESS and SASS, with device-agnostic and device-specific breakpoints",
   "homepage": "http://herereadthis.com/code/bellmaker",
   "main": [
-    "src/less/main.less",
+    "src/less/bellmaker.less",
     "src/sass/_mixins_variables.scss",
     "src/css/main.less-minified.css",
     "src/css/main.sass-minified.css"
