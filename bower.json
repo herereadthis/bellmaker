@@ -2,7 +2,10 @@
   "name": "bellmaker",
   "version": "0.3.3",
   "authors": [
-    "Jimmy Ha <herereadthis@gmail.com>"
+    {
+      "name": "Jimmy Ha",
+      "homepage": "http://herereadthis.com"
+    }
   ],
   "description": "Responsive CSS media query library for LESS and SASS, with device-agnostic and device-specific breakpoints",
   "homepage": "http://herereadthis.com/code/bellmaker",
