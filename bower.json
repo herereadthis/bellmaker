@@ -1,6 +1,6 @@
 {
   "name": "bellmaker",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "authors": [
     "Jimmy Ha <herereadthis@gmail.com>"
   ],
@@ -17,6 +17,7 @@
     ".bowerrc",
     ".gitignore",
     ".sass-cache",
+    ".travis.yml",
     "docs",
     "Gruntfile.js",
     "index.html",

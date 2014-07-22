@@ -101,7 +101,9 @@ module.exports = function(grunt) {
         'less:minifiedLess',
         'less:uncompressedLess',
         'less',
-        'sass',
+        'sass'
+    ]);
+    grunt.registerTask('server', [
         'watch'
     ]);
 };
