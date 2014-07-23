@@ -15,6 +15,7 @@
     ".bowerrc",
     ".gitignore",
     ".sass-cache",
+    ".travis.yml",
     "docs",
     "Gruntfile.js",
     "node_modules",
