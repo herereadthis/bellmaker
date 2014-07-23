@@ -2,6 +2,8 @@ Sunflash
 ========
 
 [![Bower version](https://badge.fury.io/bo/sunflash.svg)](http://badge.fury.io/bo/sunflash)
+[![Build Status](https://secure.travis-ci.org/herereadthis/sunflash.svg?branch=master)](http://travis-ci.org/herereadthis/sunflash)
+[![devDependency Status](https://david-dm.org/herereadthis/sunflash/dev-status.svg)](https://david-dm.org/herereadthis/sunflash#info=devDependencies)
 
 Sunflash is a CSS library of utilities and helper classes that every website uses
 
