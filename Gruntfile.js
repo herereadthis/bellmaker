@@ -43,4 +43,7 @@ module.exports = function(grunt) {
         'less',
         'watch'
     ]);
+    grunt.registerTask('test', [
+        'less'
+    ]);
 };

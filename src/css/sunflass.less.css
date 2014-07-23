@@ -2,6 +2,7 @@
   overflow: auto;
 }
 .sunflash_navmenu li {
+  display: block;
   float: left;
   list-style-type: none;
 }
