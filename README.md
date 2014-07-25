@@ -2,7 +2,7 @@ Bellmaker
 =========
 
 [![Bower version](https://badge.fury.io/bo/bellmaker.svg)](http://badge.fury.io/bo/bellmaker)
-[![Build Status](https://secure.travis-ci.org/herereadthis/redwall.svg?branch=master)](http://travis-ci.org/herereadthis/redwall)
+[![Build Status](https://secure.travis-ci.org/herereadthis/bellmaker.svg?branch=master)](http://travis-ci.org/herereadthis/bellmaker)
 [![devDependency Status](https://david-dm.org/herereadthis/bellmaker/dev-status.svg)](https://david-dm.org/herereadthis/bellmaker#info=devDependencies)
 
 Project page at ***[herereadthis.com/code/bellmaker/](http://herereadthis.com/code/bellmaker)***

@@ -3,6 +3,7 @@
 module.exports = function(grunt) {
     // Do grunt-related things in here
     // Project configuration.
+    require('load-grunt-tasks')(grunt);
     grunt.initConfig({
         // imports the JSON metadata stored in package.json
         pkg: grunt.file.readJSON('package.json'),
@@ -86,18 +87,12 @@ module.exports = function(grunt) {
             }
         }
     });
-    grunt.loadNpmTasks('grunt-jekyll');
-    grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('makeJekyll', [
         // 'uglify'
         'jekyll'
     ]);
-
     grunt.registerTask('default', [
-        // 'uglify'
         'less:minifiedLess',
         'less:uncompressedLess',
         'less',
@@ -109,5 +104,4 @@ module.exports = function(grunt) {
     grunt.registerTask('test', [
         'less'
     ]);
-
 };
