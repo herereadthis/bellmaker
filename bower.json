@@ -30,7 +30,7 @@
     "src/demo"
   ],
   "dependencies": {
-    "mossflower": "~0.1.4",
+    "mossflower": "~0.1.6",
     "bootstrap": "~3.2.0"
   }
 }
