@@ -1,6 +1,9 @@
 
 // classes to set page widths and grid patterns
 .bellmaker_container {
+    margin-right: auto;
+    margin-left: auto;
+    
     @media #{$da_baseline} {
         width: $pw_baseline;
     }

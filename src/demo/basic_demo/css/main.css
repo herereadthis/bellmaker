@@ -52,6 +52,10 @@ code {
 pre > code {
   white-space: pre;
 }
+.bellmaker_container {
+  margin-right: auto;
+  margin-left: auto;
+}
 @media only screen and (min-width: 320px) {
   .bellmaker_container {
     width: 100%;
