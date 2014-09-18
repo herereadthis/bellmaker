@@ -256,12 +256,13 @@ Notice how the LESS/SASS variable names of the media queries just became very ea
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | 768 WXGA:2 | 768×1280 | 2| 384×640 | 2:3 | Google Nexus 4 |
 | 720 HD:2 | 720×1280 | 2| 360:640 | 9:16 | Blackberry Z30; Motorola Droid Maxx, Razr HD; Samsung GN2; Sony Xperia S |
-| 1080 HD:2 | 1080×1920 | 2 | 560×960 | 9:16 | Samsung GN3 |
+| 1080 HD:2 | 1080×1920 | 2 | 560×960 | 9:16 | Samsung GN3; iPhone 6 Plus |
 | 1080 HD:3 | 1080×1920 | 3 | 360×640 | 9:16 | Google Nexus 5; HTC Hero M7+; LG G2; Samsung GS4+; Sony Xperia Z1+ |
 | WQHD:4 | 1440×2560 | 4 | 360×640 | 9:16 | LG G3 |
 | early iPhone | 320×480 | 1 | 320×480 | 2:3 | iPhone 1-3 |
-| iPhone 4(s) | 640×960 | 1 | 320×480 | 2:3 | iPhone 4(s) |
-| late iPhone | 640×1136 | 1 | 320×568 | 9:16 | iPhone 5(s)(c) |
+| iPhone 4 | 640×960 | 2 | 320×480 | 2:3 | iPhone 4(s) |
+| iPhone 5 | 640×1136 | 2 | 320×568 | 9:16 | iPhone 5(s)(c) |
+| iPhone 6 | 750×1334 | 2 | 375×667 | 9:16 | iPhone 6 |
 | early iPad | 768×1024 | 1 | 768×1024 | 3:4 | iPad 1-2; iPad Mini 1 |
 | retina iPad | 1536×2056 | 2 | 768×1024 | 3:4 | iPad 3+; iPad Air; iPad Mini 2 |
 
