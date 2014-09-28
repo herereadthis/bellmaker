@@ -263,6 +263,7 @@ Notice how the LESS/SASS variable names of the media queries just became very ea
 | iPhone 4 | 640×960 | 2 | 320×480 | 2:3 | iPhone 4(s) |
 | iPhone 5 | 640×1136 | 2 | 320×568 | 9:16 | iPhone 5(s)(c) |
 | iPhone 6 | 750×1334 | 2 | 375×667 | 9:16 | iPhone 6 |
+| iPhone 6 Plus | 1242×2208 | 3 | 414×736 | 9:16 | iPhone 6 Plus |
 | early iPad | 768×1024 | 1 | 768×1024 | 3:4 | iPad 1-2; iPad Mini 1 |
 | retina iPad | 1536×2056 | 2 | 768×1024 | 3:4 | iPad 3+; iPad Air; iPad Mini 2 |
 

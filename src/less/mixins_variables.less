@@ -78,7 +78,7 @@
 // Actual Resolution: 1080 X 1920
 // Display Resolution: 360 X 640
 // Device-pixel-ratio: 2
-// 1080 HD:2 phones: Samsung GN3, iPhone 6 Plus
+// 1080 HD:2 phones: Samsung GN3
 @ds_full_hd2:               ~"only screen and (min-device-width : 540px) and (max-device-width : 960px) and (min-resolution: 2dppx)";
 // 1080 HD:2 phones in landscape
 @ds_full_hd2_landscape:     ~"only screen and (min-device-width : 540px) and (max-device-width : 960px) and (min-resolution: 2dppx) and (orientation : landscape)";
@@ -147,11 +147,11 @@
 // Display Resolution: 320 X 480
 // Device-pixel-ratio: 1
 // iPhone 2-4 Media Queries
-@ds_iphone_early:           ~"only screen and (min-device-width : 320px) and (max-device-width : 480px)";
+@ds_iphone_early:           ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 1dppx)";
 // iPhone 2G-4S in landscape
-@ds_iphone_early_landscape: ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape)";
+@ds_iphone_early_landscape: ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 1dppx) and (orientation : landscape)";
 // iPhone 2G-4S in portrait
-@ds_iphone_early_portrait:  ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait)";
+@ds_iphone_early_portrait:  ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 1dppx) and (orientation : portrait)";
 
 
 // Actual Resolution: 320 X 480 (LATER)
@@ -185,6 +185,17 @@
 @ds_iphone_6_landscape:     ~"only screen and (min-device-width : 375px) and (max-device-width : 667px) and (min-resolution: 2dppx) and (orientation : landscape)";
 // iPhone 6 in portrait
 @ds_iphone_6_portrait:      ~"only screen and (min-device-width : 375px) and (max-device-width : 667px) and (min-resolution: 2dppx) and (orientation : portrait)";
+
+
+// Actual Resolution: 414 × 736
+// Display Resolution: 1242 × 2208
+// Device-pixel-ratio: 3
+// iPhone 6 Plus in portrait & landscape
+@ds_iphone_6_plus:              ~"only screen and (min-device-width : 414px) and (max-device-width : 736px) and (min-resolution: 3dppx)";
+// iPhone 6 Plus in landscape
+@ds_iphone_6_plus_landscape:    ~"only screen and (min-device-width : 414px) and (max-device-width : 736px) and (min-resolution: 3dppx) and (orientation : landscape)";
+// iPhone 6 Plus in portrait
+@ds_iphone_6_plus_portrait:     ~"only screen and (min-device-width : 414px) and (max-device-width : 736px) and (min-resolution: 3dppx) and (orientation : portrait)";
 
 // ---------------------------------------------
 // ---------------------------------------------
