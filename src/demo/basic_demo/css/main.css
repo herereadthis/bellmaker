@@ -306,22 +306,22 @@ h3 {
     content: "retina iPad in portrait mode";
   }
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 1dppx) and (orientation : landscape) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) {
   #device_sniffer:after {
     content: "early iPhone in landscape mode";
   }
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 1dppx) and (orientation : portrait) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
   #device_sniffer:after {
     content: "early iPhone in portrait mode";
   }
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 1dppx) and (orientation : landscape) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) {
   #device_sniffer:after {
     content: "early iPhone in landscape mode";
   }
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 1dppx) and (orientation : portrait) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
   #device_sniffer:after {
     content: "early iPhone in portrait mode";
   }
