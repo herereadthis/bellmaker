@@ -46,11 +46,11 @@ $orientation_portrait:      "and (orientation : portrait)";
 // Common 16:9 phones, 720p: Blackberry Z30; Motorola Droid Maxx, Razr HD; Samsung GN2, GN3, GN4; Sony Xperia S 
 // Common 16:9 phones, HD:2: Samsung GN3
 // Common 16:9 phones, HD:3: Google Nexus 5, HTC One M7+, LG G2; Samsung GS4+; Sony Xperia Z1+
-$ds_common_9_16:            "only screen and (min-device-width : 360px) and (max-device-width : 640px)";
+$ds_common_9_16:            "only screen  and (device-aspect-ratio: 9/16)";
 // True HD phones in landscape
-$ds_common_9_16_landscape:  "only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : landscape)";
+$ds_common_9_16_landscape:  "only screen and (device-aspect-ratio: 9/16) and (orientation : landscape)";
 // True HD phones in portrait
-$ds_common_9_16_portrait:   "only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : portrait)";
+$ds_common_9_16_portrait:   "only screen and (device-aspect-ratio: 9/16) and (orientation : portrait)";
 
 
 // Actual Resolution: 720 X 1280
@@ -187,11 +187,11 @@ $ds_iphone_4_portrait:      "only screen and (min-device-width : 320px) and (max
 // Display Resolution: 640 X 1136
 // Device-pixel-ratio: 2
 // iPhone 5(s)(c) in portrait & landscape
-$ds_iphone_5:               "only screen and (min-device-width : 320px) and (max-device-width : 568px) and (min-resolution: 2dppx)";
+$ds_iphone_5:               "only screen and (min-device-width : 320px) and (max-device-width : 568px) and (min-resolution: 2dppx) and (device-aspect-ratio: 40/71)";
 // iPhone 5 in landscape
-$ds_iphone_5_landscape:     "only screen and (min-device-width : 320px) and (max-device-width : 568px) and (min-resolution: 2dppx) and (orientation : landscape)";
+$ds_iphone_5_landscape:     "only screen and (min-device-width : 320px) and (max-device-width : 568px) and (min-resolution: 2dppx) and (device-aspect-ratio: 40/71) and (orientation : landscape)";
 // iPhone 5 in portrait
-$ds_iphone_5_portrait:      "only screen and (min-device-width : 320px) and (max-device-width : 568px) and (min-resolution: 2dppx) and (orientation : portrait)";
+$ds_iphone_5_portrait:      "only screen and (min-device-width : 320px) and (max-device-width : 568px) and (min-resolution: 2dppx) and (device-aspect-ratio: 40/71) and (orientation : portrait)";
 
 
 // Actual Resolution: 375 X 667

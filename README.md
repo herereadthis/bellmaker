@@ -256,10 +256,10 @@ Notice how the LESS/SASS variable names of the media queries just became very ea
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | 768 WXGA:2 | 768×1280 | 2| 384×640 | 2:3 | Google Nexus 4 |
 | 768 WXGA:2.4 | 768×1280 | 2.4| 320×533 | 9:15 | Nokia Lumia 920, 925, 928 |
+| 800 WXGA:2 | 800×1280 | 2.4| 400×640 | 9:16 | Samsun GN1 |
 | 720 HD:2 | 720×1280 | 2| 360:640 | 9:16 | Blackberry Z30; Motorola Droid Maxx, Razr HD; Samsung GN2; Sony Xperia S |
-| 1080 HD:2 | 1080×1920 | 2 | 560×960 | 9:16 | Samsung GN3; iPhone 6 Plus |
-| 1080 HD:3 | 1080×1920 | 3 | 360×640 | 9:16 | Google Nexus 5; HTC Hero M7+; LG G2; Samsung GS4+; Sony Xperia Z1+ |
-| WQHD:4 | 1440×2560 | 4 | 360×640 | 9:16 | LG G3 |
+| 1080 HD:3 | 1080×1920 | 3 | 360×640 | 9:16 | Google Nexus 5; HTC Hero M7+; LG G2; Samsung GS4+, GN3; Sony Xperia Z1+ |
+| WQHD:4 | 1440×2560 | 4 | 360×640 | 9:16 | LG G3, Samsung GN4 |
 | early iPhone | 320×480 | 1 | 320×480 | 2:3 | iPhone 1-3 |
 | iPhone 4 | 640×960 | 2 | 320×480 | 2:3 | iPhone 4(s) |
 | iPhone 5 | 640×1136 | 2 | 320×568 | 9:16 | iPhone 5(s)(c) |
