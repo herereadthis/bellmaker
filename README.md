@@ -255,6 +255,7 @@ Notice how the LESS/SASS variable names of the media queries just became very ea
 | Name | Actual Resolution | Pixel Ratio | Display Resolution | Aspect Ratio | Known Devices |
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | 768 WXGA:2 | 768×1280 | 2| 384×640 | 2:3 | Google Nexus 4 |
+| 768 WXGA:2.4 | 768×1280 | 2.4| 320×533 | 9:15 | Nokia Lumia 920, 925, 928 |
 | 720 HD:2 | 720×1280 | 2| 360:640 | 9:16 | Blackberry Z30; Motorola Droid Maxx, Razr HD; Samsung GN2; Sony Xperia S |
 | 1080 HD:2 | 1080×1920 | 2 | 560×960 | 9:16 | Samsung GN3; iPhone 6 Plus |
 | 1080 HD:3 | 1080×1920 | 3 | 360×640 | 9:16 | Google Nexus 5; HTC Hero M7+; LG G2; Samsung GS4+; Sony Xperia Z1+ |

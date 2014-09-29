@@ -111,6 +111,24 @@ $ds_wqhd4_portrait:         "only screen and (min-device-width : 360px) and (max
 // ---------------------------------------------
 
 
+// Windows Phone Queries -----------------------
+// ---------------------------------------------
+
+
+// Actual Resolution: 768 X 1280
+// Display Resolution: 320 X 533
+// Device-pixel-ratio: 2.4
+// 768 WXGA:2.4 phones: Nokia Lumia 920, 925, 928
+$ds_768_wxga24:               "only screen and (min-device-width : 320px) and (max-device-width : 533px) and (min-resolution: 2.4dppx)";
+// True HD phones in landscape
+$ds_768_wxga24_landscape:     "only screen and (min-device-width : 320px) and (max-device-width : 533px) and (min-resolution: 2.4dppx) and (orientation : landscape)";
+// True HD phones in portrait
+$ds_768_wxga24_portrait:      "only screen and (min-device-width : 320px) and (max-device-width : 533px) and (min-resolution: 2.4dppx) and (orientation : portrait)";
+
+// ---------------------------------------------
+// ---------------------------------------------
+
+
 // iOS Media Queries ---------------------------
 // ---------------------------------------------
 
