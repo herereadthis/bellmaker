@@ -326,34 +326,34 @@ h3 {
     content: "iPhone 6 in portrait mode";
   }
 }
-@media only screen and (min-device-width : 384px) and (max-device-width : 640px) and (min-resolution: 2dppx) and (orientation : landscape) {
+@media only screen and (min-device-width : 384px) and (max-device-width : 640px) and (min-resolution: 2dppx) and (device-aspect-ratio: 3/5) and (orientation : landscape) {
   #device_sniffer:after {
     content: "15:9 HD:2 in landscape mode";
   }
 }
-@media only screen and (min-device-width : 384px) and (max-device-width : 640px) and (min-resolution: 2dppx) and (orientation : portrait) {
+@media only screen and (min-device-width : 384px) and (max-device-width : 640px) and (min-resolution: 2dppx) and (device-aspect-ratio: 3/5) and (orientation : portrait) {
   #device_sniffer:after {
-    content: "15:9 HD:2 in portrait mode";
+    content: "768 HD:2 in portrait mode";
   }
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 533px) and (min-resolution: 2.4dppx) and (orientation : landscape) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 533px) and (min-resolution: 2.4dppx) and (device-aspect-ratio: 320/533) and (orientation : landscape) {
   #device_sniffer:after {
-    content: "15:9 HD:2.4 in landscape mode";
+    content: "768 HD:2.4 in landscape mode";
   }
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 533px) and (min-resolution: 2.4dppx) and (orientation : portrait) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 533px) and (min-resolution: 2.4dppx) and (device-aspect-ratio: 320/533) and (orientation : portrait) {
   #device_sniffer:after {
-    content: "15:9 HD:2.4 in portrait mode";
+    content: "768 HD:2.4 in portrait mode";
   }
 }
-@media only screen and (min-device-width : 400px) and (max-device-width : 640px) and (min-resolution: 2dppx) and (orientation : landscape) {
+@media only screen and (min-device-width : 400px) and (max-device-width : 640px) and (min-resolution: 2dppx) and (device-aspect-ratio: 5/8) and (orientation : landscape) {
   #device_sniffer:after {
-    content: "8:5 WXGA2 in landscape mode";
+    content: "800 WXGA2 in landscape mode";
   }
 }
-@media only screen and (min-device-width : 400px) and (max-device-width : 640px) and (min-resolution: 2dppx) and (orientation : portrait) {
+@media only screen and (min-device-width : 400px) and (max-device-width : 640px) and (min-resolution: 2dppx) and (device-aspect-ratio: 5/8) and (orientation : portrait) {
   #device_sniffer:after {
-    content: "8:5 WXGA2 in portrait mode";
+    content: "800 WXGA2 in portrait mode";
   }
 }
 @media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 3dppx) and (orientation : landscape) {
