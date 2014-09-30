@@ -376,3 +376,8 @@ h3 {
     content: "WQHD:4 in portrait mode";
   }
 }
+@media only screen and (device-aspect-ratio: 2/3) and (orientation : portrait) {
+  #device_sniffer:after {
+    background-color: #F00;
+  }
+}

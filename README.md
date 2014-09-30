@@ -266,14 +266,14 @@ Notice how the LESS/SASS variable names of the media queries just became very ea
 | iPhone 6 | 750×1334 | 2 | 375×667 | 375:667 | iPhone 6 |
 | iPhone 6 Plus | 1242×2208 | 3 | 414×736 | 9:16 | iPhone 6 Plus |
 | early iPad | 768×1024 | 1 | 768×1024 | 3:4 | iPad 1-2; iPad Mini 1 |
-| retina iPad | 1536×2056 | 2 | 768×1024 | 3:4 | iPad 3+; iPad Air; iPad Mini 2 |
+| retina iPad | 1536×2056 | 2 | 768×1024 | 3:4 | iPad 3, 4; iPad Air; iPad Mini 2 |
 
-Notice how at first glance, there seems to be too many different screen resolutions of which to keep track, most acuually share the same 360×640 resolution? They are all using a 9:16 aspect ratio. Use the ```ds_common_9_16``` variable. ("ds" stands for device-specific)
+Notice how at first glance, there seems to be too many different screen resolutions of which to keep track, most actually share the same 360×640 resolution? They are all using a 9:16 aspect ratio. Use the ```ds_ratio_9_16``` variable. ("ds" stands for device-specific)
 
 #### Target all 9:16 phones (LESS)
 
 ```LESS
-@media @ds_common_9_16 {
+@media @ds_ratio_9_16 {
     #container_id   {width: 100%;}
 }
 ```
@@ -281,7 +281,7 @@ Notice how at first glance, there seems to be too many different screen resoluti
 #### Target all 9:16 phones (SASS)
 
 ```SASS
-@media #{ds_common_9_16} {
+@media #{ds_ratio_9_16} {
     #container_id   {width: 100%;}
 }
 ```
@@ -289,10 +289,26 @@ Notice how at first glance, there seems to be too many different screen resoluti
 #### Compiled as CSS
 
 ```CSS
-@media only screen and (min-device-width : 360px) and (max-device-width : 640px) {
+@media only screen and (device-aspect-ratio: 9/16) {
     #container_id   {width: 100%;}
 }
 ```
+
+Here is the complete listing of how to target phones by aspect ratio:
+
+| Aspect Ratio | Brand | Models |
+| ---- | ---- | ----|
+| 9:16 | Blackberry | Z30 |
+| 9:16 | Google | Nexus 5 |
+| 9:16 | HTC | Hero M7/M8 |
+| 9:16 | LG | G2/G3 |
+| 9:16 | Motorola | Droid Maxx, Razr HD |
+| 9:16 | Samsung | GN2/GN3, GS4/GS5 |
+| 9:16 | Sony | Xperia S/Z1/Z2 |
+| 3:5 | Nokia | Lumia 920/925/928 |
+| 5:8 | Samsung | GN1 |
+| 2:3 | Apple | iPhone 1/2/3/4 |
+| 3:4 | Apple | iPad 1/2/3/4, Air, Mini |
 
 ### Orientation
 
@@ -301,29 +317,29 @@ There are two ways to target orientation, depending on your personal preference.
 #### LESS
 
 ```
-@media @ds_common_9_16 @orientation_landscape {}
-@media @ds_common_9_16_landscape {}
+@media @ds_ratio_9_16 @orientation_landscape {}
+@media @ds_ratio_9_16_landscape {}
 
-@media @ds_common_9_16 @orientation_portrait {}
-@media @ds_common_9_16_landscape {}
+@media @ds_ratio_9_16 @orientation_portrait {}
+@media @ds_ratio_9_16_landscape {}
 ```
 
 #### SASS
 
 ```
-@media #{ds_common_9_16} #{orientation_landscape} {}
-@media #{ds_common_9_16_landscape} {}
+@media #{ds_ratio_9_16} #{orientation_landscape} {}
+@media #{ds_ratio_9_16_landscape} {}
 
-@media #{ds_common_9_16} #{orientation_portrait} {}
-@media #{ds_common_9_16_landscape} {}
+@media #{ds_ratio_9_16} #{orientation_portrait} {}
+@media #{ds_ratio_9_16_landscape} {}
 ```
 
 #### Compiled as CSS
 
 ```CSS
-@media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : landscape) {
+@media only screen and (device-aspect-ratio: 9/16) and (orientation : landscape) {
 }
-@media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (orientation : portrait) {
+@media only screen and (device-aspect-ratio: 9/16) and (orientation : portrait) {
 }
 ```
 

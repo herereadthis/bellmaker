@@ -39,18 +39,58 @@ $orientation_landscape:     "and (orientation : landscape)";
 $orientation_portrait:      "and (orientation : portrait)";
 
 
-// Android Media Queries -----------------------
+
+// Aspect Ratio Media Queries ------------------
 // ---------------------------------------------
 
-// Display Resolution: 360 X 640
-// Common 16:9 phones, 720p: Blackberry Z30; Motorola Droid Maxx, Razr HD; Samsung GN2, GN3, GN4; Sony Xperia S 
-// Common 16:9 phones, HD:3: Google Nexus 5, HTC One M7+, LG G2; Samsung GS4, GS5, GN3; Sony Xperia Z1, Z2
-$ds_common_9_16:            "only screen  and (device-aspect-ratio: 9/16)";
-// True HD phones in landscape
-$ds_common_9_16_landscape:  "only screen and (device-aspect-ratio: 9/16) and (orientation : landscape)";
-// True HD phones in portrait
-$ds_common_9_16_portrait:   "only screen and (device-aspect-ratio: 9/16) and (orientation : portrait)";
+// 9:16 devices, 720p: Blackberry Z30; Motorola Droid Maxx, Razr HD; Samsung GN2; Sony Xperia S 
+// 9:16 devices, HD:3: Google Nexus 5; HTC Hero M7, M8; LG G2; Samsung GS4, GS5, GN3; Sony Xperia Z1, Z2
+// 9:16 devices, HD:4: LG G3, Samsung GN4
+// 9:16 devices, iPhone 6 Plus
+$ds_ratio_9_16:             "only screen and (device-aspect-ratio: 9/16)";
+// 9:16 devices in landscape
+$ds_ratio_9_16_landscape:   "only screen and (device-aspect-ratio: 9/16) and (orientation : landscape)";
+// 9:16 devices in portrait
+$ds_ratio_9_16_portrait:    "only screen and (device-aspect-ratio: 9/16) and (orientation : portrait)";
 
+
+// 3:5 devices: Nokia Lumia 920, 925, 928
+$ds_ratio_3_5:              "only screen and (device-aspect-ratio: 3/5)";
+// 3:5 devices in landscape
+$ds_ratio_3_5_landscape:    "only screen and (device-aspect-ratio: 3/5) and (orientation : landscape)";
+// 3:5 devices in portrait
+$ds_ratio_3_5_portrait:     "only screen and (device-aspect-ratio: 3/5) and (orientation : portrait)";
+
+
+// 5:8 devices: Samsung GN1
+$ds_ratio_5_8:              "only screen and (device-aspect-ratio: 5/8)";
+// 5:8 devices in landscape
+$ds_ratio_5_8_landscape:    "only screen and (device-aspect-ratio: 5/8) and (orientation : landscape)";
+// 5:8 devices in portrait
+$ds_ratio_5_8_portrait:     "only screen and (device-aspect-ratio: 5/8) and (orientation : portrait)";
+
+
+// 2:3 devices: iPhone 1, 2, 3(G), 4(s)
+$ds_ratio_5_8:              "only screen and (device-aspect-ratio: 2/3)";
+// 2:3 devices in landscape
+$ds_ratio_5_8_landscape:    "only screen and (device-aspect-ratio: 2/3) and (orientation : landscape)";
+// 2:3 devices in portrait
+$ds_ratio_5_8_portrait:     "only screen and (device-aspect-ratio: 2/3) and (orientation : portrait)";
+
+
+// 3:4 devices: iPad 1, 2, 3, 4, Air, Mini
+$ds_ratio_3_4:              "only screen and (device-aspect-ratio: 3/4)";
+// True HD phones in landscape
+$ds_ratio_3_4_landscape:    "only screen and (device-aspect-ratio: 3/4) and (orientation : landscape)";
+// True HD phones in portrait
+$ds_ratio_3_4_portrait:     "only screen and (device-aspect-ratio: 3/4) and (orientation : portrait)";
+
+// ---------------------------------------------
+// ---------------------------------------------
+
+
+// Android Media Queries -----------------------
+// ---------------------------------------------
 
 // Actual Resolution: 720 X 1280
 // Display Resolution: 360 X 640
