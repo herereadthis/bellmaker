@@ -1,9 +1,32 @@
 {
     "name": "bellmaker",
-    "private": true,
+    "version": "0.4.0",
+    "authors": [
+        {
+            "name": "Jimmy Ha",
+            "homepage": "http://herereadthis.com"
+        }
+    ],
+    "description": "Responsive CSS media query library for LESS and SASS, with device-agnostic and device-specific breakpoints",
+    "homepage": "http://herereadthis.com/code/bellmaker",
+    "license": "MIT",
+    "devDependencies": {},
+    "ignore": [
+        ".bowerrc",
+        ".gitignore",
+        ".sass-cache",
+        ".travis.yml",
+        "docs",
+        "Gruntfile.js",
+        "node_modules",
+        "test",
+        "docs",
+        "dist",
+        "bower_components",
+        "app"
+    ],
     "dependencies": {
         "jquery": "~2.1.1",
         "mossflower": "~0.1.8"
-    },
-    "devDependencies": {}
+    }
 }
