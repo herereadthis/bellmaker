@@ -201,6 +201,26 @@ module.exports = function (grunt) {
                 }  
             }
         },
+        sass: {
+            minifiedSass: {
+                options: {
+                    style: 'compressed',
+                    precision: 4
+                },
+                files: {
+                    "<%= config.dist %>/css/main.sass-minified.css": "<%= config.src %>/sass/main.scss"
+                }
+            },
+            uncompressedSass: {
+                options: {
+                    style: 'expanded',
+                    precision: 4
+                },
+                files: {
+                    "<%= config.dist %>/css/main.sass.css": "<%= config.src %>/sass/main.scss"
+                }
+            }
+        },
 
     // Automatically inject Bower components into the HTML file
     wiredep: {

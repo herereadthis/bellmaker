@@ -4,3 +4,4 @@ dist
 bower_components
 .DS_Store
 npm-debug.log
+.sass-cache/

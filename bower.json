@@ -27,6 +27,6 @@
     ],
     "dependencies": {
         "jquery": "~2.1.1",
-        "mossflower": "~0.1.8"
+        "mossflower": "~0.1.9"
     }
 }
