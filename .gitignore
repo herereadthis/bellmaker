@@ -3,3 +3,4 @@ dist
 .tmp
 bower_components
 .DS_Store
+npm-debug.log

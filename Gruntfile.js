@@ -13,8 +13,8 @@ module.exports = function (grunt) {
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
 
-  // Load grunt tasks automatically
-  require('load-grunt-tasks')(grunt);
+    // Load grunt tasks automatically
+    require('load-grunt-tasks')(grunt);
 
     // Configurable paths
     var config = {
@@ -181,7 +181,7 @@ module.exports = function (grunt) {
                     cleancss: true
                 },
                 files: {
-                    "<%= config.dist %>/css/main.less-minified.css": "<%= config.src %>/less/bellmaker.less"
+                    '<%= config.dist %>/css/main.less-minified.css': '<%= config.src %>/less/bellmaker.less'
                 }
             },
             uncompressedLess: {
@@ -189,7 +189,7 @@ module.exports = function (grunt) {
                     cleancss: false
                 },
                 files: {
-                    "<%= config.dist %>/css/main.less.css": "<%= config.src %>/less/bellmaker.less"
+                    '<%= config.dist %>/css/main.less.css': '<%= config.src %>/less/bellmaker.less'
                 }
             },
             basicDemoLess: {
@@ -197,7 +197,7 @@ module.exports = function (grunt) {
                     cleancss: false
                 },
                 files: {
-                    "<%= config.dist %>/css/main.demo.css": '<%= config.app %>/less/imports.less'
+                    '<%= config.dist %>/css/main.demo.css': '<%= config.app %>/less/imports.less'
                 }  
             }
         },
