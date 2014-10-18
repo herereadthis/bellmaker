@@ -16,21 +16,21 @@ The Bellmaker is a library of ***device-agnostic*** *and* ***device-specific*** 
 
 ## Build
 
-```
+```bash
 $ git clone https://github.com/herereadthis/bellmaker.git
 $ cd bellmaker/
 $ npm install
-$ bower install
-$ grunt
+$ npm run bower
+$ npm run grunt
 ```
 
 ## View the Demo
 
-```
-$ python -m SimpleHTTPServer 8001
+```bash
+$ grunt serve
 ```
 
-Site will load at http://localhost:8001/
+Site will load at http://localhost:9000/
 
 ## Setup
 
@@ -44,17 +44,26 @@ Maybe you write your novels on a typewriter. Maybe you develop your Tri-X in Rod
 
 #### Recommended: Add the Bellmaker as a Bower dependency
 
-```
+```bash
 $ bower install --save bellmaker
 ```
 
 #### Alternative: Add the Bellmaker as a submodule
 
-```
+```bash
 $ cd my_repo
 $ git submodule add https://github.com/herereadthis/bellmaker.git
 $ git add bellmaker .gitmodules
 $ git commit -m "adds Bellmaker submodule"
+```
+
+#### Importing
+
+```CSS
+/* Import LESS file */
+@import "/PATH_TO_BOWER/bellmaker/src/less/bellmaker.less";
+/* Import SASS file */
+@import "/PATH_TO_BOWER/bellmaker/src/sass/bellmaker.scss";
 ```
 
 ### Configuration

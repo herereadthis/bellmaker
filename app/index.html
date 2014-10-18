@@ -14,14 +14,25 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <link rel="stylesheet" type="text/css" href="/src/demo/basic_demo/css/main.css" />
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
 </head>
+
 <body>
 
 <header role="banner" class="bellmaker_container">
     <h1>Bellmaker</h1>
     <h2>The Media Query Master</h2>
 </header>
+
 
 <article role="main" class="bellmaker_container">
     <h2>What am I seeing?</h2>
@@ -49,14 +60,14 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
                     <li>Google Nexus 4</li>
                 </ul>
             </li>
+            <li><strong>768 WXGA:2.4 (800&times;1280)</strong>
+                <ul>
+                    <li>Nokia Lumia 920, 925, 928</li>
+                </ul>
+            </li>
             <li><strong>800 WXGA:2 (800&times;1280)</strong>
                 <ul>
                     <li>Samsung GN1</li>
-                </ul>
-            </li>
-            <li><strong>768 WXGA:2.4 (768&times;1280)</strong>
-                <ul>
-                    <li>Nokia Lumia 920, 925, 928</li>
                 </ul>
             </li>
             <li><strong>Full HD:3 (1080&times;1920)</strong>
@@ -65,12 +76,13 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
                     <li>HTC One M7, M8</li>
                     <li>LG G2</li>
                     <li>Samsung GS4, GS5 GN3</li>
-                    <li>Sony Xperia Z1, Z2</li>
+                    <li>Sony Xperia Z(1)(2)(3)</li>
                 </ul>
             </li>
             <li><strong>WQHD:4 (1440&times;2560)</strong>
                 <ul>
                     <li>LG G3</li>
+                    <li>Google Nexus 6</li>
                     <li>Samsung GN4</li>
                 </ul>
             </li>
@@ -85,6 +97,27 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     </section>
 
 </article>
+</article>
 
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
 </body>
 </html>

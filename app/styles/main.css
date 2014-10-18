@@ -25,15 +25,18 @@ body,
 table,
 td,
 ul,
+ol,
 h1,
 h2,
 h3,
 h4,
 p,
-img {
+img,
+figure {
   margin: 0;
 }
-ul {
+ul,
+ol {
   padding-left: 0;
 }
 a:link,
@@ -276,12 +279,12 @@ h3 {
     content: "early iPhone in portrait mode";
   }
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 2dppx) and (orientation : landscape) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 2dppx) and (device-aspect-ratio: 2/3) and (orientation : landscape) {
   #device_sniffer:after {
     content: "iPhone 4(s) in landscape mode";
   }
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 2dppx) and (orientation : portrait) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 2dppx) and (device-aspect-ratio: 2/3) and (orientation : portrait) {
   #device_sniffer:after {
     content: "iPhone 4(s) in portrait mode";
   }
@@ -316,12 +319,12 @@ h3 {
     content: "720p HD:2 in portrait mode";
   }
 }
-@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (min-resolution: 2dppx) and (orientation : landscape) {
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (min-resolution: 2dppx) and (device-aspect-ratio: 375/667) and (orientation : landscape) {
   #device_sniffer:after {
     content: "iPhone 6 in landscape mode";
   }
 }
-@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (min-resolution: 2dppx) and (orientation : portrait) {
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (min-resolution: 2dppx) and (device-aspect-ratio: 375/667) and (orientation : portrait) {
   #device_sniffer:after {
     content: "iPhone 6 in portrait mode";
   }
@@ -374,10 +377,5 @@ h3 {
 @media only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 4dppx) and (orientation : portrait) {
   #device_sniffer:after {
     content: "WQHD:4 in portrait mode";
-  }
-}
-@media only screen and (device-aspect-ratio: 2/3) and (orientation : portrait) {
-  #device_sniffer:after {
-    background-color: #F00;
   }
 }
