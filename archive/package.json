@@ -1,0 +1,47 @@
+{
+  "name": "bellmaker",
+  "version": "0.3.8",
+  "description": "Responsive CSS media query library for LESS and SASS, with device-agnostic and device-specific breakpoints",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/herereadthis/bellmaker.git"
+  },
+  "keywords": [
+    "Media",
+    "Query",
+    "Mobile",
+    "LESS",
+    "SASS",
+    "CSS"
+  ],
+  "author": {
+    "name": "Jimmy Ha",
+    "email": "herereadthis@gmail.com",
+    "url": "http://herereadthis.com/"
+  },
+  "licenses": [
+    {
+      "type": "GPL",
+      "url": "https://github.com/herereadthis/bellmaker/blob/master/LICENSE"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/herereadthis/bellmaker/issues"
+  },
+  "homepage": "https://github.com/herereadthis/bellmaker",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^0.11.1",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jekyll": "^0.4.2",
+    "load-grunt-tasks": "^0.6.0"
+  },
+  "dependencies": {
+    "load-grunt-tasks": "^0.6.0"
+  }
+}
