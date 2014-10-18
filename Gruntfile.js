@@ -57,6 +57,13 @@ module.exports = function (grunt) {
                 ],
                 tasks: ['less']
             },
+            sass: {
+                files: [
+                    '<%= config.app %>/sass/{,*/}*.scss',
+                    '<%= config.src %>/sass/{,*/}*.scss'
+                ],
+                tasks: ['sass']
+            },
             styles: {
                 files: ['<%= config.app %>/styles/{,*/}*.css'],
                 tasks: ['newer:copy:styles', 'autoprefixer']
@@ -208,7 +215,7 @@ module.exports = function (grunt) {
                     precision: 4
                 },
                 files: {
-                    "<%= config.dist %>/css/main.sass-minified.css": "<%= config.src %>/sass/main.scss"
+                    '<%= config.dist %>/css/main.sass-minified.css': '<%= config.src %>/sass/main.scss'
                 }
             },
             uncompressedSass: {
@@ -217,7 +224,7 @@ module.exports = function (grunt) {
                     precision: 4
                 },
                 files: {
-                    "<%= config.dist %>/css/main.sass.css": "<%= config.src %>/sass/main.scss"
+                    '<%= config.dist %>/css/main.sass.css': '<%= config.src %>/sass/main.scss'
                 }
             }
         },
@@ -425,6 +432,7 @@ module.exports = function (grunt) {
     'concurrent:dist',
     'autoprefixer',
     'less',
+    'sass',
     'concat',
     'cssmin',
     'uglify',
