@@ -275,7 +275,7 @@ Notice how the LESS/SASS variable names of the media queries just became very ea
 | iPhone 6 | 750×1334 | 2 | 375×667 | 375:667 | iPhone 6 |
 | iPhone 6 Plus | 1242×2208 | 3 | 414×736 | 9:16 | iPhone 6 Plus |
 | early iPad | 768×1024 | 1 | 768×1024 | 3:4 | iPad 1-2; iPad Mini 1 |
-| retina iPad | 1536×2056 | 2 | 768×1024 | 3:4 | iPad 3, 4; iPad Air; iPad Mini 2 |
+| retina iPad | 1536×2056 | 2 | 768×1024 | 3:4 | iPad 3, 4; iPad Air 1-1; iPad Mini 2-3 |
 
 Notice how at first glance, there seems to be too many different screen resolutions of which to keep track, most actually share the same 360×640 resolution? They are all using a 9:16 aspect ratio. Use the ```ds_ratio_9_16``` variable. ("ds" stands for device-specific)
 
@@ -317,7 +317,7 @@ Here is the complete listing of how to target phones by aspect ratio:
 | 3:5 | Nokia | Lumia 920/925/928 |
 | 5:8 | Samsung | GN1 |
 | 2:3 | Apple | iPhone 1/2/3/4 |
-| 3:4 | Apple | iPad 1/2/3/4, Air, Mini |
+| 3:4 | Apple | iPad 1/2/3/4, Air 1-2, Mini 1-3 |
 
 ### Orientation
 
