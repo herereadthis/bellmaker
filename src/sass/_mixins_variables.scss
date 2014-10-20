@@ -175,18 +175,18 @@ $ds_768_wxga24_portrait:      "only screen and (min-device-width : 320px) and (m
 // Display Resolution: 768 X 1024
 // Device-pixel-ratio: 1
 // All iPads in portrait & landscape
-$ds_ipad:                   "only screen and (min-device-width : 768px) and (max-device-width : 1024px)";
+$ds_ipad:                   "only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (device-aspect-ratio: 3/4)";
 // All iPads in landscape
-$ds_ipad_landscape:         "only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)";
+$ds_ipad_landscape:         "only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (device-aspect-ratio: 3/4) and (orientation : landscape)";
 // All iPads in portrait
-$ds_ipad_portrait:          "only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)";
+$ds_ipad_portrait:          "only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (device-aspect-ratio: 3/4) and (orientation : portrait)";
 
 // ipad Mini, iPad 1 & 2 in portrait & landscape
-$ds_ipad_early:             "only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (min-resolution: 1dppx)";
+$ds_ipad_early:             "only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1) and (device-aspect-ratio: 3/4)";
 // ipad Mini, iPad 1 & 2 in landscape
-$ds_ipad_early_landscape:   "only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (min-resolution: 1dppx) and (orientation : landscape)";
+$ds_ipad_early_landscape:   "only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1) and (device-aspect-ratio: 3/4) and (orientation : landscape)";
 // ipad Mini, iPad 1 & 2 in portrait
-$ds_ipad_early_portrait:    "only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (min-resolution: 1dppx) and (orientation : portrait)";
+$ds_ipad_early_portrait:    "only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1) and (device-aspect-ratio: 3/4) and (orientation : portrait)";
 
 
 // Actual Resolution: 768 X 1024
@@ -195,9 +195,9 @@ $ds_ipad_early_portrait:    "only screen and (min-device-width : 768px) and (max
 // Retina iPad (includes Mini Retina) in portrait & landscape
 $ds_ipad_retina:            "only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (min-resolution: 2dppx)";
 // Retina iPad in landscape
-$ds_ipad_retina_landscape:  "only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (min-resolution: 2dppx) and (orientation : landscape)";
+$ds_ipad_retina_landscape:  "only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation : landscape)";
 // Retina iPad in portrait
-$ds_ipad_retina_portrait:   "only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (min-resolution: 2dppx) and (orientation : portrait)";
+$ds_ipad_retina_portrait:   "only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation : portrait)";
 
 
 // Actual Resolution: 320 X 480
