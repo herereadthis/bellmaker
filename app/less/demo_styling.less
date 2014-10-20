@@ -8,8 +8,6 @@
         padding: 2rem 2rem 0 2rem;
     }
 }
-[role="main"] {
-}
 h1 {
     font-weight: normal;
 
@@ -23,7 +21,9 @@ h1 {
     }
 }
 ul {
-    padding-bottom: 2rem;
+    @media @da_baseline {
+        padding: 0 2rem 2rem 2rem;
+    }
     ul {
         padding-bottom: 0;
         padding-left: 2rem;

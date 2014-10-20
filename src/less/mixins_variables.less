@@ -176,84 +176,84 @@
 // Display Resolution: 768 X 1024
 // Device-pixel-ratio: 1
 // All iPads in portrait & landscape
-@ds_ipad:                   ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px)";
+@ds_ipad:                   ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (device-aspect-ratio: 3/4)";
 // All iPads in landscape
-@ds_ipad_landscape:         ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)";
+@ds_ipad_landscape:         ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (device-aspect-ratio: 3/4) and (orientation : landscape)";
 // All iPads in portrait
-@ds_ipad_portrait:          ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)";
+@ds_ipad_portrait:          ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (device-aspect-ratio: 3/4) and (orientation : portrait)";
 
 // ipad Mini, iPad 1 & 2 in portrait & landscape
-@ds_ipad_early:             ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (min-resolution: 1dppx)";
+@ds_ipad_early:             ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1) and (device-aspect-ratio: 3/4)";
 // ipad Mini, iPad 1 & 2 in landscape
-@ds_ipad_early_landscape:   ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (min-resolution: 1dppx) and (orientation : landscape)";
+@ds_ipad_early_landscape:   ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1) and (device-aspect-ratio: 3/4) and (orientation : landscape)";
 // ipad Mini, iPad 1 & 2 in portrait
-@ds_ipad_early_portrait:    ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (min-resolution: 1dppx) and (orientation : portrait)";
+@ds_ipad_early_portrait:    ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 1) and (device-aspect-ratio: 3/4) and (orientation : portrait)";
 
 
 // Actual Resolution: 768 X 1024
 // Display Resolution: 1536 X 2048
 // Device-pixel-ratio: 2
-// Retina iPad (includes Mini Retina) in portrait & landscape
-@ds_ipad_retina:            ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (min-resolution: 2dppx)";
+// Retina iPad (includes Mini Retina and Air) in portrait & landscape
+@ds_ipad_retina:            ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 2) and (device-aspect-ratio: 3/4)";
 // Retina iPad in landscape
-@ds_ipad_retina_landscape:  ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (min-resolution: 2dppx) and (orientation : landscape)";
+@ds_ipad_retina_landscape:  ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 2) and (device-aspect-ratio: 3/4) and (orientation : landscape)";
 // Retina iPad in portrait
-@ds_ipad_retina_portrait:   ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (min-resolution: 2dppx) and (orientation : portrait)";
+@ds_ipad_retina_portrait:   ~"only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 2) and (device-aspect-ratio: 3/4) and (orientation : portrait)";
 
 
 // Actual Resolution: 320 X 480
 // Display Resolution: 320 X 480
 // Device-pixel-ratio: 1
-// iPhone 2-4 Media Queries
-@ds_iphone_early:           ~"only screen and (min-device-width : 320px) and (max-device-width : 480px)";
-// iPhone 2G-4S in landscape
-@ds_iphone_early_landscape: ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape)";
-// iPhone 2G-4S in portrait
-@ds_iphone_early_portrait:  ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait)";
+// iPhone 2G-3GS Media Queries
+@ds_iphone_early:           ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (-webkit-min-device-pixel-ratio: 1) and (device-aspect-ratio: 2/3)";
+// iPhone 2G-3GS in landscape
+@ds_iphone_early_landscape: ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (-webkit-min-device-pixel-ratio: 1) and (device-aspect-ratio: 2/3) and (orientation : landscape)";
+// iPhone 2G-3GS in portrait
+@ds_iphone_early_portrait:  ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (-webkit-min-device-pixel-ratio: 1) and (device-aspect-ratio: 2/3) and (orientation : portrait)";
 
 
 // Actual Resolution: 320 X 480 (LATER)
 // Display Resolution: 640 X 960 (LATER)
 // Device-pixel-ratio: 2
 // iPhone 4, 4S Media Queries
-@ds_iphone_4:               ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 2dppx) and (device-aspect-ratio: 2/3)";
+@ds_iphone_4:               ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (-webkit-min-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3)";
 // iPhone 2G-4S in landscape
-@ds_iphone_4_landscape:     ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 2dppx) and (device-aspect-ratio: 2/3) and (orientation : landscape)";
+@ds_iphone_4_landscape:     ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (-webkit-min-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) and (orientation : landscape)";
 // iPhone 2G-4S in portrait
-@ds_iphone_4_portrait:      ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (min-resolution: 2dppx) and (device-aspect-ratio: 2/3) and (orientation : portrait)";
+@ds_iphone_4_portrait:      ~"only screen and (min-device-width : 320px) and (max-device-width : 480px) and (-webkit-min-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) and (orientation : portrait)";
 
 
 // Actual Resolution: 320 X 568
 // Display Resolution: 640 X 1136
 // Device-pixel-ratio: 2
 // iPhone 5(s)(c) in portrait & landscape
-@ds_iphone_5:               ~"only screen and (min-device-width : 320px) and (max-device-width : 568px) and (min-resolution: 2dppx) and (device-aspect-ratio: 40/71)";
+@ds_iphone_5:               ~"only screen and (min-device-width : 320px) and (max-device-width : 568px) and (-webkit-min-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)";
 // iPhone 5 in landscape
-@ds_iphone_5_landscape:     ~"only screen and (min-device-width : 320px) and (max-device-width : 568px) and (min-resolution: 2dppx) and (device-aspect-ratio: 40/71) and (orientation : landscape)";
+@ds_iphone_5_landscape:     ~"only screen and (min-device-width : 320px) and (max-device-width : 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation : landscape)";
 // iPhone 5 in portrait
-@ds_iphone_5_portrait:      ~"only screen and (min-device-width : 320px) and (max-device-width : 568px) and (min-resolution: 2dppx) and (device-aspect-ratio: 40/71) and (orientation : portrait)";
+@ds_iphone_5_portrait:      ~"only screen and (min-device-width : 320px) and (max-device-width : 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation : portrait)";
 
 
 // Actual Resolution: 375 X 667
 // Display Resolution: 750 X 1334
 // Device-pixel-ratio: 2
 // iPhone 6 in portrait & landscape
-@ds_iphone_6:               ~"only screen and (min-device-width : 375px) and (max-device-width : 667px) and (min-resolution: 2dppx) and (device-aspect-ratio: 375/667)";
+@ds_iphone_6:               ~"only screen and (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio: 2) and (device-aspect-ratio: 375/667)";
 // iPhone 6 in landscape
-@ds_iphone_6_landscape:     ~"only screen and (min-device-width : 375px) and (max-device-width : 667px) and (min-resolution: 2dppx) and (device-aspect-ratio: 375/667) and (orientation : landscape)";
+@ds_iphone_6_landscape:     ~"only screen and (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio: 2) and (device-aspect-ratio: 375/667) and (orientation : landscape)";
 // iPhone 6 in portrait
-@ds_iphone_6_portrait:      ~"only screen and (min-device-width : 375px) and (max-device-width : 667px) and (min-resolution: 2dppx) and (device-aspect-ratio: 375/667) and (orientation : portrait)";
+@ds_iphone_6_portrait:      ~"only screen and (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio: 2) and (device-aspect-ratio: 375/667) and (orientation : portrait)";
 
 
 // Actual Resolution: 414 × 736
 // Display Resolution: 1242 × 2208
 // Device-pixel-ratio: 3
 // iPhone 6 Plus in portrait & landscape
-@ds_iphone_6_plus:              ~"only screen and (min-device-width : 414px) and (max-device-width : 736px) and (min-resolution: 3dppx)";
+@ds_iphone_6_plus:              ~"only screen and (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio: 3)";
 // iPhone 6 Plus in landscape
-@ds_iphone_6_plus_landscape:    ~"only screen and (min-device-width : 414px) and (max-device-width : 736px) and (min-resolution: 3dppx) and (orientation : landscape)";
+@ds_iphone_6_plus_landscape:    ~"only screen and (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio: 2) and (orientation : landscape)";
 // iPhone 6 Plus in portrait
-@ds_iphone_6_plus_portrait:     ~"only screen and (min-device-width : 414px) and (max-device-width : 736px) and (min-resolution: 3dppx) and (orientation : portrait)";
+@ds_iphone_6_plus_portrait:     ~"only screen and (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation : portrait)";
 
 // ---------------------------------------------
 // ---------------------------------------------
