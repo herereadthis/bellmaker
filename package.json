@@ -1,6 +1,6 @@
 {
   "name": "sunflash",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Sunflash is a CSS library of utilities and helper classes that every website uses",
   "scripts": {
     "grunt": "./node_modules/grunt-cli/bin/grunt",

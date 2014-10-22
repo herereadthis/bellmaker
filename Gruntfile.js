@@ -40,8 +40,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('default', [
-        'less',
-        'watch'
+        'less'
     ]);
     grunt.registerTask('test', [
         'less'
