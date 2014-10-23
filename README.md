@@ -5,7 +5,8 @@ Bellmaker
 [![Build Status](https://secure.travis-ci.org/herereadthis/bellmaker.svg?branch=master)](http://travis-ci.org/herereadthis/bellmaker)
 [![devDependency Status](https://david-dm.org/herereadthis/bellmaker/dev-status.svg)](https://david-dm.org/herereadthis/bellmaker#info=devDependencies)
 
-Project page at ***[herereadthis.com/code/bellmaker/](http://herereadthis.com/code/bellmaker)***
+* Project page at ***[herereadthis.com/code/bellmaker/](http://herereadthis.com/code/bellmaker/)***
+* Demo page at ***[bellmaker.herereadthis.com](http://bellmaker.herereadthis.com)***
 
 The Bellmaker is a library of ***device-agnostic*** *and* ***device-specific*** media queries that will complement your exisiting CSS. 
 
@@ -275,7 +276,7 @@ Notice how the LESS/SASS variable names of the media queries just became very ea
 | iPhone 6 | 750×1334 | 2 | 375×667 | 375:667 | iPhone 6 |
 | iPhone 6 Plus | 1242×2208 | 3 | 414×736 | 9:16 | iPhone 6 Plus |
 | early iPad | 768×1024 | 1 | 768×1024 | 3:4 | iPad 1-2; iPad Mini 1 |
-| retina iPad | 1536×2056 | 2 | 768×1024 | 3:4 | iPad 3, 4; iPad Air 1-1; iPad Mini 2-3 |
+| retina iPad | 1536×2056 | 2 | 768×1024 | 3:4 | iPad 3, 4; iPad Air 1-2; iPad Mini 2-3 |
 
 Notice how at first glance, there seems to be too many different screen resolutions of which to keep track, most actually share the same 360×640 resolution? They are all using a 9:16 aspect ratio. Use the ```ds_ratio_9_16``` variable. ("ds" stands for device-specific)
 
