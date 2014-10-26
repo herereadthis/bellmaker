@@ -10,7 +10,7 @@
     "description": "Sunflash is a CSS library of utilities and helper classes that every website uses",
     "homepage": "https://github.com/herereadthis/sunflash",
     "main": [
-      "src/less/sunflash.less"
+      "src/less/sunflash.less",
       "src/sass/sunflash.scss"
     ],
     "license": "MIT",
