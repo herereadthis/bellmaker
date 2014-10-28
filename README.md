@@ -367,30 +367,35 @@ Use these mixins especially for moving columns around. Remember that offsets and
 .bellmaker_offset(@attribute,@offset) {};
 // Factor mixin:
 .bellmaker_factor(@attribute,@factor) {};
+```
 
 #### Example: offset left padding
 
 ```LESS
-// #container will now always have 10rem left padding at 
-// all breakpoints starting from da_small to da_x_large
+// #container will now always be 10rem width, with enough padding
+// on the left side to keep it flush right
 #container {
+    width: 10rem;
     .bellmaker_offset(padding-left, 10);
 }
 ```
 
 ```CSS
 /* output */
+#container {
+    width: 10rem;
+}
 @media only screen and (min-width: 768px) {
-    #container {width: 648px;}
+    #container {padding-left: 648px;}
 }
 @media only screen and (min-width: 1024px) {
-    #container {width: 860px;}
+    #container {padding-left: 860px;}
 }
 @media only screen and (min-width: 1280px) {
-    #container {width: 1052px;}
+    #container {padding-left: 1052px;}
 }
 @media only screen and (min-width: 1440px) {
-    #container {width: 1244px;}
+    #container {padding-left: 1244px;}
 }
 ```
 
