@@ -353,7 +353,48 @@ There are two ways to target orientation, depending on your personal preference.
 }
 ```
 
+------------------------
 
+## Math Operators
+
+Box-model dimensions and offsets can use mixins, which will range from breakpoints ```da_small``` to ```da_x_large```. Breakpoints ```da_baseline```, ```da_2x_small```, and ```da_x_small``` are not part of the math operators because sizing for them is done as percentages. 
+
+Use these mixins especially for moving columns around. Remember that offsets and factors will be calculated as REM units.
+
+
+```LESS
+// Offset mixin:
+.bellmaker_offset(@attribute,@offset) {};
+// Factor mixin:
+.bellmaker_factor(@attribute,@factor) {};
+
+#### Example: offset left padding
+
+```LESS
+// #container will now always have 10rem left padding at 
+// all breakpoints starting from da_small to da_x_large
+#container {
+    .bellmaker_offset(padding-left, 10);
+}
+```
+
+```CSS
+/* output */
+@media only screen and (min-width: 768px) {
+    #container {width: 648px;}
+}
+@media only screen and (min-width: 1024px) {
+    #container {width: 860px;}
+}
+@media only screen and (min-width: 1280px) {
+    #container {width: 1052px;}
+}
+@media only screen and (min-width: 1440px) {
+    #container {width: 1244px;}
+}
+```
+
+Available attributes are ```width```, ```height```, ```padding-top```, ```padding-right```, ```padding-bottom```, ```padding-left```, ```padding-top```, ```padding-right```, ```padding-bottom```, ```padding-left```, ```margin-top```, ```margin-right```, ```margin-bottom```, and ```margin-left```.
 
 
 ------------------------
