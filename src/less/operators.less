@@ -1,3 +1,12 @@
+// Operators
+//
+// sample usage
+// .foo {
+//     .bellmaker_offset(width,-10rem);
+//     .bellmaker_factor(padding-left,0.5);
+// }
+
+
 .bellmaker_offset(width, @offset) {
     @media @da_small {  width: @pw_small + @offset;}
     @media @da_medium { width: @pw_medium + @offset;}

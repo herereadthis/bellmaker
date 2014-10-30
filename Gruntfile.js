@@ -62,7 +62,7 @@ module.exports = function (grunt) {
                     '<%= config.app %>/sass/{,*/}*.scss',
                     '<%= config.src %>/sass/{,*/}*.scss'
                 ],
-                tasks: ['sass']
+                tasks: ['sass:bellmaker']
             },
             styles: {
                 files: ['<%= config.app %>/styles/{,*/}*.css'],
@@ -180,7 +180,7 @@ module.exports = function (grunt) {
                 options: {
                 },
                 files: {
-                    '<%= config.tmp %>/styles/main.css': '<%= config.app %>/less/imports.less'
+                    '<%= config.tmp %>/styles/main.less.css': '<%= config.app %>/less/imports.less'
                 }
             },
             minifiedLess: {
@@ -209,6 +209,11 @@ module.exports = function (grunt) {
             }
         },
         sass: {
+            bellmaker: {
+                files: {
+                    '<%= config.tmp %>/styles/main.sass.css': '<%= config.src %>/sass/bellmaker.scss'
+                }
+            },
             minifiedSass: {
                 options: {
                     style: 'compressed',

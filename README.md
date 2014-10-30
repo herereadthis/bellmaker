@@ -4,6 +4,7 @@ Bellmaker
 [![Bower version](https://badge.fury.io/bo/bellmaker.svg)](http://badge.fury.io/bo/bellmaker)
 [![Build Status](https://secure.travis-ci.org/herereadthis/bellmaker.svg?branch=master)](http://travis-ci.org/herereadthis/bellmaker)
 [![devDependency Status](https://david-dm.org/herereadthis/bellmaker/dev-status.svg)](https://david-dm.org/herereadthis/bellmaker#info=devDependencies)
+[![Code Climate](https://codeclimate.com/github/herereadthis/bellmaker/badges/gpa.svg)](https://codeclimate.com/github/herereadthis/bellmaker)
 
 * Project page at ***[herereadthis.com/code/bellmaker/](http://herereadthis.com/code/bellmaker/)***
 * Demo page at ***[bellmaker.herereadthis.com](http://bellmaker.herereadthis.com)***
@@ -363,39 +364,69 @@ Use these mixins especially for moving columns around. Remember that offsets and
 
 
 ```LESS
-// Offset mixin:
+// LESS: Offset mixin:
 .bellmaker_offset(@attribute,@offset) {};
-// Factor mixin:
+// LESS Factor mixin:
 .bellmaker_factor(@attribute,@factor) {};
+```
+
+```SCSS
+// SASS: Offset mixin:
+@include bellmaker_offset($attribute,$offset) {};
+// SASS Factor mixin:
+@include bellmaker_factor($attribute,$factor) {};
 ```
 
 #### Example: offset left padding
 
 ```LESS
-// #container will now always be 10rem width, with enough padding
-// on the left side to keep it flush right
-#container {
-    width: 10rem;
-    .bellmaker_offset(padding-left, 10);
+// As LESS: section will now always be 30rem width less than parent
+// container, so that a 30rem sidebar can floated right
+section {
+    float: left;
+    .bellmaker_offset(width, -30);
+}
+aside {
+    float: right;
+    width: 30rem;
 }
 ```
 
+```SCSS
+// As SASS
+section {
+    float: left;
+    @include bellmaker_offset(width, -30);
+}
+aside {
+    float: right;
+    width: 30rem;
+}
+```
+
+
+
+
 ```CSS
 /* output */
-#container {
-    width: 10rem;
+section {
+    float: left;
 }
 @media only screen and (min-width: 768px) {
-    #container {padding-left: 648px;}
+    section {width: 448px;}
 }
 @media only screen and (min-width: 1024px) {
-    #container {padding-left: 860px;}
+    section {width: 660px;}
 }
 @media only screen and (min-width: 1280px) {
-    #container {padding-left: 1052px;}
+    section {width: 852px;}
 }
 @media only screen and (min-width: 1440px) {
-    #container {padding-left: 1244px;}
+    section {width: 1044px;}
+}
+aside {
+    float: right;
+    width: 30rem;
 }
 ```
 

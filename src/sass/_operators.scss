@@ -1,0 +1,21 @@
+// Operators
+//
+// sample usage
+// .foo {
+//     @include bellmaker_offset(width,-10rem);
+//     @include bellmaker_factor(padding-left,0.5);
+// }
+
+@mixin bellmaker_offset($attribute, $offset) {
+    @media #{$da_small} {   #{$attribute}: $pw_small + $offset;}
+    @media #{$da_medium} {  #{$attribute}: $pw_medium + $offset;}
+    @media #{$da_large} {   #{$attribute}: $pw_large + $offset;}
+    @media #{$da_x_large} { #{$attribute}: $pw_x_large + $offset;}
+}
+@mixin bellmaker_factor($attribute, $factor) {
+    @media #{$da_small} {   #{$attribute}: $pw_small * $factor;}
+    @media #{$da_medium} {  #{$attribute}: $pw_medium * $factor;}
+    @media #{$da_large} {   #{$attribute}: $pw_large * $factor;}
+    @media #{$da_x_large} { #{$attribute}: $pw_x_large * $factor;}
+}
+
