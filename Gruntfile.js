@@ -55,7 +55,7 @@ module.exports = function (grunt) {
                     '<%= config.app %>/less/{,*/}*.less',
                     '<%= config.src %>/less/{,*/}*.less'
                 ],
-                tasks: ['less']
+                tasks: ['less:bellmaker']
             },
             sass: {
                 files: [
@@ -180,7 +180,7 @@ module.exports = function (grunt) {
                 options: {
                 },
                 files: {
-                    '<%= config.tmp %>/styles/main.less.css': '<%= config.app %>/less/imports.less'
+                    '<%= config.app %>/styles/main.less.css': '<%= config.app %>/less/imports.less'
                 }
             },
             minifiedLess: {
@@ -188,7 +188,7 @@ module.exports = function (grunt) {
                     cleancss: true
                 },
                 files: {
-                    '<%= config.dist %>/css/main.less-minified.css': '<%= config.src %>/less/bellmaker.less'
+                    '<%= config.dist %>/styles/main.less-minified.css': '<%= config.src %>/less/bellmaker.less'
                 }
             },
             uncompressedLess: {
@@ -196,7 +196,7 @@ module.exports = function (grunt) {
                     cleancss: false
                 },
                 files: {
-                    '<%= config.dist %>/css/main.less.css': '<%= config.src %>/less/bellmaker.less'
+                    '<%= config.dist %>/styles/main.less.css': '<%= config.src %>/less/bellmaker.less'
                 }
             },
             basicDemoLess: {
@@ -204,14 +204,14 @@ module.exports = function (grunt) {
                     cleancss: false
                 },
                 files: {
-                    '<%= config.dist %>/css/main.demo.css': '<%= config.app %>/less/imports.less'
+                    '<%= config.dist %>/styles/main.less.css': '<%= config.app %>/less/imports.less'
                 }  
             }
         },
         sass: {
             bellmaker: {
                 files: {
-                    '<%= config.tmp %>/styles/main.sass.css': '<%= config.src %>/sass/bellmaker.scss'
+                    '<%= config.app %>/styles/main.sass.css': '<%= config.src %>/sass/bellmaker.scss'
                 }
             },
             minifiedSass: {
