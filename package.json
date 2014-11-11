@@ -1,6 +1,6 @@
 {
   "name": "bellmaker",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "description": "Responsive CSS media query library for LESS and SASS, with device-agnostic and device-specific breakpoints",
   "repository": {
     "type": "git",
@@ -66,6 +66,7 @@
   "scripts": {
     "start": "node ./example/cube/node_server/server.js",
     "grunt": "./node_modules/grunt-cli/bin/grunt",
-    "bower": "./node_modules/bower/bin/bower install"
+    "bower": "./node_modules/bower/bin/bower install",
+    "server": "./node_modules/grunt-cli/bin/grunt serve"
   }
 }

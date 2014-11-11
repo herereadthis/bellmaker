@@ -1,6 +1,6 @@
 {
     "name": "bellmaker",
-    "version": "0.4.7",
+    "version": "0.4.8",
     "authors": [
         {
             "name": "Jimmy Ha",
@@ -33,6 +33,6 @@
     ],
     "dependencies": {
         "jquery": "~2.1.1",
-        "mossflower": "~0.1.9"
+        "mossflower": "~0.1.11"
     }
 }
