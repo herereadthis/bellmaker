@@ -43,8 +43,8 @@ $orientation_portrait:      "and (orientation : portrait)";
 // Aspect Ratio Media Queries ------------------
 // ---------------------------------------------
 
-// 9:16 devices, 720p: Blackberry Z30; Motorola Droid Maxx, Razr HD; Samsung GN2; Sony Xperia S 
-// 9:16 devices, HD:3: Google Nexus 5; HTC Hero M7, M8; LG G2; Samsung GS4, GS5, GN3; Sony Xperia Z1, Z2, Z3
+// 9:16 devices, 720p: Blackberry Z30; Motorola Droid Maxx, Moto G, Moto X(1), Razr HD; Samsung GN2; Sony Xperia S 
+// 9:16 devices, HD:3: Google Nexus 5; HTC Hero M7, M8; LG G2; Moto X(2), Nokia Lumia Icon; Samsung GS4, GS5, GN3; Sony Xperia Z1, Z2, Z3
 // 9:16 devices, HD:4: LG G3, Samsung GN4
 // 9:16 devices, iPhone 6 Plus
 $ds_ratio_9_16:             "only screen and (device-aspect-ratio: 9/16)";
@@ -95,7 +95,7 @@ $ds_ratio_3_4_portrait:     "only screen and (device-aspect-ratio: 3/4) and (ori
 // Actual Resolution: 720 X 1280
 // Display Resolution: 360 X 640
 // Device-pixel-ratio: 2
-// 720 HD:2 phones: Blackberry Z30; Motorola Droid Maxx, Razr HD; Samsung GN2; Sony Xperia S
+// 720 HD:2 phones: Blackberry Z30; Motorola Droid Maxx, Moto G, Moto X(1), Razr HD; Samsung GN2; Sony Xperia S
 $ds_720p_hd2:               "only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 2dppx)";
 // 720 HD:2 phones in landscape
 $ds_720p_hd2_landscape:     "only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 2dppx) and (orientation : landscape)";
@@ -128,7 +128,7 @@ $ds_800_wxga2_portrait:      "only screen and (min-device-width : 400px) and (ma
 // Actual Resolution: 1080 X 1920
 // Display Resolution: 360 X 640
 // Device-pixel-ratio: 3
-// 1080 HD:3 phones: Google Nexus 5, HTC One M7+, LG G2; Samsung GS4, GS5, GN3; Sony Xperia Z1, Z2, Z3
+// 1080 HD:3 phones: Google Nexus 5, HTC One M7+, LG G2; Moto X(2), Nokia Lumia Icon; Samsung GS4, GS5, GN3; Sony Xperia Z1, Z2, Z3
 $ds_1080_hd3:               "only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 3dppx)";
 // 1080 HD:3 phones in landscape
 $ds_1080_hd3_landscape:     "only screen and (min-device-width : 360px) and (max-device-width : 640px) and (min-resolution: 3dppx) and (orientation : landscape)";

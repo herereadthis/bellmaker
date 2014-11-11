@@ -263,11 +263,11 @@ Notice how the LESS/SASS variable names of the media queries just became very ea
 
 | Name | Actual Resolution | Pixel Ratio | Display Resolution | Aspect Ratio | Known Devices |
 | ---- | ---- | ---- | ---- | ---- | ---- |
-| 720 HD:2 | 720×1280 | 2| 360:640 | 9:16 | Blackberry Z30; Motorola Droid Maxx, Razr HD; Samsung GN2; Sony Xperia S |
+| 720 HD:2 | 720×1280 | 2| 360:640 | 9:16 | Blackberry Z30; Motorola Droid Maxx, Moto G, Moto X(1), Razr HD; Samsung GN2; Sony Xperia S |
 | 768 WXGA:2 | 768×1280 | 2| 384×640 | 3:5 | Google Nexus 4 |
 | 768 WXGA:2.4 | 768×1280 | 2.4 | 320×533 | 3:5 | Nokia Lumia 920, 925, 928 |
 | 800 WXGA:2 | 800×1280 | 2 | 400×640 | 5:8 | Samsung GN1 |
-| 1080 HD:3 | 1080×1920 | 3 | 360×640 | 9:16 | Google Nexus 5; HTC Hero M7+; LG G2; Samsung GS4, GS5, GN3; Sony Xperia Z(1-3) |
+| 1080 HD:3 | 1080×1920 | 3 | 360×640 | 9:16 | Google Nexus 5; HTC Hero M7+; Motorola Moto X(2); LG G2; Nokia Lumia Icon; Samsung GS4, GS5, GN3; Sony Xperia Z(1-3) |
 | WQHD:4 | 1440×2560 | 4 | 360×640 | 9:16 | LG G3, Samsung GN4 |
 | early iPhone | 320×480 | 1 | 320×480 | 2:3 | iPhone 1-3 |
 | iPhone 4 | 640×960 | 2 | 320×480 | 2:3 | iPhone 4(s) |
@@ -311,8 +311,9 @@ Here is the complete listing of how to target phones by aspect ratio:
 | 9:16 | Google | Nexus 5 |
 | 9:16 | HTC | Hero M7/M8 |
 | 9:16 | LG | G2/G3 |
-| 9:16 | Motorola | Droid Maxx, Razr HD |
-| 9:16 | Samsung | GN2/GN3, GS4/GS5 |
+| 9:16 | Motorola | Droid Maxx, Moto G, Moto X(1)/X(2), Razr HD |
+| 9:16 | Nokia | Lumia Icon |
+| 9:16 | Samsung | GN2/GN3/GN4, GS4/GS5 |
 | 9:16 | Sony | Xperia S/Z1/Z2/Z3 |
 | 3:5 | Nokia | Lumia 920/925/928 |
 | 5:8 | Samsung | GN1 |
