@@ -79,7 +79,7 @@ $ds_ratio_5_8_portrait:     "only screen and (device-aspect-ratio: 5/8)";
 
 
 // 2:3 devices: iPhone 1, 2, 3(G), 4(s)
-$ds_ratio_5_8:              ~"only screen and (device-aspect-ratio: 2/3), only screen and (device-aspect-ratio: 3/2)";
+$ds_ratio_5_8:              "only screen and (device-aspect-ratio: 2/3), only screen and (device-aspect-ratio: 3/2)";
 // 2:3 devices in landscape
 $ds_ratio_5_8_landscape:    "only screen and (device-aspect-ratio: 3/2) and (orientation : landscape)";
 // 2:3 devices in portrait
