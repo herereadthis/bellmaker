@@ -2,33 +2,35 @@
 
 
 // tells you which one are you using
-#basic_query:before {
-    content: "Device-agnostic: ";
-    font-weight: bold;
-}
-#basic_query:after {
-    display: block;
+#basic_query {
+    &:before {
+        content: "Device-agnostic: ";
+        font-weight: bold;
+    }
+    &:after {
+        display: block;
 
-    @media @da_baseline {
-        content: "baseline - 100% liquid for screens at 320 to 480";
-    }
-    @media @da_2x_small {
-        content: "2x-small - 100% liquid for screens at 480 to 640";
-    }
-    @media @da_x_small {
-        content: "x small - 100% liquid for screens at 480 to 768";
-    }
-    @media @da_small {
-        content: "small - 768 pixels for screens at 768 to 1024";
-    }
-    @media @da_medium {
-        content: "medium - 960 pixels for screens at 1024 to 1280";
-    }
-    @media @da_large {
-        content: "large - 1152 pixels for screens at 1280 to 1440";
-    }
-    @media @da_x_large {
-        content: "x-large - 1296 pixels for screens at 1440 and up";
+        @media @da_baseline {
+            content: "baseline - 100% liquid for screens at 320 to 480";
+        }
+        @media @da_2x_small {
+            content: "2x-small - 100% liquid for screens at 480 to 640";
+        }
+        @media @da_x_small {
+            content: "x small - 100% liquid for screens at 480 to 768";
+        }
+        @media @da_small {
+            content: "small - 768 pixels for screens at 768 to 1024";
+        }
+        @media @da_medium {
+            content: "medium - 960 pixels for screens at 1024 to 1280";
+        }
+        @media @da_large {
+            content: "large - 1152 pixels for screens at 1280 to 1440";
+        }
+        @media @da_x_large {
+            content: "x-large - 1296 pixels for screens at 1440 and up";
+        }
     }
 }
 #device_sniffer {
@@ -117,6 +119,47 @@
         }
         @media @ds_wqhd4_portrait {
             content: "WQHD:4 in portrait mode";
+        }
+    }
+}
+#aspect_ratio {
+    &:before {
+        content: "Aspect Ratio: ";
+        font-weight: bold;
+    }
+    &:after {
+        content: "unable to detect";
+        display: block;
+
+        @media @ds_ratio_3_4_landscape {
+            content: "3:4 screen in landscape mode";
+        }
+        @media @ds_ratio_3_4_portrait {
+            content: "3:4 screen in portrait mode";
+        }
+        @media @ds_ratio_5_8_landscape {
+            content: "5:8 screen in landscape mode";
+        }
+        @media @ds_ratio_5_8_portrait {
+            content: "5:8 screen in portrait mode";
+        }
+        @media @ds_ratio_3_5_landscape {
+            content: "3:5 screen in landscape mode";
+        }
+        @media @ds_ratio_3_5_portrait {
+            content: "3:5 screen in portrait mode";
+        }
+        @media @ds_ratio_2_3_landscape {
+            content: "2:3 screen in landscape mode";
+        }
+        @media @ds_ratio_2_3_portrait {
+            content: "2:3 screen in portrait mode";
+        }
+        @media @ds_ratio_9_16_landscape {
+            content: "9:16 screen in landscape mode";
+        }
+        @media @ds_ratio_9_16_portrait {
+            content: "9:16 screen in portrait mode";
         }
     }
 }

@@ -277,7 +277,7 @@ Notice how the LESS/SASS variable names of the media queries just became very ea
 | early iPad | 768×1024 | 1 | 768×1024 | 3:4 | iPad 1-2; iPad Mini 1 |
 | retina iPad | 1536×2056 | 2 | 768×1024 | 3:4 | iPad 3, 4; iPad Air 1-2; iPad Mini 2-3 |
 
-Notice how at first glance, there seems to be too many different screen resolutions of which to keep track, most actually share the same 360×640 resolution? They are all using a 9:16 aspect ratio. Use the ```ds_ratio_9_16``` variable. ("ds" stands for device-specific)
+Notice how at first glance, there seems to be too many different screen resolutions of which to keep track, most actually share the same 360×640 resolution? They are all using a 9:16 aspect ratio. Use the ```ds_ratio_9_16``` variable. ("ds" stands for device-specific). Also, regardless of orientation, the formulat is always lowest ratio : highest ratio.
 
 #### Target all 9:16 phones (LESS)
 
