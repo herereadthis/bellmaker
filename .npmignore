@@ -2,3 +2,6 @@ bower.json
 .bowerrc
 .travis.yml
 Gruntfile.js
+.editorconfig
+.jshintrc
+.gitattributes
