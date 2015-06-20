@@ -220,7 +220,7 @@ module.exports = function (grunt) {
                     precision: 4
                 },
                 files: {
-                    '<%= config.dist %>/css/main.sass-minified.css': '<%= config.src %>/sass/main.scss'
+                    '<%= config.dist %>/css/main.sass-minified.css': '<%= config.src %>/sass/bellmaker.scss'
                 }
             },
             uncompressedSass: {
@@ -229,7 +229,7 @@ module.exports = function (grunt) {
                     precision: 4
                 },
                 files: {
-                    '<%= config.dist %>/css/main.sass.css': '<%= config.src %>/sass/main.scss'
+                    '<%= config.dist %>/css/main.sass.css': '<%= config.src %>/sass/bellmaker.scss'
                 }
             }
         },

@@ -4,6 +4,14 @@
     margin-right: auto;
     margin-left: auto;
     
+    // If the container contains floating elements, this ensures that the
+    // container will expand vertically to hold all elements.
+    &:after {
+        content: "";
+        float: none;
+        clear: both;
+        display: block;
+    }
     @media #{$da_baseline} {
         width: $pw_baseline;
     }
