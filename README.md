@@ -1,9 +1,10 @@
 Bellmaker
 =========
 
+[![npm version](https://badge.fury.io/js/bellmaker.svg)](http://badge.fury.io/js/bellmaker)
 [![Bower version](https://badge.fury.io/bo/bellmaker.svg)](http://badge.fury.io/bo/bellmaker)
 [![Build Status](https://secure.travis-ci.org/herereadthis/bellmaker.svg?branch=master)](http://travis-ci.org/herereadthis/bellmaker)
-[![devDependency Status](https://david-dm.org/herereadthis/bellmaker/dev-status.svg)](https://david-dm.org/herereadthis/bellmaker#info=devDependencies)
+[![devDependency Status](https://david-dm.org/herereadthis/bellmaker/dev-status.svg)](https://david-dm.org/herereadthis/bellmaker)
 [![Code Climate](https://codeclimate.com/github/herereadthis/bellmaker/badges/gpa.svg)](https://codeclimate.com/github/herereadthis/bellmaker)
 
 * Project page at ***[herereadthis.com/code/bellmaker/](http://herereadthis.com/code/bellmaker/)***
