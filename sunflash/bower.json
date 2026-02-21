@@ -1,0 +1,28 @@
+{
+    "name": "sunflash",
+    "version": "0.1.7",
+    "authors": [
+        {
+            "name": "Jimmy Ha",
+            "homepage": "http://herereadthis.com"
+        }
+    ],
+    "description": "Sunflash is a CSS library of utilities and helper classes that every website uses",
+    "homepage": "https://github.com/herereadthis/sunflash",
+    "main": [
+      "src/less/sunflash.less",
+      "src/sass/sunflash.scss"
+    ],
+    "license": "MIT",
+    "devDependencies": {},
+    "ignore": [
+      ".bowerrc",
+      ".gitignore",
+      ".sass-cache",
+      ".travis.yml",
+      "docs",
+      "Gruntfile.js",
+      "node_modules",
+      "src/components"
+    ]
+}
